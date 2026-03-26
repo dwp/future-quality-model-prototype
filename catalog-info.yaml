@@ -1,8 +1,8 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: blank.prototype.kit
-  title: Blank-Prototype-Kit
+  name: future.quality.model.prototype
+  title: Future.Quality-Model-Prototype
   description: |
     A blank prototype kit version 13.18.1 with DWP Frontend installed
 
