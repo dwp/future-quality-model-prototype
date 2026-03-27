@@ -1,5 +1,6 @@
 {
-  "serviceName": "Service name goes here",
+  "serviceName": "Future Quality Model",
+  "useServiceNavigation": true,
   "plugins": {
     "govuk-frontend": {
       "rebrand": true

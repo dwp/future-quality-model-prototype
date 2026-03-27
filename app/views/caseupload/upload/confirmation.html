@@ -1,0 +1,40 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+ 
+{% block header %}
+{{
+    dwpHeader({
+        serviceName: serviceName,
+        serviceHref: "/",
+        container: true
+    })
+}}
+
+{% endblock %}
+
+
+{% block content %}
+
+<h1 class="govuk-heading-l">File submitted for sampling</h1>
+
+<h2 class="govuk-heading-m">ESA_newclaims_sample_august_25.csv is now being processed</h2>
+
+<p>You can view the progress in <a href="#">upload history</a></p>
+
+
+<div class="govuk-button-group">
+  <button type="button" onclick="document.location='prepare.html'" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+    Back to file upload
+  </button>
+  <button type="button" onclick="document.location='../dashboard.html'" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+    Back to dashboard
+  </button>
+</div>
+
+
+
+
+{% endblock %}

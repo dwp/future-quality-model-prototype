@@ -1,0 +1,45 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+ 
+{% block header %}
+{{
+    dwpHeader({
+        serviceName: serviceName,
+        serviceHref: "/",
+        container: true
+    })
+}}
+
+{% endblock %}
+
+
+{% block content %}
+
+<h1 class="govuk-heading-l">File upload for case sampling</h1>
+
+<h2 class="govuk-heading-m">Choose a service from the list below:</h2>
+
+
+<div style="width: 100%; height: auto; border-bottom: 1px solid #aaa;">
+    <div style="width: 75%; height: auto; display: inline-block;">
+        <p><a href="upload/prepare.html">Upload a case sample file</a></p>
+        <p>Send a file for the quality assurance team to review</p>
+    </div>
+    <div style="width: 24%; height: 100%; display: inline-block; vertical-align: Top; text-align: right;">></div>
+</div>
+<div style="width: 100%; height: 20px;"></div>
+<div style="width: 100%; height: auto; border-bottom: 1px solid #aaa;">
+    <div style="width: 75%; height: auto; display: inline-block;">
+        <p><a href="history.html">View upload history</a></p>
+        <p>Review files uploaded for your product line</p>
+    </div>
+    <div style="width: 24%; height: 100%; display: inline-block; vertical-align: Top; text-align: right; ">></div>
+</div>
+
+
+
+
+{% endblock %}

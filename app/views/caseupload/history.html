@@ -1,0 +1,85 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+ 
+{% block header %}
+{{
+    dwpHeader({
+        serviceName: serviceName,
+        serviceHref: "/",
+        container: true
+    })
+}}
+
+{% endblock %}
+
+
+{% block content %}
+
+{{ govukBackLink({
+  text: "Back",
+  href: "../dashboard"
+}) }}
+
+<h1 class="govuk-heading-l">File upload History</h1>
+
+<table class="govuk-table govuk-table--small-text-until-tablet">
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th scope="col" class="govuk-table__header">Sample date range</th>
+      <th scope="col" class="govuk-table__header ">Uploaded by</th>
+      <th scope="col" class="govuk-table__header ">Product</th>
+      <th scope="col" class="govuk-table__header ">Assurance type</th>
+      <th scope="col" class="govuk-table__header ">Status</th>
+      <th scope="col" class="govuk-table__header ">Date</th>
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell ">01/03/2025 to 31/03/2025</td>
+      <td class="govuk-table__cell ">Joe Bloggs</td>
+      <td class="govuk-table__cell ">ESA</td>
+      <td class="govuk-table__cell ">Circumstances</td>
+      <td class="govuk-table__cell "><strong class="govuk-tag govuk-tag--yellow">Processing</strong></td>
+      <td class="govuk-table__cell ">31/03/2025</td>
+    </tr>
+     <tr class="govuk-table__row">
+      <td class="govuk-table__cell ">01/02/2025 to 28/02/2025</td>
+      <td class="govuk-table__cell ">Joe Bloggs</td>
+      <td class="govuk-table__cell ">ESA</td>
+      <td class="govuk-table__cell ">Circumstances</td>
+      <td class="govuk-table__cell "><strong class="govuk-tag govuk-tag--green">Pass</strong></td>
+      <td class="govuk-table__cell ">28/02/2025</td>
+    </tr>
+     <tr class="govuk-table__row">
+      <td class="govuk-table__cell ">01/02/2025 to 28/02/2025</td>
+      <td class="govuk-table__cell ">Joe Bloggs</td>
+      <td class="govuk-table__cell ">ESA</td>
+      <td class="govuk-table__cell ">Circumstances</td>
+      <td class="govuk-table__cell "><strong class="govuk-tag govuk-tag--red">Fail</strong></td>
+      <td class="govuk-table__cell ">28/02/2025</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell ">01/01/2025 to 31/01/2025</td>
+      <td class="govuk-table__cell ">Joe Bloggs</td>
+      <td class="govuk-table__cell ">ESA</td>
+      <td class="govuk-table__cell ">Circumstances</td>
+      <td class="govuk-table__cell "><strong class="govuk-tag govuk-tag--green">Pass</strong></td>
+      <td class="govuk-table__cell ">31/01/2025</td>
+    </tr>
+     <tr class="govuk-table__row">
+      <td class="govuk-table__cell ">01/12/2024 to 31/12/2024</td>
+      <td class="govuk-table__cell ">Joe Bloggs</td>
+      <td class="govuk-table__cell ">ESA</td>
+      <td class="govuk-table__cell ">Circumstances</td>
+      <td class="govuk-table__cell "><strong class="govuk-tag govuk-tag--green">Pass</strong></td>
+      <td class="govuk-table__cell ">31/12/2024</td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+{% endblock %}

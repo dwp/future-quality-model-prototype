@@ -1,0 +1,211 @@
+{% extends homeOfficeKit_formLayout or "layouts/main.html" %}
+{% from "govuk/components/back-link/macro.njk" import govukBackLink %}
+
+
+{% block pageTitle %}
+  GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+ 
+{% block header %}
+
+{{
+    dwpHeader({
+        serviceName: serviceName,
+        serviceHref: "/",
+        container: true
+    })
+}}
+
+{% endblock %}
+
+{% block stylesheets %}
+  {{ super() }}
+  <style type="text/css">
+  .hods-page,
+  html {
+  height: auto;
+  }
+  </style>
+
+{% endblock %}
+
+
+{% block content %}
+
+{{ govukBackLink({
+  text: "Back",
+  href: "../dashboard"
+}) }}
+
+<h1 class="govuk-heading-l">Prepare for file upload</h1>
+
+<div class="govuk-form-group" id="product_line_dropdown">
+  <label class="govuk-label" for="product_line">
+    Select product line
+  </label>
+  <select class="govuk-select" id="product_line" name="product_line">
+    <option value="#">Please select</option>
+    <option value="esa">ESA</option>
+  </select>
+</div>
+
+<div class="govuk-form-group" id="assurance_type_dropdown">
+  <label class="govuk-label" for="assurance_type">
+    Select assurance type
+  </label>
+  <select class="govuk-select" id="assurance_type" name="assurance_type">
+    <option value="#">Please select</option>
+    <option value="new_claim">New Claim</option>
+  </select>
+</div>
+
+<div id="file_upload">
+  <h2 class="govuk-heading-m">Checklist</h2>
+  <p class="govuk-body">These file formats are acceptable:</p>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>CSV</li>
+      <li>Microsoft Excel</li>
+    </ul>
+
+  <div class="govuk-form-group ">
+    <label class="govuk-label" for="file-upload-1">
+    
+    </label>
+    <div
+      class="govuk-drop-zone"
+      data-module="govuk-file-upload">
+      <input class="govuk-file-upload" id="file-upload-1" name="fileUpload1" type="file">
+    </div>
+  </div>
+
+</div>
+
+
+<div id="loading" class="hods-loading-spinner" role="status">
+  <div class="hods-loading-spinner__spinner"></div>
+  <div class="hods-loading-spinner__content">
+    <h2 class="govuk-heading-m">
+      Please wait...
+    </h2>
+  </div>
+</div>
+
+<div id="preview_confirm">
+  <table class="govuk-table">
+    <caption class="govuk-table__caption govuk-table__caption--l">File preview details</caption>
+    <tbody class="govuk-table__body">
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header">File name</th>
+        <td class="govuk-table__cell">ESA_newclaims_sample_august_25.csv</td>
+      </tr>
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header">Number of rows identified</th>
+        <td class="govuk-table__cell">125</td>
+      </tr>
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header">Number of rows to be sampled</th>
+        <td class="govuk-table__cell">50</td>
+      </tr>
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header">Assurance type</th>
+        <td class="govuk-table__cell">ESA, New claims</td>
+      </tr>
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header">File uploaded for case sampling: date range identified</th>
+        <td class="govuk-table__cell">10/01/2025 to 20/01/2025</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="govuk-form-group">
+  <fieldset class="govuk-fieldset">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+      <h1 class="govuk-fieldset__heading">
+        Confirm if the file is:
+      </h1>
+    </legend>
+    <div class="govuk-radios" data-module="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="confirm" name="confirm" type="radio" value="yes">
+        <label class="govuk-label govuk-radios__label" for="confirm">
+          Correct I want to submit it for sampling
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="deny" name="deny" type="radio" value="no">
+        <label class="govuk-label govuk-radios__label" for="deny">
+          Incorrect I want to choose a different file
+        </label>
+      </div>
+    </div>
+  </fieldset>
+  </div>
+
+  <div class="govuk-button-group">
+    <button id="confirm_button" type="submit" disabled aria-disabled="true" class="govuk-button" data-module="govuk-button">
+      Confirm
+    </button>
+    <button type="button" onclick="document.location='../dashboard.html'" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+      Back to dashboard
+    </button>
+  </div>
+</div>
+
+
+{% endblock %}
+
+{% block pageScripts %}
+<script>
+  const loading = document.getElementById("loading");
+  const product_line = document.getElementById("product_line");
+  const assurance_type_dropdown = document.getElementById("assurance_type_dropdown");
+  const assurance_type = document.getElementById("assurance_type");
+  const file_upload = document.getElementById("file_upload");
+  const file_selector = document.getElementById("file-upload-1"); 
+  const preview_confirm = document.getElementById("preview_confirm");
+  const confirm2 = document.getElementById("confirm");
+  const deny = document.getElementById("deny");
+  
+  window.onload = function(){
+   loading.style.display="none";
+   assurance_type_dropdown.style.display="none";
+   file_upload.style.display="none";
+   preview_confirm.style.display="none";
+  }
+
+  product_line.addEventListener("change", function(){
+    const value = this.value;
+    if (value=="esa"){
+      assurance_type_dropdown.style.display = "inline-block";
+    }
+  });
+
+  assurance_type.addEventListener("change", function(){
+    const value = this.value;
+    if (value=="new_claim"){
+      file_upload.style.display = "block";
+    }
+  });
+
+  file_selector.addEventListener("change", function(){
+    loading.style.display = "block";
+    loading.classList.add("govuk-frontend-supported");
+    setTimeout(function() { display_preview(); }, 5000);
+  });
+
+  confirm2.addEventListener("change", function(){
+    document.getElementById("confirm_button").disabled = false;
+    deny.checked = false;
+  });
+
+  deny.addEventListener("change", function(){
+    document.getElementById("confirm_button").disabled = false;
+    confirm2.checked = false;
+  });
+
+  function display_preview(){
+    preview_confirm.style.display = "inline-block";
+    loading.style.display = "none";
+  }
+</script>
+{% endblock %}
