@@ -4,6 +4,11 @@
     "serve": "govuk-prototype-kit serve",
     "start": "govuk-prototype-kit start",
     "heroku-prebuild": "rm -f package-lock.json"
+  },
+  "engines": {
+    "node": "22",
+    "npm": "10"
+  
 
   },
   "dependencies": {
