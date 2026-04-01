@@ -23,177 +23,402 @@
   href: "dashboard"
 }) }}
 
-<h1 class="govuk-heading-l">File upload History</h1>
+<h1 class="govuk-heading-l">File upload history</h1>
 
 
 <!-- Filter-->
-
-<div class="moj-filter" data-module="moj-filter">
-  <div class="moj-filter__header">
-    <div class="moj-filter__header-title">
-      <h2 class="govuk-heading-m">Filter</h2>
+<div id="filter">
+  <div class="moj-filter" data-module="moj-filter">
+    <div class="moj-filter__header">
+      <div class="moj-filter__header-title">
+        <h2 class="govuk-heading-m">Filter</h2>
+      </div>
+      <div class="moj-filter__header-action">
+      </div>
     </div>
-    <div class="moj-filter__header-action">
+    <div class="moj-filter__content">
+      <div class="moj-filter__options">
+        <button type="submit" id="activate_filter" class="govuk-button" data-module="govuk-button" data-test-id="submit-button">
+          Apply filters
+        </button>
+        <div class="filter_container">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-label--m" for="keywords">
+            Uploaded by
+          </label>
+          <div class="govuk-hint">
+            Filter by name
+          </div>
+          <input class="govuk-input" id="keywords" name="keywords" type="text">
+        </div>
+        
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <label class="govuk-label govuk-label--m" for="keywords">Product</label>
+            <!--<legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+              Product
+            </legend>-->
+            <div class="govuk-hint">
+            Filter by product
+          </div>
+            <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="type" name="type" type="checkbox" value="1">
+                <label class="govuk-label govuk-checkboxes__label" for="type">
+                  UC
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="type-2" name="type" type="checkbox" value="2">
+                <label class="govuk-label govuk-checkboxes__label" for="type-2">
+                  ESA
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="type-3" name="type" type="checkbox" value="3">
+                <label class="govuk-label govuk-checkboxes__label" for="type-3">
+                  Pension Credit
+                </label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <label class="govuk-label govuk-label--m" for="keywords">Assurance type</label>
+            <!--<legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+              Assurance type
+            </legend>-->
+            <div class="govuk-hint">
+              Filter by type
+            </div>
+            <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="status" name="status" type="checkbox" value="complete">
+                <label class="govuk-label govuk-checkboxes__label" for="status">
+                  New claims
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="status-2" name="status" type="checkbox" value="incomplete">
+                <label class="govuk-label govuk-checkboxes__label" for="status-2">
+                  Circumstances
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="status-3" name="status" type="checkbox" value="inprogress">
+                <label class="govuk-label govuk-checkboxes__label" for="status-3">
+                  Adjustments
+                </label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+        </div>
+      </div>
     </div>
   </div>
-  <div class="moj-filter__content">
-    <div class="moj-filter__selected">
-      <div class="moj-filter__selected-heading">
-        <div class="moj-filter__heading-title">
-          <h2 class="govuk-heading-m">Selected filters</h2>
-        </div>
-        <div class="moj-filter__heading-action">
-          <p><a class="govuk-link govuk-link--no-visited-state" href="">Clear filters</a></p>
-        </div>
+</div>
+
+<div id="filter_active">
+  <div class="moj-filter" data-module="moj-filter">
+    <div class="moj-filter__header">
+      <div class="moj-filter__header-title">
+        <h2 class="govuk-heading-m">Filter</h2>
       </div>
-      <h3 class="govuk-heading-s govuk-!-margin-bottom-0">Product</h3>
-      <ul class="moj-filter-tags">
-        <li><a class="moj-filter__tag" href="/path/to/remove/this"><span class="govuk-visually-hidden">Remove this filter</span> ESA</a></li>
-      </ul>
-      <h3 class="govuk-heading-s govuk-!-margin-bottom-0">Assurance Type</h3>
-      <ul class="moj-filter-tags">
-        <li><a class="moj-filter__tag" href="/path/to/remove/this"><span class="govuk-visually-hidden">Remove this filter</span> Circumstances</a></li>
-      </ul>
+      <div class="moj-filter__header-action">
+      </div>
     </div>
-    <div class="moj-filter__options">
-      <button type="submit" class="govuk-button" data-module="govuk-button" data-test-id="submit-button">
-        Apply filters
-      </button>
-      <div class="filter_container">
-      <div class="govuk-form-group">
-        <label class="govuk-label govuk-label--m" for="keywords">
-          Uploaded by
-        </label>
-        <div class="govuk-hint">
-          Filter by name
+    <div class="moj-filter__content">
+      <div class="moj-filter__selected">
+        <div class="moj-filter__selected-heading">
+          <div class="moj-filter__heading-title">
+            <h2 class="govuk-heading-m">Selected filters</h2>
+          </div>
+          <div class="moj-filter__heading-action">
+            <p><a class="govuk-link govuk-link--no-visited-state" href="#" id="clear_filter">Clear filters</a></p>
+          </div>
         </div>
-        <input class="govuk-input" id="keywords" name="keywords" type="text">
+        <h3 class="govuk-heading-s govuk-!-margin-bottom-0">Product</h3>
+        <ul class="moj-filter-tags">
+          <li><a class="moj-filter__tag" href="/path/to/remove/this"><span class="govuk-visually-hidden">Remove this filter</span> ESA</a></li>
+        </ul>
+        <h3 class="govuk-heading-s govuk-!-margin-bottom-0">Assurance Type</h3>
+        <ul class="moj-filter-tags">
+          <li><a class="moj-filter__tag" href="/path/to/remove/this"><span class="govuk-visually-hidden">Remove this filter</span> Circumstances</a></li>
+        </ul>
       </div>
-      
-      <div class="govuk-form-group">
-        <fieldset class="govuk-fieldset">
-          <label class="govuk-label govuk-label--m" for="keywords">Product</label>
-          <!--<legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-            Product
-          </legend>-->
+      <div class="moj-filter__options">
+        <button type="submit" class="govuk-button" data-module="govuk-button" data-test-id="submit-button">
+          Apply filters
+        </button>
+        <div class="filter_container">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-label--m" for="keywords">
+            Uploaded by
+          </label>
           <div class="govuk-hint">
-          Filter by product
+            Filter by name
+          </div>
+          <input class="govuk-input" id="keywords" name="keywords" type="text">
         </div>
-          <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
-            <div class="govuk-checkboxes__item">
-              <input class="govuk-checkboxes__input" id="type" name="type" type="checkbox" value="1">
-              <label class="govuk-label govuk-checkboxes__label" for="type">
-                UC
-              </label>
-            </div>
-            <div class="govuk-checkboxes__item">
-              <input class="govuk-checkboxes__input" id="type-2" name="type" type="checkbox" value="2" checked>
-              <label class="govuk-label govuk-checkboxes__label" for="type-2">
-                ESA
-              </label>
-            </div>
-            <div class="govuk-checkboxes__item">
-              <input class="govuk-checkboxes__input" id="type-3" name="type" type="checkbox" value="3">
-              <label class="govuk-label govuk-checkboxes__label" for="type-3">
-                Pension Credit
-              </label>
-            </div>
+        
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <label class="govuk-label govuk-label--m" for="keywords">Product</label>
+            <!--<legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+              Product
+            </legend>-->
+            <div class="govuk-hint">
+            Filter by product
           </div>
-        </fieldset>
-      </div>
-      <div class="govuk-form-group">
-        <fieldset class="govuk-fieldset">
-          <label class="govuk-label govuk-label--m" for="keywords">Assurance type</label>
-          <!--<legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-            Assurance type
-          </legend>-->
-          <div class="govuk-hint">
-            Filter by type
-          </div>
-          <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
-            <div class="govuk-checkboxes__item">
-              <input class="govuk-checkboxes__input" id="status" name="status" type="checkbox" value="complete">
-              <label class="govuk-label govuk-checkboxes__label" for="status">
-                New Claims
-              </label>
+            <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="type" name="type" type="checkbox" value="1">
+                <label class="govuk-label govuk-checkboxes__label" for="type">
+                  UC
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="type-2" name="type" type="checkbox" value="2" checked>
+                <label class="govuk-label govuk-checkboxes__label" for="type-2">
+                  ESA
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="type-3" name="type" type="checkbox" value="3">
+                <label class="govuk-label govuk-checkboxes__label" for="type-3">
+                  Pension Credit
+                </label>
+              </div>
             </div>
-            <div class="govuk-checkboxes__item">
-              <input class="govuk-checkboxes__input" id="status-2" name="status" type="checkbox" value="incomplete" checked>
-              <label class="govuk-label govuk-checkboxes__label" for="status-2">
-                Circumstances
-              </label>
+          </fieldset>
+        </div>
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <label class="govuk-label govuk-label--m" for="keywords">Assurance type</label>
+            <!--<legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+              Assurance type
+            </legend>-->
+            <div class="govuk-hint">
+              Filter by type
             </div>
-            <div class="govuk-checkboxes__item">
-              <input class="govuk-checkboxes__input" id="status-3" name="status" type="checkbox" value="inprogress">
-              <label class="govuk-label govuk-checkboxes__label" for="status-3">
-                Adjustments
-              </label>
+            <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="status" name="status" type="checkbox" value="complete">
+                <label class="govuk-label govuk-checkboxes__label" for="status">
+                  New Claims
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="status-2" name="status" type="checkbox" value="incomplete" checked>
+                <label class="govuk-label govuk-checkboxes__label" for="status-2">
+                  Circumstances
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="status-3" name="status" type="checkbox" value="inprogress">
+                <label class="govuk-label govuk-checkboxes__label" for="status-3">
+                  Adjustments
+                </label>
+              </div>
             </div>
-          </div>
-        </fieldset>
-      </div>
+          </fieldset>
+        </div>
+        </div>
       </div>
     </div>
   </div>
 </div>
 
 <!-- End Filter-->
-
-<table id="results" class="govuk-table govuk-table--small-text-until-tablet">
-  <thead class="govuk-table__head">
-    <tr class="govuk-table__row">
-      <th scope="col" class="govuk-table__header">Sample date range</th>
-      <th scope="col" class="govuk-table__header ">Uploaded by</th>
-      <th scope="col" class="govuk-table__header ">Product</th>
-      <th scope="col" class="govuk-table__header ">Assurance type</th>
-      <th scope="col" class="govuk-table__header ">Status</th>
-      <th scope="col" class="govuk-table__header ">Date</th>
-    </tr>
-  </thead>
-  <tbody class="govuk-table__body">
-    <tr class="govuk-table__row">
+<div id="unfiltered">
+  <table id="results" class="govuk-table govuk-table--small-text-until-tablet">
+    <thead class="govuk-table__head">
+      <tr class="govuk-table__row">
+        <th scope="col" class="govuk-table__header">Sample date range</th>
+        <th scope="col" class="govuk-table__header ">Uploaded by</th>
+        <th scope="col" class="govuk-table__header ">Product</th>
+        <th scope="col" class="govuk-table__header ">Assurance type</th>
+        <th scope="col" class="govuk-table__header ">Status</th>
+        <th scope="col" class="govuk-table__header ">Upload date</th>
+      </tr>
+    </thead>
+    <tbody class="govuk-table__body">
+       <tr class="govuk-table__row">
+        <td class="govuk-table__cell ">01/03/2025 to 31/03/2025</td>
+        <td class="govuk-table__cell ">Joe Bloggs</td>
+        <td class="govuk-table__cell ">ESA</td>
+        <td class="govuk-table__cell ">Circumstances</td>
+        <td class="govuk-table__cell "><strong class="govuk-tag govuk-tag--yellow">Processing</strong></td>
+        <td class="govuk-table__cell ">31/03/2025</td>
+      </tr>
       <td class="govuk-table__cell ">01/03/2025 to 31/03/2025</td>
-      <td class="govuk-table__cell ">Joe Bloggs</td>
-      <td class="govuk-table__cell ">ESA</td>
-      <td class="govuk-table__cell ">Circumstances</td>
-      <td class="govuk-table__cell "><strong class="govuk-tag govuk-tag--yellow">Processing</strong></td>
-      <td class="govuk-table__cell ">31/03/2025</td>
-    </tr>
-     <tr class="govuk-table__row">
+        <td class="govuk-table__cell ">Jane Dear</td>
+        <td class="govuk-table__cell ">AA</td>
+        <td class="govuk-table__cell ">Adjustment</td>
+        <td class="govuk-table__cell "><strong class="govuk-tag govuk-tag--green">Pass</strong></td>
+        <td class="govuk-table__cell ">31/03/2025</td>
+      </tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell ">15/03/2025 to 21/03/2025</td>
+        <td class="govuk-table__cell ">Jack Jones</td>
+        <td class="govuk-table__cell ">UC</td>
+        <td class="govuk-table__cell ">New claims</td>
+        <td class="govuk-table__cell "><strong class="govuk-tag govuk-tag--green">Pass</strong></td>
+        <td class="govuk-table__cell ">21/03/2025</td>
+      </tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell ">08/03/2025 to 14/03/2025</td>
+        <td class="govuk-table__cell ">Jack Jones</td>
+        <td class="govuk-table__cell ">UC</td>
+        <td class="govuk-table__cell ">New claims</td>
+        <td class="govuk-table__cell "><strong class="govuk-tag govuk-tag--green">Pass</strong></td>
+        <td class="govuk-table__cell ">14/03/2025</td>
+      </tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell ">01/03/2025 to 07/03/2025</td>
+        <td class="govuk-table__cell ">Jack Jones</td>
+        <td class="govuk-table__cell ">UC</td>
+        <td class="govuk-table__cell ">New claims</td>
+        <td class="govuk-table__cell "><strong class="govuk-tag govuk-tag--green">Pass</strong></td>
+        <td class="govuk-table__cell ">07/03/2025</td>
+      </tr>
+       </tr>
       <td class="govuk-table__cell ">01/02/2025 to 28/02/2025</td>
-      <td class="govuk-table__cell ">Joe Bloggs</td>
-      <td class="govuk-table__cell ">ESA</td>
-      <td class="govuk-table__cell ">Circumstances</td>
-      <td class="govuk-table__cell "><strong class="govuk-tag govuk-tag--green">Pass</strong></td>
-      <td class="govuk-table__cell ">28/02/2025</td>
-    </tr>
-     <tr class="govuk-table__row">
-      <td class="govuk-table__cell ">01/02/2025 to 28/02/2025</td>
-      <td class="govuk-table__cell ">Joe Bloggs</td>
-      <td class="govuk-table__cell ">ESA</td>
-      <td class="govuk-table__cell ">Circumstances</td>
-      <td class="govuk-table__cell "><strong class="govuk-tag govuk-tag--red">Fail</strong></td>
-      <td class="govuk-table__cell ">28/02/2025</td>
-    </tr>
-    <tr class="govuk-table__row">
-      <td class="govuk-table__cell ">01/01/2025 to 31/01/2025</td>
-      <td class="govuk-table__cell ">Joe Bloggs</td>
-      <td class="govuk-table__cell ">ESA</td>
-      <td class="govuk-table__cell ">Circumstances</td>
-      <td class="govuk-table__cell "><strong class="govuk-tag govuk-tag--green">Pass</strong></td>
-      <td class="govuk-table__cell ">31/01/2025</td>
-    </tr>
-     <tr class="govuk-table__row">
-      <td class="govuk-table__cell ">01/12/2024 to 31/12/2024</td>
-      <td class="govuk-table__cell ">Joe Bloggs</td>
-      <td class="govuk-table__cell ">ESA</td>
-      <td class="govuk-table__cell ">Circumstances</td>
-      <td class="govuk-table__cell "><strong class="govuk-tag govuk-tag--green">Pass</strong></td>
-      <td class="govuk-table__cell ">31/12/2024</td>
-    </tr>
-  </tbody>
-</table>
+        <td class="govuk-table__cell ">Jane Dear</td>
+        <td class="govuk-table__cell ">AA</td>
+        <td class="govuk-table__cell ">Adjustment</td>
+        <td class="govuk-table__cell "><strong class="govuk-tag govuk-tag--green">Pass</strong></td>
+        <td class="govuk-table__cell ">28/02/2025</td>
+      </tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell ">01/02/2025 to 28/02/2025</td>
+        <td class="govuk-table__cell ">Joe Bloggs</td>
+        <td class="govuk-table__cell ">ESA</td>
+        <td class="govuk-table__cell ">Circumstances</td>
+        <td class="govuk-table__cell "><strong class="govuk-tag govuk-tag--green">Pass</strong></td>
+        <td class="govuk-table__cell ">28/02/2025</td>
+      </tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell ">01/02/2025 to 28/02/2025</td>
+        <td class="govuk-table__cell ">Joe Bloggs</td>
+        <td class="govuk-table__cell ">ESA</td>
+        <td class="govuk-table__cell ">Circumstances</td>
+        <td class="govuk-table__cell "><strong class="govuk-tag govuk-tag--red">Fail</strong></td>
+        <td class="govuk-table__cell ">28/02/2025</td>
+      </tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell ">01/01/2025 to 31/01/2025</td>
+        <td class="govuk-table__cell ">Joe Bloggs</td>
+        <td class="govuk-table__cell ">ESA</td>
+        <td class="govuk-table__cell ">Circumstances</td>
+        <td class="govuk-table__cell "><strong class="govuk-tag govuk-tag--green">Pass</strong></td>
+        <td class="govuk-table__cell ">31/01/2025</td>
+      </tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell ">01/12/2024 to 31/12/2024</td>
+        <td class="govuk-table__cell ">Joe Bloggs</td>
+        <td class="govuk-table__cell ">ESA</td>
+        <td class="govuk-table__cell ">Circumstances</td>
+        <td class="govuk-table__cell "><strong class="govuk-tag govuk-tag--green">Pass</strong></td>
+        <td class="govuk-table__cell ">31/12/2024</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div id="filtered">
+  <table id="results" class="govuk-table govuk-table--small-text-until-tablet">
+    <thead class="govuk-table__head">
+      <tr class="govuk-table__row">
+        <th scope="col" class="govuk-table__header">Sample date range</th>
+        <th scope="col" class="govuk-table__header ">Uploaded by</th>
+        <th scope="col" class="govuk-table__header ">Product</th>
+        <th scope="col" class="govuk-table__header ">Assurance type</th>
+        <th scope="col" class="govuk-table__header ">Status</th>
+        <th scope="col" class="govuk-table__header ">Upload date</th>
+      </tr>
+    </thead>
+    <tbody class="govuk-table__body">
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell ">01/03/2025 to 31/03/2025</td>
+        <td class="govuk-table__cell ">Joe Bloggs</td>
+        <td class="govuk-table__cell ">ESA</td>
+        <td class="govuk-table__cell ">Circumstances</td>
+        <td class="govuk-table__cell "><strong class="govuk-tag govuk-tag--yellow">Processing</strong></td>
+        <td class="govuk-table__cell ">31/03/2025</td>
+      </tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell ">01/02/2025 to 28/02/2025</td>
+        <td class="govuk-table__cell ">Joe Bloggs</td>
+        <td class="govuk-table__cell ">ESA</td>
+        <td class="govuk-table__cell ">Circumstances</td>
+        <td class="govuk-table__cell "><strong class="govuk-tag govuk-tag--green">Pass</strong></td>
+        <td class="govuk-table__cell ">28/02/2025</td>
+      </tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell ">01/02/2025 to 28/02/2025</td>
+        <td class="govuk-table__cell ">Joe Bloggs</td>
+        <td class="govuk-table__cell ">ESA</td>
+        <td class="govuk-table__cell ">Circumstances</td>
+        <td class="govuk-table__cell "><strong class="govuk-tag govuk-tag--red">Fail</strong></td>
+        <td class="govuk-table__cell ">28/02/2025</td>
+      </tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell ">01/01/2025 to 31/01/2025</td>
+        <td class="govuk-table__cell ">Joe Bloggs</td>
+        <td class="govuk-table__cell ">ESA</td>
+        <td class="govuk-table__cell ">Circumstances</td>
+        <td class="govuk-table__cell "><strong class="govuk-tag govuk-tag--green">Pass</strong></td>
+        <td class="govuk-table__cell ">31/01/2025</td>
+      </tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell ">01/12/2024 to 31/12/2024</td>
+        <td class="govuk-table__cell ">Joe Bloggs</td>
+        <td class="govuk-table__cell ">ESA</td>
+        <td class="govuk-table__cell ">Circumstances</td>
+        <td class="govuk-table__cell "><strong class="govuk-tag govuk-tag--green">Pass</strong></td>
+        <td class="govuk-table__cell ">31/12/2024</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
 
+
+{% endblock %}
+
+{% block pageScripts %}
+
+<script>
+const activate_filter = document.getElementById("activate_filter");
+const clear_filter = document.getElementById("clear_filter");
+const unfiltered = document.getElementById("unfiltered");
+const filtered = document.getElementById('filtered');
+const filter = document.getElementById("filter");
+const filter_active = document.getElementById("filter_active");
+
+
+  window.onload = function(){
+   filtered.style.display="none";
+   filter_active.style.display="none";
+  }
+
+  activate_filter.addEventListener("click", function(){
+    filter.style.display="none";
+    filter_active.style.display="block";
+    unfiltered.style.display="none";
+    filtered.style.display="block";
+  });
+
+  clear_filter.addEventListener("click", function(){
+    filter.style.display="block";
+    filter_active.style.display="none";
+    unfiltered.style.display="block";
+    filtered.style.display="none";
+
+  });
+</script>
 
 {% endblock %}

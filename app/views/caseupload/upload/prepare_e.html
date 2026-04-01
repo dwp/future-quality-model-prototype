@@ -228,7 +228,7 @@
   file_selector.addEventListener("change", function(){
     loading.style.display = "block";
     loading.classList.add("govuk-frontend-supported");
-    setTimeout(function() { display_preview(); }, 5000);
+    setTimeout(function() { display_error(); }, 5000);
   });
 
   confirm2.addEventListener("change", function(){
@@ -247,9 +247,11 @@
   }
 
   function display_error(){
-    error_summary.style.display="inline-block";
+    loading.style.display = "none";
+    error_summary.style.display="block";
     at_error.style.display="inline-block";
     assurance_type_dropdown.style.display="none";
+    window.scrollTo(0, 0);
   }
 </script>
 {% endblock %}
