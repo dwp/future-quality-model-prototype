@@ -63,12 +63,6 @@
           </div>
             <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
               <div class="govuk-checkboxes__item">
-                <input class="govuk-checkboxes__input" id="type" name="type" type="checkbox" value="1">
-                <label class="govuk-label govuk-checkboxes__label" for="type">
-                  UC
-                </label>
-              </div>
-              <div class="govuk-checkboxes__item">
                 <input class="govuk-checkboxes__input" id="type-2" name="type" type="checkbox" value="2">
                 <label class="govuk-label govuk-checkboxes__label" for="type-2">
                   ESA
@@ -108,7 +102,7 @@
               <div class="govuk-checkboxes__item">
                 <input class="govuk-checkboxes__input" id="status-3" name="status" type="checkbox" value="inprogress">
                 <label class="govuk-label govuk-checkboxes__label" for="status-3">
-                  Adjustments
+                  Claims maintenance
                 </label>
               </div>
             </div>
@@ -174,12 +168,6 @@
           </div>
             <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
               <div class="govuk-checkboxes__item">
-                <input class="govuk-checkboxes__input" id="type" name="type" type="checkbox" value="1">
-                <label class="govuk-label govuk-checkboxes__label" for="type">
-                  UC
-                </label>
-              </div>
-              <div class="govuk-checkboxes__item">
                 <input class="govuk-checkboxes__input" id="type-2" name="type" type="checkbox" value="2" checked>
                 <label class="govuk-label govuk-checkboxes__label" for="type-2">
                   ESA
@@ -219,7 +207,7 @@
               <div class="govuk-checkboxes__item">
                 <input class="govuk-checkboxes__input" id="status-3" name="status" type="checkbox" value="inprogress">
                 <label class="govuk-label govuk-checkboxes__label" for="status-3">
-                  Adjustments
+                  Claims maintenance
                 </label>
               </div>
             </div>
@@ -237,6 +225,7 @@
     <thead class="govuk-table__head">
       <tr class="govuk-table__row">
         <th scope="col" class="govuk-table__header">Sample date range</th>
+        <th scope="col" class="govuk-table__header">Rows identified</th>
         <th scope="col" class="govuk-table__header ">Uploaded by</th>
         <th scope="col" class="govuk-table__header ">Product</th>
         <th scope="col" class="govuk-table__header ">Assurance type</th>
@@ -247,13 +236,15 @@
     <tbody class="govuk-table__body">
        <tr class="govuk-table__row">
         <td class="govuk-table__cell ">01/03/2025 to 31/03/2025</td>
+        <td class="govuk-table__cell ">10,000</td>
         <td class="govuk-table__cell ">Joe Bloggs</td>
         <td class="govuk-table__cell ">ESA</td>
         <td class="govuk-table__cell ">Circumstances</td>
         <td class="govuk-table__cell "><strong class="govuk-tag govuk-tag--yellow">Processing</strong></td>
         <td class="govuk-table__cell ">31/03/2025</td>
       </tr>
-      <td class="govuk-table__cell ">01/03/2025 to 31/03/2025</td>
+        <td class="govuk-table__cell ">01/03/2025 to 31/03/2025</td>
+        <td class="govuk-table__cell ">10,000</td>
         <td class="govuk-table__cell ">Jane Dear</td>
         <td class="govuk-table__cell ">AA</td>
         <td class="govuk-table__cell ">Adjustment</td>
@@ -262,6 +253,7 @@
       </tr>
       <tr class="govuk-table__row">
         <td class="govuk-table__cell ">15/03/2025 to 21/03/2025</td>
+        <td class="govuk-table__cell ">10,000</td>
         <td class="govuk-table__cell ">Jack Jones</td>
         <td class="govuk-table__cell ">UC</td>
         <td class="govuk-table__cell ">New claims</td>
@@ -270,6 +262,7 @@
       </tr>
       <tr class="govuk-table__row">
         <td class="govuk-table__cell ">08/03/2025 to 14/03/2025</td>
+        <td class="govuk-table__cell ">10,000</td>
         <td class="govuk-table__cell ">Jack Jones</td>
         <td class="govuk-table__cell ">UC</td>
         <td class="govuk-table__cell ">New claims</td>
@@ -278,6 +271,7 @@
       </tr>
       <tr class="govuk-table__row">
         <td class="govuk-table__cell ">01/03/2025 to 07/03/2025</td>
+        <td class="govuk-table__cell ">10,000</td>
         <td class="govuk-table__cell ">Jack Jones</td>
         <td class="govuk-table__cell ">UC</td>
         <td class="govuk-table__cell ">New claims</td>
@@ -285,7 +279,8 @@
         <td class="govuk-table__cell ">07/03/2025</td>
       </tr>
        </tr>
-      <td class="govuk-table__cell ">01/02/2025 to 28/02/2025</td>
+        <td class="govuk-table__cell ">01/02/2025 to 28/02/2025</td>
+        <td class="govuk-table__cell ">10,000</td>
         <td class="govuk-table__cell ">Jane Dear</td>
         <td class="govuk-table__cell ">AA</td>
         <td class="govuk-table__cell ">Adjustment</td>
@@ -294,22 +289,28 @@
       </tr>
       <tr class="govuk-table__row">
         <td class="govuk-table__cell ">01/02/2025 to 28/02/2025</td>
+        <td class="govuk-table__cell ">10,000</td>
         <td class="govuk-table__cell ">Joe Bloggs</td>
         <td class="govuk-table__cell ">ESA</td>
         <td class="govuk-table__cell ">Circumstances</td>
         <td class="govuk-table__cell "><strong class="govuk-tag govuk-tag--green">Pass</strong></td>
         <td class="govuk-table__cell ">28/02/2025</td>
       </tr>
-      <tr class="govuk-table__row">
-        <td class="govuk-table__cell ">01/02/2025 to 28/02/2025</td>
-        <td class="govuk-table__cell ">Joe Bloggs</td>
-        <td class="govuk-table__cell ">ESA</td>
-        <td class="govuk-table__cell ">Circumstances</td>
-        <td class="govuk-table__cell "><strong class="govuk-tag govuk-tag--red">Fail</strong></td>
-        <td class="govuk-table__cell ">28/02/2025</td>
-      </tr>
+      <tr id="error_row" class="govuk-table__row">
+          <td class="govuk-table__cell expanded_table_cell">01/02/2025 to 28/02/2025</td>
+          <td class="govuk-table__cell expanded_table_cell">10,000</td>
+          <td class="govuk-table__cell expanded_table_cell">Joe Bloggs</td>
+          <td class="govuk-table__cell expanded_table_cell">ESA</td>
+          <td class="govuk-table__cell expanded_table_cell">Circumstances</td>
+          <td class="govuk-table__cell expanded_table_cell" style="position: relative;"><strong class="govuk-tag govuk-tag--red">Fail</strong><a class="fail-link-open" onclick="javascript: close_error();"></a></td>
+          <td class="govuk-table__cell expanded_table_cell">28/02/2025</td>
+        </tr>
+        <tr id="error_message" class="govuk-table__row">
+          <td colspan="7" class="govuk-table__cell"><p style="font-weight: bold; color: #d4351c; text-align: center;">There was an error with this upload, please contact admin for more details.</p></td>
+        </tr>
       <tr class="govuk-table__row">
         <td class="govuk-table__cell ">01/01/2025 to 31/01/2025</td>
+        <td class="govuk-table__cell ">10,000</td>
         <td class="govuk-table__cell ">Joe Bloggs</td>
         <td class="govuk-table__cell ">ESA</td>
         <td class="govuk-table__cell ">Circumstances</td>
@@ -318,6 +319,7 @@
       </tr>
       <tr class="govuk-table__row">
         <td class="govuk-table__cell ">01/12/2024 to 31/12/2024</td>
+        <td class="govuk-table__cell ">10,000</td>
         <td class="govuk-table__cell ">Joe Bloggs</td>
         <td class="govuk-table__cell ">ESA</td>
         <td class="govuk-table__cell ">Circumstances</td>
@@ -333,6 +335,7 @@
     <thead class="govuk-table__head">
       <tr class="govuk-table__row">
         <th scope="col" class="govuk-table__header">Sample date range</th>
+        <th scope="col" class="govuk-table__header">Rows identified</th>
         <th scope="col" class="govuk-table__header ">Uploaded by</th>
         <th scope="col" class="govuk-table__header ">Product</th>
         <th scope="col" class="govuk-table__header ">Assurance type</th>
@@ -343,6 +346,7 @@
     <tbody class="govuk-table__body">
       <tr class="govuk-table__row">
         <td class="govuk-table__cell ">01/03/2025 to 31/03/2025</td>
+        <td class="govuk-table__cell ">10,000</td>
         <td class="govuk-table__cell ">Joe Bloggs</td>
         <td class="govuk-table__cell ">ESA</td>
         <td class="govuk-table__cell ">Circumstances</td>
@@ -351,22 +355,28 @@
       </tr>
       <tr class="govuk-table__row">
         <td class="govuk-table__cell ">01/02/2025 to 28/02/2025</td>
+        <td class="govuk-table__cell ">10,000</td>
         <td class="govuk-table__cell ">Joe Bloggs</td>
         <td class="govuk-table__cell ">ESA</td>
         <td class="govuk-table__cell ">Circumstances</td>
         <td class="govuk-table__cell "><strong class="govuk-tag govuk-tag--green">Pass</strong></td>
         <td class="govuk-table__cell ">28/02/2025</td>
       </tr>
-      <tr class="govuk-table__row">
-        <td class="govuk-table__cell ">01/02/2025 to 28/02/2025</td>
-        <td class="govuk-table__cell ">Joe Bloggs</td>
-        <td class="govuk-table__cell ">ESA</td>
-        <td class="govuk-table__cell ">Circumstances</td>
-        <td class="govuk-table__cell "><strong class="govuk-tag govuk-tag--red">Fail</strong></td>
-        <td class="govuk-table__cell ">28/02/2025</td>
-      </tr>
+      <tr id="error_row" class="govuk-table__row">
+          <td class="govuk-table__cell expanded_table_cell">01/02/2025 to 28/02/2025</td>
+          <td class="govuk-table__cell expanded_table_cell">10,000</td>
+          <td class="govuk-table__cell expanded_table_cell">Joe Bloggs</td>
+          <td class="govuk-table__cell expanded_table_cell">ESA</td>
+          <td class="govuk-table__cell expanded_table_cell">Circumstances</td>
+          <td class="govuk-table__cell expanded_table_cell" style="position: relative;"><strong class="govuk-tag govuk-tag--red">Fail</strong><a class="fail-link-open" onclick="javascript: close_error();"></a></td>
+          <td class="govuk-table__cell expanded_table_cell">28/02/2025</td>
+        </tr>
+        <tr id="error_message" class="govuk-table__row">
+          <td colspan="7" class="govuk-table__cell"><p style="font-weight: bold; color: #d4351c; text-align: center;">There was an error with this upload, please contact admin for more details.</p></td>
+        </tr>
       <tr class="govuk-table__row">
         <td class="govuk-table__cell ">01/01/2025 to 31/01/2025</td>
+        <td class="govuk-table__cell ">10,000</td>
         <td class="govuk-table__cell ">Joe Bloggs</td>
         <td class="govuk-table__cell ">ESA</td>
         <td class="govuk-table__cell ">Circumstances</td>
@@ -375,6 +385,7 @@
       </tr>
       <tr class="govuk-table__row">
         <td class="govuk-table__cell ">01/12/2024 to 31/12/2024</td>
+        <td class="govuk-table__cell ">10,000</td>
         <td class="govuk-table__cell ">Joe Bloggs</td>
         <td class="govuk-table__cell ">ESA</td>
         <td class="govuk-table__cell ">Circumstances</td>
@@ -389,6 +400,52 @@
 
 {% endblock %}
 
+<!-- add script for css here-->
+{% block stylesheets %}
+{{ super() }}
+<style type="text/css" />
+  .expanded_table_cell {
+    border-bottom: none;
+  }
+
+  .fail-link-open::before {
+        border-right: 3px solid #1d70b8;
+        border-top: 3px solid #1d70b8;
+        content: "";
+        display: block;
+        height: 7px;
+        position: absolute;
+        right: 40px;
+        top: 20%;
+        margin-top: 5px;
+        -webkit-transform: translateY(0) rotate(135deg) scale(1);
+        -ms-transform: translateY(0) rotate(135deg) scale(1);
+        transform: translateY(0) rotate(135deg) scale(1);
+        width: 7px;
+    }
+
+    .fail-link-close:before {
+      border-right: 3px solid #1d70b8;
+        border-top: 3px solid #1d70b8;
+        content: "";
+        display: block;
+        height: 7px;
+        position: absolute;
+        right: 40px;
+        top: 20%;
+        margin-top: 5px;
+        -webkit-transform: translateY(0) rotate(315deg) scale(1);
+        -ms-transform: translateY(0) rotate(315deg) scale(1);
+        transform: translateY(0) rotate(315deg) scale(1);
+        width: 7px;
+    }
+
+
+
+</style>
+
+{% endblock %}
+
 {% block pageScripts %}
 
 <script>
@@ -398,6 +455,9 @@ const unfiltered = document.getElementById("unfiltered");
 const filtered = document.getElementById('filtered');
 const filter = document.getElementById("filter");
 const filter_active = document.getElementById("filter_active");
+const error_row = document.getElementById("error_row");
+const error_message = document.getElementById("error_message");
+
 
 
   window.onload = function(){
@@ -419,6 +479,18 @@ const filter_active = document.getElementById("filter_active");
     filtered.style.display="none";
 
   });
+
+  function close_error(){
+    error_message.style.display="none";
+    error_row.innerHTML="<td class=\"govuk-table__cell \">01/02/2025 to 28/02/2025</td><td class=\"govuk-table__cell \">10,000</td><td class=\"govuk-table__cell \">Joe Bloggs</td><td class=\"govuk-table__cell \">ESA</td><td class=\"govuk-table__cell \">Circumstances</td><td class=\"govuk-table__cell \" style=\"position: relative;\"><strong class=\"govuk-tag govuk-tag--red\">Fail</strong><a class=\"fail-link-close\" onclick=\"javascript: open_error();\"></a></td><td class=\"govuk-table__cell \">28/02/2025</td>";
+  }
+
+  function open_error(){
+    error_message.style.display="table-row";
+    error_row.innerHTML="<td class=\"govuk-table__cell expanded_table_cell \">01/02/2025 to 28/02/2025</td><td class=\"govuk-table__cell expanded_table_cell \">10,000</td><td class=\"govuk-table__cell expanded_table_cell \">Joe Bloggs</td><td class=\"govuk-table__cell expanded_table_cell \">ESA</td><td class=\"govuk-table__cell expanded_table_cell \">Circumstances</td><td class=\"govuk-table__cell expanded_table_cell\" style=\"position: relative;\"><strong class=\"govuk-tag govuk-tag--red\">Fail</strong><a class=\"fail-link-open\" onclick=\"javascript: close_error();\"></a></td><td class=\"govuk-table__cell expanded_table_cell \">28/02/2025</td>";
+  }
+
+
 </script>
 
 {% endblock %}
