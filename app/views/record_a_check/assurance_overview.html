@@ -1,0 +1,330 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+ 
+{% block header %}
+{{
+    dwpHeader({
+        serviceName: serviceName,
+        serviceHref: "/",
+        container: true
+    })
+}}
+
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+  <a href="#" class="govuk-back-link">Back</a>
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full">
+            <h3 class="govuk-caption-l">FQM-QA-1234</h3>
+            <h1 class="govuk-heading-xl">Assurance overview</h1>
+            <div id="calltoactions">
+                <button style="display: inline;" class="govuk-button" data-module="govuk-button">
+                    Continue Assurance
+                </button>
+                <p class="govuk-body" style="display: inline;">
+                    <a href="#" class="govuk-link">Deselct Assurance</a> <a href="#" class="govuk-link">Reassign Assurance</a>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+            <div id="overview_container">
+                <div id="overview_table">
+                    <table class="govuk-table">
+                        <tbody class="govuk-table__body">
+                        <tr class="govuk-table__row">
+                            <th scope="row" class="govuk-table__header">Status</th>
+                            <td class="govuk-table__cell">in progress</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <th scope="row" class="govuk-table__header">NINO</th>
+                            <td class="govuk-table__cell">AB 12 34 A</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <th scope="row" class="govuk-table__header">Product type</th>
+                            <td class="govuk-table__cell">ESA</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <th scope="row" class="govuk-table__header">Assurance type</th>
+                            <td class="govuk-table__cell">New claims</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <th scope="row" class="govuk-table__header">Event date and time</th>
+                            <td class="govuk-table__cell">1st January 2025 at 10:30AM</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="spacing govuk-!-margin-bottom-9"></div>
+            <h2 class="govuk-heading-l">Step by step</h2>
+            <p class="govuk-body-l">Complete each step in order.</p>
+            <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default">
+                <div class="govuk-accordion__section">
+                    <div class="govuk-accordion__section-header">
+                        <h2 class="govuk-accordion__section-heading">
+                            <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+                            Assurance details
+                            </span>
+                        </h2>
+                    </div>
+                    <div id="accordion-default-content-1" class="govuk-accordion__section-content">
+                        <ul class="govuk-task-list">
+                            <li class="govuk-task-list__item govuk-task-list__item--with-link">
+                                <div class="govuk-task-list__name-and-hint">
+                                <a class="govuk-link govuk-task-list__link" href="case_details" aria-describedby="company-details-1-status">
+                                    Case details
+                                </a>
+                                </div>
+                                <div class="govuk-task-list__status" id="company-details-1-status">
+                                    <strong class="govuk-tag govuk-tag--blue">
+                                        Incomplete
+                                    </strong>
+                                </div>
+                            </li>
+                            <li class="govuk-task-list__item govuk-task-list__item--with-link">
+                                <div class="govuk-task-list__name-and-hint">
+                                <a class="govuk-link govuk-task-list__link" href="sample_details" aria-describedby="company-details-2-status">
+                                    Sample details
+                                </a>
+                                </div>
+                                <div class="govuk-task-list__status" id="company-details-2-status">
+                                <strong class="govuk-tag govuk-tag--blue">
+                                    Incomplete
+                                </strong>
+                                </div>
+                            </li>
+                            <li class="govuk-task-list__item govuk-task-list__item--with-link">
+                                <div class="govuk-task-list__name-and-hint">
+                                <a class="govuk-link govuk-task-list__link" href="award_details" aria-describedby="company-details-4-status">
+                                    Award details 
+                                </a>
+                                </div>
+                                <div class="govuk-task-list__status" id="company-details-4-status">
+                                <strong class="govuk-tag govuk-tag--blue">
+                                    Incomplete
+                                </strong>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="govuk-accordion__section">
+                    <div class="govuk-accordion__section-header">
+                        <h2 class="govuk-accordion__section-heading">
+                            <span class="govuk-accordion__section-button" id="accordion-default-heading-2">
+                            Sections and Questions
+                            </span>
+                        </h2>
+                    </div>
+                    <div id="accordion-default-content-2" class="govuk-accordion__section-content">
+                        <p class="govuk-body govuk-!-font-weight-bold">Mandatory</p>
+                        <ul class="govuk-task-list">
+                            <li class="govuk-task-list__item govuk-task-list__item--with-link">
+                                <div class="govuk-task-list__name-and-hint">
+                                <a class="govuk-link govuk-task-list__link" href="#" aria-describedby="company-details-1-status">
+                                    Security and identity verification for DWP
+                                </a>
+                                </div>
+                                <div class="govuk-task-list__status" id="company-details-1-status">
+                                    <strong class="govuk-tag govuk-tag--blue">
+                                        Incomplete
+                                    </strong>
+                                </div>
+                            </li>
+                            <li class="govuk-task-list__item govuk-task-list__item--with-link">
+                                <div class="govuk-task-list__name-and-hint">
+                                <a class="govuk-link govuk-task-list__link" href="#" aria-describedby="company-details-2-status">
+                                    Housing cost
+                                </a>
+                                </div>
+                                <div class="govuk-task-list__status" id="company-details-2-status">
+                                <strong class="govuk-tag govuk-tag--blue">
+                                    Incomplete
+                                </strong>
+                                </div>
+                            </li>
+                        </ul>
+                        <p class="govuk-body govuk-!-font-weight-bold">Add more sections and questions</p>
+                        <div class="govuk-form-group">
+                            <fieldset class="govuk-fieldset">
+                                <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                                    <div class="govuk-checkboxes__item">
+                                        <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+                                        <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                                            Lorem
+                                        </label>
+                                    </div>
+                                    <div class="govuk-checkboxes__item">
+                                        <input class="govuk-checkboxes__input" id="organisation-2" name="organisation" type="checkbox" value="employment-tribunal">
+                                        <label class="govuk-label govuk-checkboxes__label" for="organisation-2">
+                                            Ipsum
+                                        </label>
+                                    </div>
+                                    <div class="govuk-checkboxes__item">
+                                        <input class="govuk-checkboxes__input" id="organisation-3" name="organisation" type="checkbox" value="MOD">
+                                        <label class="govuk-label govuk-checkboxes__label" for="organisation-3">
+                                            Dolor
+                                        </label>
+                                    </div>
+                                    <div class="govuk-checkboxes__item">
+                                        <input class="govuk-checkboxes__input" id="organisation-4" name="organisation" type="checkbox" value="DfT">
+                                        <label class="govuk-label govuk-checkboxes__label" for="organisation-4">
+                                            Sit
+                                        </label>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </div>
+                    </div>
+                </div>
+                <div class="govuk-accordion__section">
+                    <div class="govuk-accordion__section-header">
+                        <h2 class="govuk-accordion__section-heading">
+                            <span class="govuk-accordion__section-button" id="accordion-default-heading-3">
+                            Error review
+                            </span>
+                        </h2>
+                    </div>
+                    <div id="accordion-default-content-3" class="govuk-accordion__section-content">
+                        <p class="govuk-body">This is the content for Know your audience.</p>
+                    </div>
+                </div>
+                <div class="govuk-accordion__section">
+                    <div class="govuk-accordion__section-header">
+                        <h2 class="govuk-accordion__section-heading">
+                            <span class="govuk-accordion__section-button" id="accordion-default-heading-4">
+                            Assuance Summary
+                            </span>
+                        </h2>
+                    </div>
+                    <div id="accordion-default-content-4" class="govuk-accordion__section-content">
+                        <p class="govuk-body">This is the content for How people read.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="govuk-grid-column-one-third">
+            <div id="overview_history">
+                <h2 class="govuk-heading-l">Assurance History</h2>
+                    <ol class="hmrc-timeline">
+                        <li class="hmrc-timeline__event">
+                            <h2 class="hmrc-timeline__event-title">Award details completed</h2>
+                            <time class="hmrc-timeline__event-meta" datetime="2026-04-01">01 April 2026</time>
+                            <div class="hmrc-timeline__event-content">
+                                <p class="govuk-body">By Philip Hotton</p>
+                            </div>
+                        </li>
+                        <li class="hmrc-timeline__event">
+                            <h2 class="hmrc-timeline__event-title">Sample details completed</h2>
+                            <time class="hmrc-timeline__event-meta" datetime="2026-04-01">01 April 2026</time>
+                            <div class="hmrc-timeline__event-content">
+                                <p class="govuk-body">By Philip Hotton</p>
+                            </div>
+                        </li>
+                        <li class="hmrc-timeline__event">
+                            <h2 class="hmrc-timeline__event-title">Case details completed</h2>
+                            <time class="hmrc-timeline__event-meta" datetime="2026-04-01">01 April 2026</time>
+                            <div class="hmrc-timeline__event-content">
+                                <p class="govuk-body">By Philip Hotton</p>
+                            </div>
+                        </li>
+                        <li class="hmrc-timeline__event">
+                            <h2 class="hmrc-timeline__event-title">Assurance selected</h2>
+                            <time class="hmrc-timeline__event-meta" datetime="2026-04-01">01 April 2026</time>
+                            <div class="hmrc-timeline__event-content">
+                                <p class="govuk-body">By System</p>
+                            </div>
+                        </li>
+                    </ol>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+<!-- add script for css here-->
+{% block stylesheets %}
+{{ super() }}
+<style type="text/css" />
+.hmrc-timeline {
+    border-left: 5px solid #1d70b8;
+    margin: 0 0 30px;
+    padding: 0;
+}
+
+ol {
+    display: block;
+    list-style-type: decimal;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    padding-inline-start: 40px;
+    unicode-bidi: isolate;
+}
+
+.hmrc-timeline__event {
+    list-style: none;
+    padding-bottom: 20px;
+    padding-left: 15px;
+    position: relative;
+}
+
+li {
+    display: list-item;
+    unicode-bidi: isolate;
+}
+
+.hmrc-timeline__event-title {
+    margin-bottom: 5px;
+}
+
+    .govuk-heading-m, .hmrc-timeline__event-title, .subsection-collection .js-title-controls-wrap .section-title {
+        font-size: 1.5rem;
+        line-height: 1.25;
+    }
+
+    .govuk-heading-m, .hmrc-timeline__event-title, .subsection-collection .js-title-controls-wrap .section-title {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: var(--govuk-text-colour, #0b0c0c);
+    display: block;
+    font-family: GDS Transport, arial, sans-serif;
+    font-size: 1.3125rem;
+    font-weight: 700;
+    line-height: 1.1904761905;
+    margin-bottom: 15px;
+    margin-top: 0;
+}
+
+.hmrc-timeline__event-title:before {
+    background-color: #1d70b8;
+    content: "";
+    height: 5px;
+    left: 0;
+    position: absolute;
+    top: .5em;
+    width: 7px;
+}
+
+.hmrc-timeline__event-meta {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: var(--govuk-text-colour, #0b0c0c);
+    display: block;
+    font-family: GDS Transport, arial, sans-serif;
+    font-size: 1.1875rem;
+    font-weight: 400;
+    line-height: 1.3157894737;
+    margin-bottom: 15px;
+}
+</style>
+{% endblock %}
+
+

@@ -1,0 +1,391 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+ 
+{% block header %}
+{{
+    dwpHeader({
+        serviceName: serviceName,
+        serviceHref: "/",
+        container: true
+    })
+}}
+
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-width-container">
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-third">
+            <div id="menu">
+                <p class="govuk-body">
+                    <a href="assurance_overview" class="govuk-link govuk-link--no-visited-state">Assurance Overview</a>
+                </p>
+                <h2 class="govuk-heading-m">Assurance details</h2>
+                <hr class="govuk-section-break govuk-section-break--visible">
+                <div class="govuk-!-static-margin-6"></div>
+                <p class="govuk-body govuk-!-font-weight-bold">Case details</a></p>
+                <p><a href="sample_details" class="govuk-link govuk-link--no-visited-state">Sample details</a></p>
+                <p><a href="award_details" class="govuk-link govuk-link--no-visited-state">Award details</a></p>
+            </div>
+        </div>
+        <div class="govuk-grid-column-two-thirds">
+            <a href="#" class="govuk-back-link">Back</a>
+            <h3 class="govuk-caption-l">FQM-QA-1234</h3>
+            <h1 class="govuk-heading-xl">Case details</h1>
+            <div class="govuk-form-group">
+                <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                    <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+                        <label class="govuk-label govuk-checkboxes__label govuk-fieldset__legend--s" for="waste">
+                            Exclude from MI
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="govuk-form-group">
+                <label class="govuk-label govuk-fieldset__legend--s" for="event-name">
+                    Customer first name
+                </label>
+                <input class="govuk-input" id="event-name" name="eventName" type="text">
+            </div>
+            <div class="govuk-form-group">
+                <label class="govuk-label govuk-fieldset__legend--s" for="event-name">
+                    Customer last name
+                </label>
+                <input class="govuk-input " id="event-name" name="eventName" type="text">
+            </div>
+            <!--partner-->
+            <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset" aria-describedby="changedName-hint">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                    <h2 class="govuk-fieldset__heading">
+                        Is there a partner?
+                    </h2>
+                    </legend>
+                    <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+                        <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="partner_yes" name="partner" type="radio" value="yes">
+                            <label class="govuk-label govuk-radios__label" for="partner_yes">
+                            Yes
+                            </label>
+                        </div>
+                        <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="parner_no" name="partner" type="radio" value="no">
+                            <label class="govuk-label govuk-radios__label" for="parner_no">
+                            No
+                            </label>
+                        </div>
+                    </div>
+                    <div id="customer_partner" class="govuk-inset-text">
+                        <div class="govuk-form-group">
+                            <label class="govuk-label govuk-fieldset__legend--s" for="event-name">
+                                Partner's first name
+                            </label>
+                            <input class="govuk-input " id="event-name" name="eventName" type="text">
+                        </div>
+                        <div class="govuk-form-group">
+                            <label class="govuk-label govuk-fieldset__legend--s" for="event-name">
+                                Partner's last name
+                            </label>
+                            <input class="govuk-input " id="event-name" name="eventName" type="text">
+                        </div>
+                        <div class="govuk-form-group">
+                            <label class="govuk-label govuk-fieldset__legend--s" for="event-name">
+                                Partner's NINO
+                            </label>
+                            <input class="govuk-input " id="event-name" name="eventName" type="text">
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+            <!--Telephony-->
+            <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset" aria-describedby="changedName-hint">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                    <h2 class="govuk-fieldset__heading">
+                        Telephony call present?
+                    </h2>
+                    </legend>
+                    <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+                        <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="telephony_yes" name="telephony" type="radio" value="yes">
+                            <label class="govuk-label govuk-radios__label" for="telephony_yes">
+                            Yes
+                            </label>
+                        </div>
+                        <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="telephony_no" name="telephony" type="radio" value="no">
+                            <label class="govuk-label govuk-radios__label" for="telephony_no">
+                            No
+                            </label>
+                        </div>
+                    </div>
+                    <div id="telephony_details" class="govuk-inset-text">
+                        <div class="govuk-form-group">
+                            <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
+                                <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                                    <h2 class="govuk-fieldset__heading">
+                                        Call date
+                                    </h2>
+                                </legend>
+                                <div id="passport-issued-hint" class="govuk-hint">
+                                    For example, 27 3 2007
+                                </div>
+                                <div class="govuk-date-input" id="passport-issued">
+                                    <div class="govuk-date-input__item">
+                                        <div class="govuk-form-group">
+                                        <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+                                            Day
+                                        </label>
+                                        <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric">
+                                        </div>
+                                    </div>
+                                    <div class="govuk-date-input__item">
+                                        <div class="govuk-form-group">
+                                        <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+                                            Month
+                                        </label>
+                                        <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric">
+                                        </div>
+                                    </div>
+                                    <div class="govuk-date-input__item">
+                                        <div class="govuk-form-group">
+                                        <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+                                            Year
+                                        </label>
+                                        <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric">
+                                        </div>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </div>
+                        <div class="govuk-form-group">
+                            <label class="govuk-label govuk-fieldset__legend--s" for="event-name">
+                                Primary verint number
+                            </label>
+                            <input class="govuk-input " id="event-name" name="eventName" type="text">
+                        </div>
+                        <div class="govuk-form-group">
+                            <fieldset class="govuk-fieldset" aria-describedby="changedName-hint">
+                                <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                                <h2 class="govuk-fieldset__heading">
+                                    Additional or outbound call present?
+                                </h2>
+                                </legend>
+                                <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+                                    <div class="govuk-radios__item">
+                                        <input class="govuk-radios__input" id="additional_telephony_yes" name="additional_telephony" type="radio" value="yes">
+                                        <label class="govuk-label govuk-radios__label" for="additional_telephony_yes">
+                                        Yes
+                                        </label>
+                                    </div>
+                                    <div class="govuk-radios__item">
+                                        <input class="govuk-radios__input" id="additional_telephony_no" name="additional_telephony" type="radio" value="no">
+                                        <label class="govuk-label govuk-radios__label" for="additional_telephony_no">
+                                        No
+                                        </label>
+                                    </div>
+                                </div>
+                                <div id="additional_telephony_details" class="govuk-inset-text">
+                                    <div class="govuk-form-group">
+                                        <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
+                                            <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                                                <h2 class="govuk-fieldset__heading">
+                                                    Call date
+                                                </h2>
+                                            </legend>
+                                            <div id="passport-issued-hint" class="govuk-hint">
+                                                For example, 27 3 2007
+                                            </div>
+                                            <div class="govuk-date-input" id="passport-issued">
+                                                <div class="govuk-date-input__item">
+                                                    <div class="govuk-form-group">
+                                                    <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+                                                        Day
+                                                    </label>
+                                                    <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric">
+                                                    </div>
+                                                </div>
+                                                <div class="govuk-date-input__item">
+                                                    <div class="govuk-form-group">
+                                                    <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+                                                        Month
+                                                    </label>
+                                                    <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric">
+                                                    </div>
+                                                </div>
+                                                <div class="govuk-date-input__item">
+                                                    <div class="govuk-form-group">
+                                                    <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+                                                        Year
+                                                    </label>
+                                                    <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </fieldset>
+                                    </div>
+                                    <div class="govuk-form-group">
+                                        <label class="govuk-label govuk-fieldset__legend--s" for="event-name">
+                                            Secondary verint number
+                                        </label>
+                                        <input class="govuk-input " id="event-name" name="eventName" type="text">
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </div>
+                    </div>
+
+                </fieldset>
+            </div>
+            <!--Dates-->
+            <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                        <h2 class="govuk-fieldset__heading">
+                            Claim activity start date
+                        </h2>
+                    </legend>
+                    <div id="passport-issued-hint" class="govuk-hint">
+                        For example, 27 3 2007
+                    </div>
+                    <div class="govuk-date-input" id="passport-issued">
+                        <div class="govuk-date-input__item">
+                            <div class="govuk-form-group">
+                            <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+                                Day
+                            </label>
+                            <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric">
+                            </div>
+                        </div>
+                        <div class="govuk-date-input__item">
+                            <div class="govuk-form-group">
+                            <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+                                Month
+                            </label>
+                            <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric">
+                            </div>
+                        </div>
+                        <div class="govuk-date-input__item">
+                            <div class="govuk-form-group">
+                            <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+                                Year
+                            </label>
+                            <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric">
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+            <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                        <h2 class="govuk-fieldset__heading">
+                            Adjudicated date
+                        </h2>
+                    </legend>
+                    <div id="passport-issued-hint" class="govuk-hint">
+                        For example, 27 3 2007
+                    </div>
+                    <div class="govuk-date-input" id="passport-issued">
+                        <div class="govuk-date-input__item">
+                            <div class="govuk-form-group">
+                            <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+                                Day
+                            </label>
+                            <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric">
+                            </div>
+                        </div>
+                        <div class="govuk-date-input__item">
+                            <div class="govuk-form-group">
+                            <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+                                Month
+                            </label>
+                            <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric">
+                            </div>
+                        </div>
+                        <div class="govuk-date-input__item">
+                            <div class="govuk-form-group">
+                            <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+                                Year
+                            </label>
+                            <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric">
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+            <button type="submit" class="govuk-button" data-module="govuk-button">
+                Save and continue
+            </button>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block pageScripts %}
+<script>
+
+/*content sections */
+const partner = document.getElementById("customer_partner");
+const telephony = document.getElementById("telephony_details");
+const additional_telephony = document.getElementById("additional_telephony_details");
+
+
+/*question sets*/
+const partner_question = document.querySelectorAll('input[name="partner"]');
+const telephony_question = document.querySelectorAll('input[name="telephony"]');
+const additional_telephony_question = document.querySelectorAll('input[name="additional_telephony"]');
+
+
+/*on load default */
+window.onload = function(){
+partner.style.display="none";
+telephony.style.display="none";
+additional_telephony.style.display="none";
+
+}
+
+/* radio logic */
+partner_question.forEach(element => {
+    element.addEventListener('change', function(){
+        if (this.value==='yes'){
+            partner.style.display="block";
+        }
+        else {
+            partner.style.display="none";
+        }
+    });
+});
+
+telephony_question.forEach(element => {
+    element.addEventListener('change', function(){
+        if (this.value==='yes'){
+            telephony.style.display="block";
+        }
+        else {
+            telephony.style.display="none";
+        }
+    });
+});
+
+additional_telephony_question.forEach(element => {
+    element.addEventListener('change', function(){
+        if (this.value==='yes'){
+            additional_telephony.style.display="block";
+        }
+        else {
+            additional_telephony.style.display="none";
+        }
+    });
+});
+
+
+
+</script>
+{% endblock %}
+

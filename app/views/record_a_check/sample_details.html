@@ -1,0 +1,244 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+ 
+{% block header %}
+{{
+    dwpHeader({
+        serviceName: serviceName,
+        serviceHref: "/",
+        container: true
+    })
+}}
+
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-width-container">
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-third">
+            <div id="menu">
+                <p class="govuk-body">
+                    <a href="assurance_overview" class="govuk-link govuk-link--no-visited-state">Assurance Overview</a>
+                </p>
+                <h2 class="govuk-heading-m">Assurance details</h2>
+                <hr class="govuk-section-break govuk-section-break--visible">
+                <div class="govuk-!-static-margin-6"></div>
+                <p><a href="case_details" class="govuk-link govuk-link--no-visited-state">Case details</a></p>
+                <p class="govuk-body govuk-!-font-weight-bold">Sample details</a></p>
+                <p><a href="award_details" class="govuk-link govuk-link--no-visited-state">Award details</a></p>
+            </div>
+        </div>
+        <div class="govuk-grid-column-two-thirds">
+            <a href="#" class="govuk-back-link">Back</a>
+            <h3 class="govuk-caption-l">FQM-QA-1234</h3>
+            <h1 class="govuk-heading-xl">Sample details</h1>
+            <div class="govuk-form-group">
+                <label class="govuk-label govuk-fieldset__legend--s" for="telphony_office_select">
+                    Which office handled the telephony?
+                </label>
+                <select class="govuk-select" id="telphony_office_select">
+                    <option value="#">Please select</option>
+                    <option value="#">Office 1</option>
+                    <option value="#">Office 2</option>
+                    <option value="#">Office 3</option>
+                </select>
+            </div>
+            <div class="govuk-form-group">
+                <label class="govuk-label govuk-fieldset__legend--s" for="jobcenter_select">
+                    Which Jobcenter handled the case?
+                </label>
+                <select class="govuk-select" id="jobcenter_select">
+                    <option value="#">Please select</option>
+                    <option value="#">Jobcentre 1</option>
+                    <option value="#">Jobcentre 2</option>
+                    <option value="#">Jobcentre 3</option>
+                </select>
+            </div>
+            <!--second jobcentre-->
+            <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset" aria-describedby="changedName-hint">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                    <h2 class="govuk-fieldset__heading">
+                        Was a secondary jobcentre involved?
+                    </h2>
+                    </legend>
+                    <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+                        <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="second_jobcentre_yes" name="second_jobcentre" type="radio" value="yes">
+                            <label class="govuk-label govuk-radios__label" for="second_jobcentre_yes">
+                            Yes
+                            </label>
+                        </div>
+                        <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="second_jobcentre_no" name="second_jobcentre" type="radio" value="no">
+                            <label class="govuk-label govuk-radios__label" for="second_jobcentre_no">
+                            No
+                            </label>
+                        </div>
+                    </div>
+                    <div id="second_jobcentre" class="govuk-inset-text">
+                        <div class="govuk-form-group">
+                            <label class="govuk-label govuk-fieldset__legend--s" for="second_jobcentre_select">
+                                Secondary jobcenter
+                            </label>
+                            <select class="govuk-select" id="second_jobcentre_select">
+                                <option value="#">Please select</option>
+                                <option value="#">Jobcentre 1</option>
+                                <option value="#">Jobcentre 2</option>
+                                <option value="#">Jobcentre 3</option>
+                            </select>
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+            <div class="govuk-form-group">
+                <label class="govuk-label govuk-fieldset__legend--s" for="jobcenter">
+                    Which office processed the case?
+                </label>
+                <select class="govuk-select" id="jobcenter">
+                    <option value="#">Please select</option>
+                    <option value="#">Office 1</option>
+                    <option value="#">Office 2</option>
+                    <option value="#">Office 3</option>
+                </select>
+            </div>
+            <!--second office-->
+            <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset" aria-describedby="changedName-hint">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                    <h2 class="govuk-fieldset__heading">
+                        Was a secondary processing office involved?
+                    </h2>
+                    </legend>
+                    <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+                        <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="second_office_yes" name="second_office" type="radio" value="yes">
+                            <label class="govuk-label govuk-radios__label" for="second_office_yes">
+                            Yes
+                            </label>
+                        </div>
+                        <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="second_office_no" name="second_office" type="radio" value="no">
+                            <label class="govuk-label govuk-radios__label" for="second_office_no">
+                            No
+                            </label>
+                        </div>
+                    </div>
+                    <div id="second_office" class="govuk-inset-text">
+                        <div class="govuk-form-group">
+                            <label class="govuk-label govuk-fieldset__legend--s" for="second_office_select">
+                                Secondary processing office
+                            </label>
+                            <select class="govuk-select" id="second_office_select">
+                                <option value="#">Please select</option>
+                                <option value="#">Office 1</option>
+                                <option value="#">Office 2</option>
+                                <option value="#">Office 3</option>
+                            </select>
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+            <div class="govuk-form-group">
+                <label class="govuk-label govuk-fieldset__legend--s" for="channel_source">
+                    Channel source
+                </label>
+                <select class="govuk-select" id="channel_source">
+                    <option value="#">Please select</option>
+                    <option value="#">Lorem</option>
+                    <option value="#">Ipsum</option>
+                    <option value="#">Dolor</option>
+                </select>
+            </div>
+            <div class="govuk-form-group">
+                <label class="govuk-label govuk-fieldset__legend--s" for="claim_type">
+                    Claim type
+                </label>
+                <select class="govuk-select" id="claim_type">
+                    <option value="#">Please select</option>
+                    <option value="#">Lorem</option>
+                    <option value="#">Ipsum</option>
+                    <option value="#">Dolor</option>
+                </select>
+            </div>
+            <div class="govuk-form-group">
+                <label class="govuk-label govuk-fieldset__legend--s" for="assessment_provider">
+                    Assessment provider
+                </label>
+                <select class="govuk-select" id="assessment_provider">
+                    <option value="#">Please select</option>
+                    <option value="#">Lorem</option>
+                    <option value="#">Ipsum</option>
+                    <option value="#">Dolor</option>
+                </select>
+            </div>
+            <div class="govuk-form-group">
+                <label class="govuk-label govuk-fieldset__legend--s" for="assurance_type">
+                    Assurance type
+                </label>
+                <select class="govuk-select" id="assurance_type">
+                    <option value="#">Please select</option>
+                    <option value="#">Lorem</option>
+                    <option value="#">Ipsum</option>
+                    <option value="#">Dolor</option>
+                </select>
+            </div>
+            <button type="submit" class="govuk-button" data-module="govuk-button">
+                Save and continue
+            </button>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block pageScripts %}
+<script>
+
+/*content sections */
+const second_jobcentre = document.getElementById("second_jobcentre");
+const second_office = document.getElementById("second_office");
+
+/*question sets*/
+const second_jobcentre_question = document.querySelectorAll('input[name="second_jobcentre"]');
+const second_office_question = document.querySelectorAll('input[name="second_office"]');
+
+
+/*on load default */
+window.onload = function(){
+second_jobcentre.style.display="none";
+second_office.style.display="none";
+}
+
+/* radio logic */
+second_jobcentre_question.forEach(element => {
+    element.addEventListener('change', function(){
+        if (this.value==='yes'){
+            second_jobcentre.style.display="block";
+        }
+        else {
+            second_jobcentre.style.display="none";
+        }
+    });
+});
+
+second_office_question.forEach(element => {
+    element.addEventListener('change', function(){
+        if (this.value==='yes'){
+            second_office.style.display="block";
+        }
+        else {
+            second_office.style.display="none";
+        }
+    });
+});
+
+
+
+
+</script>
+{% endblock %}
+
