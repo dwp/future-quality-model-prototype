@@ -22,16 +22,26 @@
         <div class="govuk-grid-column-full">
             <h3 class="govuk-caption-l">FQM-QA-1234</h3>
             <h1 class="govuk-heading-xl">Assurance overview</h1>
-            <div id="calltoactions">
-                <button style="display: inline;" class="govuk-button" data-module="govuk-button">
-                    Continue Assurance
-                </button>
-                <p class="govuk-body" style="display: inline;">
-                    <a href="#" class="govuk-link">Deselct Assurance</a> <a href="#" class="govuk-link">Reassign Assurance</a>
-                </p>
-            </div>
         </div>
     </div>
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-third">
+            <button style="display: inline;" onclick="location.href='case_details';" class="govuk-button" data-module="govuk-button">
+                Start assurance
+            </button>
+        </div>
+        <div class="govuk-grid-column-one-third">
+            <p class="govuk-body" style="vertical-align: middle;">
+                <a href="#" class="govuk-link">Deselct assurance</a>
+            </p>
+        </div>
+        <div class="govuk-grid-column-one-third">
+            <p class="govuk-body" style="vertical-align: middle;">
+                <a href="#" class="govuk-link">Reassign assurance</a>
+            </p>
+        </div>
+    </div>
+    <div class="spacing govuk-!-margin-bottom-6"></div>
     <div class="govuk-grid-row">
         <div class="govuk-grid-column-two-thirds">
             <div id="overview_container">
@@ -40,7 +50,7 @@
                         <tbody class="govuk-table__body">
                         <tr class="govuk-table__row">
                             <th scope="row" class="govuk-table__header">Status</th>
-                            <td class="govuk-table__cell">in progress</td>
+                            <td class="govuk-table__cell"><strong class="govuk-tag">In progress</strong></td>
                         </tr>
                         <tr class="govuk-table__row">
                             <th scope="row" class="govuk-table__header">NINO</th>
@@ -55,7 +65,7 @@
                             <td class="govuk-table__cell">New claims</td>
                         </tr>
                         <tr class="govuk-table__row">
-                            <th scope="row" class="govuk-table__header">Event date and time</th>
+                            <th scope="row" class="govuk-table__header">Business event date and time</th>
                             <td class="govuk-table__cell">1st January 2025 at 10:30AM</td>
                         </tr>
                         </tbody>
@@ -63,8 +73,6 @@
                 </div>
             </div>
             <div class="spacing govuk-!-margin-bottom-9"></div>
-            <h2 class="govuk-heading-l">Step by step</h2>
-            <p class="govuk-body-l">Complete each step in order.</p>
             <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default">
                 <div class="govuk-accordion__section">
                     <div class="govuk-accordion__section-header">
@@ -124,7 +132,7 @@
                         </h2>
                     </div>
                     <div id="accordion-default-content-2" class="govuk-accordion__section-content">
-                        <p class="govuk-body govuk-!-font-weight-bold">Mandatory</p>
+                        <p class="govuk-heading-m govuk-!-font-weight-bold">Mandatory</p>
                         <ul class="govuk-task-list">
                             <li class="govuk-task-list__item govuk-task-list__item--with-link">
                                 <div class="govuk-task-list__name-and-hint">
@@ -151,32 +159,83 @@
                                 </div>
                             </li>
                         </ul>
-                        <p class="govuk-body govuk-!-font-weight-bold">Add more sections and questions</p>
+                        <div class="spacing govuk-!-margin-bottom-9"></div>
+                        <p class="govuk-heading-m govuk-!-font-weight-bold">Optional</p>
+                        <div class="spacing govuk-!-margin-bottom-9"></div>
+                        <p class="govuk-heading-m govuk-!-font-weight-bold">Add more sections</p>
                         <div class="govuk-form-group">
                             <fieldset class="govuk-fieldset">
                                 <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
                                     <div class="govuk-checkboxes__item">
                                         <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
                                         <label class="govuk-label govuk-checkboxes__label" for="organisation">
-                                            Lorem
+                                            Personal details
                                         </label>
                                     </div>
                                     <div class="govuk-checkboxes__item">
                                         <input class="govuk-checkboxes__input" id="organisation-2" name="organisation" type="checkbox" value="employment-tribunal">
                                         <label class="govuk-label govuk-checkboxes__label" for="organisation-2">
-                                            Ipsum
+                                            Payment
                                         </label>
                                     </div>
                                     <div class="govuk-checkboxes__item">
                                         <input class="govuk-checkboxes__input" id="organisation-3" name="organisation" type="checkbox" value="MOD">
                                         <label class="govuk-label govuk-checkboxes__label" for="organisation-3">
-                                            Dolor
+                                            Claim date and eligibility
                                         </label>
                                     </div>
                                     <div class="govuk-checkboxes__item">
                                         <input class="govuk-checkboxes__input" id="organisation-4" name="organisation" type="checkbox" value="DfT">
                                         <label class="govuk-label govuk-checkboxes__label" for="organisation-4">
-                                            Sit
+                                            Contributions, conditions and tax
+                                        </label>
+                                    </div>
+                                    <div class="govuk-checkboxes__item">
+                                        <input class="govuk-checkboxes__input" id="organisation-4" name="organisation" type="checkbox" value="DfT">
+                                        <label class="govuk-label govuk-checkboxes__label" for="organisation-4">
+                                            Medical details
+                                        </label>
+                                    </div>
+                                    <div class="govuk-checkboxes__item">
+                                        <input class="govuk-checkboxes__input" id="organisation-4" name="organisation" type="checkbox" value="DfT">
+                                        <label class="govuk-label govuk-checkboxes__label" for="organisation-4">
+                                            Linking
+                                        </label>
+                                    </div>
+                                    <div class="govuk-checkboxes__item">
+                                        <input class="govuk-checkboxes__input" id="organisation-4" name="organisation" type="checkbox" value="DfT">
+                                        <label class="govuk-label govuk-checkboxes__label" for="organisation-4">
+                                            Other benefits
+                                        </label>
+                                    </div>
+                                    <div class="govuk-checkboxes__item">
+                                        <input class="govuk-checkboxes__input" id="organisation-4" name="organisation" type="checkbox" value="DfT">
+                                        <label class="govuk-label govuk-checkboxes__label" for="organisation-4">
+                                            Savings
+                                        </label>
+                                    </div>
+                                    <div class="govuk-checkboxes__item">
+                                        <input class="govuk-checkboxes__input" id="organisation-4" name="organisation" type="checkbox" value="DfT">
+                                        <label class="govuk-label govuk-checkboxes__label" for="organisation-4">
+                                            Premium and extra amounts
+                                        </label>
+                                    </div>
+                                    <div class="govuk-checkboxes__item">
+                                        <input class="govuk-checkboxes__input" id="organisation-4" name="organisation" type="checkbox" value="DfT">
+                                        <label class="govuk-label govuk-checkboxes__label" for="organisation-4">
+                                            Employment, self employment and earnings
+                                        </label>
+                                    </div>
+                                    <div class="govuk-checkboxes__item">
+                                        <input class="govuk-checkboxes__input" id="organisation-4" name="organisation" type="checkbox" value="DfT">
+                                        <label class="govuk-label govuk-checkboxes__label" for="organisation-4">
+                                            Non-state pension
+                                        </label>
+                                    </div>
+                                    <div class="govuk-checkboxes__item">
+                                        <input class="govuk-checkboxes__input" id="organisation-4" name="organisation" type="checkbox" value="DfT">
+                                        <label class="govuk-label govuk-checkboxes__label" for="organisation-4">
+                                            Special rules / end of life
                                         </label>
                                     </div>
                                 </div>
@@ -184,7 +243,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="govuk-accordion__section">
+                <!--<div class="govuk-accordion__section">
                     <div class="govuk-accordion__section-header">
                         <h2 class="govuk-accordion__section-heading">
                             <span class="govuk-accordion__section-button" id="accordion-default-heading-3">
@@ -195,17 +254,17 @@
                     <div id="accordion-default-content-3" class="govuk-accordion__section-content">
                         <p class="govuk-body">This is the content for Know your audience.</p>
                     </div>
-                </div>
+                </div>-->
                 <div class="govuk-accordion__section">
                     <div class="govuk-accordion__section-header">
                         <h2 class="govuk-accordion__section-heading">
                             <span class="govuk-accordion__section-button" id="accordion-default-heading-4">
-                            Assuance Summary
+                             Summary
                             </span>
                         </h2>
                     </div>
                     <div id="accordion-default-content-4" class="govuk-accordion__section-content">
-                        <p class="govuk-body">This is the content for How people read.</p>
+                        <p class="govuk-body">...</p>
                     </div>
                 </div>
             </div>
@@ -214,7 +273,7 @@
             <div id="overview_history">
                 <h2 class="govuk-heading-l">Assurance History</h2>
                     <ol class="hmrc-timeline">
-                        <li class="hmrc-timeline__event">
+                        <!--<li class="hmrc-timeline__event">
                             <h2 class="hmrc-timeline__event-title">Award details completed</h2>
                             <time class="hmrc-timeline__event-meta" datetime="2026-04-01">01 April 2026</time>
                             <div class="hmrc-timeline__event-content">
@@ -234,7 +293,7 @@
                             <div class="hmrc-timeline__event-content">
                                 <p class="govuk-body">By Philip Hotton</p>
                             </div>
-                        </li>
+                        </li>-->
                         <li class="hmrc-timeline__event">
                             <h2 class="hmrc-timeline__event-title">Assurance selected</h2>
                             <time class="hmrc-timeline__event-meta" datetime="2026-04-01">01 April 2026</time>
