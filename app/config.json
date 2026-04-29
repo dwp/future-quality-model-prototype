@@ -1,5 +1,5 @@
 {
-  "serviceName": "Future Quality Model",
+  "serviceName": "Quality Assurance App",
   "useServiceNavigation": true,
   "plugins": {
     "govuk-frontend": {
