@@ -1,0 +1,103 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Start - Case assignment – {{ serviceName }} – GOV.UK Prototype
+{% endblock %}
+ 
+{% block header %}
+{{
+    dwpHeader({
+        serviceName: serviceName,
+        serviceHref: "/",
+        container: true
+    })
+}}
+
+{% endblock %}
+
+
+{% block content %}
+
+
+<h1 class="govuk-heading-l">Choose a reason for deselecting this case</h1>
+
+<div class="govuk-form-group">
+    <fieldset class="govuk-fieldset" aria-describedby="changedName-hint">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+        <h2 class="govuk-fieldset__heading">
+            Please select a reason
+        </h2>
+        </legend>
+        <div class="govuk-radios " data-module="govuk-radios">
+            <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="partner_yes" name="partner" type="radio" value="yes">
+                <label class="govuk-label govuk-radios__label" for="partner_yes">
+                Claimant resides in Northern Ireland
+                </label>
+            </div>
+            <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="parner_no" name="partner" type="radio" value="no">
+                <label class="govuk-label govuk-radios__label" for="parner_no">
+                No claim to benefit within the assurance period.
+                </label>
+            </div>
+                <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="parner_no" name="partner" type="radio" value="no">
+                <label class="govuk-label govuk-radios__label" for="parner_no">
+                Claim terminated or withdrawn before assurance period
+                </label>
+            </div>
+                <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="parner_no" name="partner" type="radio" value="no">
+                <label class="govuk-label govuk-radios__label" for="parner_no">
+                Case subject to QA within current reporting year
+                </label>
+            </div>
+                <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="parner_no" name="partner" type="radio" value="no">
+                <label class="govuk-label govuk-radios__label" for="parner_no">
+                Clerical case
+                </label>
+            </div>
+                <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="parner_no" name="partner" type="radio" value="no">
+                <label class="govuk-label govuk-radios__label" for="parner_no">
+                New claim for same customer assured within same month
+                </label>
+            </div>
+                <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="parner_no" name="partner" type="radio" value="no">
+                <label class="govuk-label govuk-radios__label" for="parner_no">
+                Determination of new claim to benefit on claims maintenance sample
+                </label>
+            </div>
+                <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="parner_no" name="partner" type="radio" value="no">
+                <label class="govuk-label govuk-radios__label" for="parner_no">
+                Performance measurement or Tier 3 activity on case
+                </label>
+            </div>
+                <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="parner_no" name="partner" type="radio" value="no">
+                <label class="govuk-label govuk-radios__label" for="parner_no">
+                New claim not fully processed yet (decision outstanding)
+                </label>
+            </div>
+                <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="parner_no" name="partner" type="radio" value="no">
+                <label class="govuk-label govuk-radios__label" for="parner_no">
+                Credit only case.
+                </label>
+            </div>
+        </div>
+    </fieldset>
+</div>
+<div class="govuk-button-group">
+    <button type="submit" class="govuk-button" data-module="govuk-button">
+        Save and continue
+    </button>
+    <a href="#" onclick="javascript: history.back()" class="govuk-link">Cancel</a>
+</div>
+
+{% endblock %}
+

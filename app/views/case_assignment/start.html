@@ -1,0 +1,114 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Start - Case assignment – {{ serviceName }} – GOV.UK Prototype
+{% endblock %}
+ 
+{% block header %}
+{{
+    dwpHeader({
+        serviceName: serviceName,
+        serviceHref: "/",
+        container: true
+    })
+}}
+
+{% endblock %}
+
+
+{% block content %}
+
+
+<h1 class="govuk-heading-l">Start a new assurance</h1>
+<!--
+<div class="govuk-form-group" id="product_line_dropdown">
+  <label class="govuk-label" for="product_line">
+    Select product line
+  </label>
+  <select class="govuk-select" id="product_line" name="product_line">
+    <option value="#">Please select</option>
+    <option value="esa">ESA</option>
+    <option value="esa">UC</option>
+    <option value="esa">AA</option>
+  </select>
+</div>
+
+<div class="govuk-form-group" id="assurance_type_dropdown">
+  <label class="govuk-label" for="assurance_type">
+    Select assurance type
+  </label>
+  <select class="govuk-select" id="assurance_type" name="assurance_type">
+    <option value="#">Please select</option>
+    <option value="new_claim">New claims</option>
+    <option value="adjustment">Adjustments</option>
+    <option value="circumstances">Change in circumstances</option>
+  </select>
+</div>
+
+-->
+
+<div class="govuk-form-group">
+    <fieldset class="govuk-fieldset" aria-describedby="changedName-hint">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+        <h2 class="govuk-fieldset__heading">
+            Choose a product line
+        </h2>
+        </legend>
+        <div class="govuk-radios " data-module="govuk-radios">
+            <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="pl" name="pl" type="radio" value="esa">
+                <label class="govuk-label govuk-radios__label" for="pl">
+                ESA
+                </label>
+            </div>
+        </div>
+    </fieldset>
+</div>
+
+<div class="govuk-form-group">
+    <fieldset class="govuk-fieldset" aria-describedby="changedName-hint">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+        <h2 class="govuk-fieldset__heading">
+            Choose an assurance type
+        </h2>
+        </legend>
+        <div class="govuk-radios " data-module="govuk-radios">
+            <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="ast" name="ast" type="radio" value="new_claims">
+                <label class="govuk-label govuk-radios__label" for="ast">
+                New claims
+                </label>
+            </div>
+        </div>
+    </fieldset>
+</div>
+
+<div class="govuk-button-group">
+    <button type="submit" onclick="location.href='../record_a_check/assurance_overview.html'" class="govuk-button" data-module="govuk-button">
+        Save and continue
+    </button>
+    <a href="#" class="govuk-link">Cancel</a>
+</div>
+
+{% endblock %}
+
+{% block pageScripts %}
+<script>
+
+  const product_line = document.getElementById("product_line");
+  const assurance_type_dropdown = document.getElementById("assurance_type_dropdown");
+  
+  window.onload = function(){
+   assurance_type_dropdown.style.display="none";
+  }
+
+  product_line.addEventListener("change", function(){
+    const value = this.value;
+    if (value=="esa"){
+      assurance_type_dropdown.style.display = "inline-block";
+    }
+  });
+
+  </script>
+
+  {% endblock %}
