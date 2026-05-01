@@ -46,7 +46,7 @@
 </div>
 
 -->
-
+<h2 class="govuk-heading-m">Get a case for assurance.</h2>
 <div class="govuk-form-group">
     <fieldset class="govuk-fieldset" aria-describedby="changedName-hint">
         <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
@@ -54,18 +54,30 @@
             Choose a product line
         </h2>
         </legend>
-        <div class="govuk-radios " data-module="govuk-radios">
+        <div class="govuk-radios" data-module="govuk-radios" id="product_line">
+            <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="pl" name="pl" type="radio" value="esa">
+                <label class="govuk-label govuk-radios__label" for="pl">
+                Pension credit
+                </label>
+            </div>
             <div class="govuk-radios__item">
                 <input class="govuk-radios__input" id="pl" name="pl" type="radio" value="esa">
                 <label class="govuk-label govuk-radios__label" for="pl">
                 ESA
                 </label>
             </div>
+            <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="pl" name="pl" type="radio" value="esa">
+                <label class="govuk-label govuk-radios__label" for="pl">
+                AA
+                </label>
+            </div>
         </div>
     </fieldset>
 </div>
 
-<div class="govuk-form-group">
+<div class="govuk-form-group" id="assurance_type">
     <fieldset class="govuk-fieldset" aria-describedby="changedName-hint">
         <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
         <h2 class="govuk-fieldset__heading">
@@ -76,7 +88,13 @@
             <div class="govuk-radios__item">
                 <input class="govuk-radios__input" id="ast" name="ast" type="radio" value="new_claims">
                 <label class="govuk-label govuk-radios__label" for="ast">
-                New claims
+                New claim
+                </label>
+            </div>
+            <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="ast" name="ast" type="radio" value="new_claims">
+                <label class="govuk-label govuk-radios__label" for="ast">
+                Change of circumstances
                 </label>
             </div>
         </div>
@@ -96,18 +114,15 @@
 <script>
 
   const product_line = document.getElementById("product_line");
-  const assurance_type_dropdown = document.getElementById("assurance_type_dropdown");
+  const assurance_type = document.getElementById("assurance_type");
   
   window.onload = function(){
-   assurance_type_dropdown.style.display="none";
+   assurance_type.style.display="none";
   }
 
   product_line.addEventListener("change", function(){
-    const value = this.value;
-    if (value=="esa"){
-      assurance_type_dropdown.style.display = "inline-block";
-    }
-  });
+      assurance_type.style.display = "inline-block";
+    });
 
   </script>
 

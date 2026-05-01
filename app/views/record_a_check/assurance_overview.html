@@ -58,11 +58,11 @@
                         </tr>
                         <tr class="govuk-table__row">
                             <th scope="row" class="govuk-table__header">Product type</th>
-                            <td class="govuk-table__cell">ESA</td>
+                            <td class="govuk-table__cell">Pension credit</td>
                         </tr>
                         <tr class="govuk-table__row">
                             <th scope="row" class="govuk-table__header">Assurance type</th>
-                            <td class="govuk-table__cell">New claims</td>
+                            <td class="govuk-table__cell">New claim</td>
                         </tr>
                         <tr class="govuk-table__row">
                             <th scope="row" class="govuk-table__header">Business event date and time</th>
@@ -90,11 +90,19 @@
                                     Case details
                                 </a>
                                 </div>
-                                <div class="govuk-task-list__status" id="company-details-1-status">
+                                {% if hasVisitedPageCaseDetails %}
+                                <div class="govuk-task-list__status" id="case-details-status">
+                                    <strong class="govuk-tag govuk-tag--green">
+                                        Complete
+                                    </strong>
+                                </div>
+                                {% else %}
+                                <div class="govuk-task-list__status" id="case-details-status">
                                     <strong class="govuk-tag govuk-tag--blue">
                                         Incomplete
                                     </strong>
                                 </div>
+                                {% endif %}
                             </li>
                             <li class="govuk-task-list__item govuk-task-list__item--with-link">
                                 <div class="govuk-task-list__name-and-hint">
@@ -102,11 +110,19 @@
                                     Sample details
                                 </a>
                                 </div>
-                                <div class="govuk-task-list__status" id="company-details-2-status">
-                                <strong class="govuk-tag govuk-tag--blue">
-                                    Incomplete
-                                </strong>
+                                {% if hasVisitedPageSampleDetails %}
+                                <div class="govuk-task-list__status" id="sample-details-status">
+                                    <strong class="govuk-tag govuk-tag--green">
+                                        Complete
+                                    </strong>
                                 </div>
+                                {% else %}
+                                <div class="govuk-task-list__status" id="sample-details-status">
+                                    <strong class="govuk-tag govuk-tag--blue">
+                                        Incomplete
+                                    </strong>
+                                </div>
+                                {% endif %}
                             </li>
                             <li class="govuk-task-list__item govuk-task-list__item--with-link">
                                 <div class="govuk-task-list__name-and-hint">
@@ -114,11 +130,19 @@
                                     Award details 
                                 </a>
                                 </div>
-                                <div class="govuk-task-list__status" id="company-details-4-status">
-                                <strong class="govuk-tag govuk-tag--blue">
-                                    Incomplete
-                                </strong>
+                                 {% if hasVisitedPageAwardDetails %}
+                                <div class="govuk-task-list__status" id="sample-details-status">
+                                    <strong class="govuk-tag govuk-tag--green">
+                                        Complete
+                                    </strong>
                                 </div>
+                                {% else %}
+                                <div class="govuk-task-list__status" id="sample-details-status">
+                                    <strong class="govuk-tag govuk-tag--blue">
+                                        Incomplete
+                                    </strong>
+                                </div>
+                                {% endif %}
                             </li>
                         </ul>
                     </div>
