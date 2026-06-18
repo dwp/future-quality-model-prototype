@@ -1,0 +1,234 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Select assurance sections - Record a check – {{ serviceName }} – GOV.UK Prototype
+{% endblock %}
+ 
+{% block header %}
+{{
+    dwpHeader({
+        serviceName: serviceName,
+        serviceHref: "/",
+        container: true
+    })
+}}
+
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-width-container">
+  <a href="#" class="govuk-back-link">Back to assurance overview</a>
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full">
+            <h3 class="govuk-caption-l">FQM-QA-1234</h3>
+            <div class="spacing govuk-!-margin-bottom-6"></div>
+            <h1 class="govuk-heading-xl">Select assurance sections</h1>
+            <p class="govuk-body">Select applicable sections for this assurance by ticking those that apply. You can change the section selection by unticking.</p>
+        </div>
+    </div>
+    <div class="spacing govuk-!-margin-bottom-6"></div>
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+            <table class="govuk-table">
+                <tbody class="govuk-table__body">
+                    <th scope="row" class="govuk-table__header">Mandatory sections 2/20</th>
+                    <tr class="govuk-table__row">
+                        <td class="govuk-table__cell">Security and identity verification for DWP</td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                        <td class="govuk-table__cell">Housing cost</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="spacing govuk-!-margin-bottom-9"></div>
+            <h2 class="govuk-heading-l">Select applicable sections 0/20</h2>
+            <button onclick="" class="govuk-button govuk-button--secondary">Select all</button>
+            <div class="govuk-form-group">
+                <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                     <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+                        <label class="govuk-label govuk-checkboxes__label govuk-fieldset__legend--s" for="waste">
+                            6 point plan
+                        </label>
+                    </div> 
+                    <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+                        <label class="govuk-label govuk-checkboxes__label govuk-fieldset__legend--s" for="waste">
+                            Accessbiliby
+                        </label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+                        <label class="govuk-label govuk-checkboxes__label govuk-fieldset__legend--s" for="waste">
+                            Advanced customer support
+                        </label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+                        <label class="govuk-label govuk-checkboxes__label govuk-fieldset__legend--s" for="waste">
+                            Appointees
+                        </label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+                        <label class="govuk-label govuk-checkboxes__label govuk-fieldset__legend--s" for="waste">
+                            Claim date and eligibility
+                        </label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+                        <label class="govuk-label govuk-checkboxes__label govuk-fieldset__legend--s" for="waste">
+                            Conditions, contributions, and tax
+                        </label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+                        <label class="govuk-label govuk-checkboxes__label govuk-fieldset__legend--s" for="waste">
+                            Controls and notifications
+                        </label>
+                    </div>
+                     <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+                        <label class="govuk-label govuk-checkboxes__label govuk-fieldset__legend--s" for="waste">
+                            Employment, self employment, and earnings
+                        </label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+                        <label class="govuk-label govuk-checkboxes__label govuk-fieldset__legend--s" for="waste">
+                            Hospital and care home
+                        </label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+                        <label class="govuk-label govuk-checkboxes__label govuk-fieldset__legend--s" for="waste">
+                            Household composition
+                        </label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+                        <label class="govuk-label govuk-checkboxes__label govuk-fieldset__legend--s" for="waste">
+                            Housing benefit and council tax
+                        </label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+                        <label class="govuk-label govuk-checkboxes__label govuk-fieldset__legend--s" for="waste">
+                            Income
+                        </label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+                        <label class="govuk-label govuk-checkboxes__label govuk-fieldset__legend--s" for="waste">
+                           Labour market
+                        </label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+                        <label class="govuk-label govuk-checkboxes__label govuk-fieldset__legend--s" for="waste">
+                            Linking
+                        </label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+                        <label class="govuk-label govuk-checkboxes__label govuk-fieldset__legend--s" for="waste">
+                            Medical details
+                        </label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+                        <label class="govuk-label govuk-checkboxes__label govuk-fieldset__legend--s" for="waste">
+                            Migration
+                        </label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+                        <label class="govuk-label govuk-checkboxes__label govuk-fieldset__legend--s" for="waste">
+                            MOP
+                        </label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+                        <label class="govuk-label govuk-checkboxes__label govuk-fieldset__legend--s" for="waste">
+                            Non-state pension
+                        </label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+                        <label class="govuk-label govuk-checkboxes__label govuk-fieldset__legend--s" for="waste">
+                            Other benefits
+                        </label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+                        <label class="govuk-label govuk-checkboxes__label govuk-fieldset__legend--s" for="waste">
+                            Other income
+                        </label>
+                    </div>
+                     <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+                        <label class="govuk-label govuk-checkboxes__label govuk-fieldset__legend--s" for="waste">
+                            Payments
+                        </label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+                        <label class="govuk-label govuk-checkboxes__label govuk-fieldset__legend--s" for="waste">
+                            Personal details
+                        </label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+                        <label class="govuk-label govuk-checkboxes__label govuk-fieldset__legend--s" for="waste">
+                            Premiums and extra amounts
+                        </label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+                        <label class="govuk-label govuk-checkboxes__label govuk-fieldset__legend--s" for="waste">
+                            Savings and investments
+                        </label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+                        <label class="govuk-label govuk-checkboxes__label govuk-fieldset__legend--s" for="waste">
+                            Special rules End of life
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="spacing govuk-!-margin-bottom-9"></div>
+            <div>
+                <button name="cd_complete" value="yes" onclick="location.href='../record_a_check/security_questions.html'" class="govuk-button" data-module="govuk-button">
+                    Save and continue
+                </button>
+                <a class=" govuk-!-margin-9 govuk-link" href="#">Cancel</a>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}
+
+{% block pageScripts %}
+<script>
+
+/*content sections */
+
+/*question sets*/
+
+
+/*on load default */
+window.onload = function(){
+}
+
+/* radio logic */
+
+
+
+
+
+</script>
+{% endblock %}

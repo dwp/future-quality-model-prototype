@@ -1,0 +1,155 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Record an error - Record a check – {{ serviceName }} – GOV.UK Prototype
+{% endblock %}
+ 
+{% block header %}
+{{
+    dwpHeader({
+        serviceName: serviceName,
+        serviceHref: "/",
+        container: true
+    })
+}}
+
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-width-container">
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full">
+            <a href="assurance_overview.html" class="govuk-back-link">Back to Security and identity verification for DWP</a>
+            <h3 class="govuk-caption-l">Error-12-34-56</h3>
+            <div class="spacing govuk-!-margin-bottom-6"></div>
+            <h1 class="govuk-heading-xl">Record an error</h1>
+            <div id="overview_container" class="govuk-cookie-banner" style="padding: 10px 10px 1px 10px; border-bottom: 5px;">
+                <div id="error_overview_table">
+                    <table class="govuk-table" style="margin-bottom: 10px !important;">
+                        <tbody class="govuk-table__body">
+                        <tr class="govuk-table__row">
+                            <th scope="row" class="govuk-table__header">Question</th>
+                            <td class="govuk-table__cell">Where appropriate has the outcome of the identity check been correctly recorded?</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <th scope="row" class="govuk-table__header">Section</th>
+                            <td class="govuk-table__cell">Security and identity verification for DWP</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <th scope="row" class="govuk-table__header">Case</th>
+                            <td class="govuk-table__cell">FQM-QA-1234</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <th style="border-bottom: none;" scope="row" class="govuk-table__header">Type</th>
+                            <td style="border-bottom: none;" class="govuk-table__cell">Business event error</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="spacing govuk-!-margin-bottom-9"></div>
+            <div class="govuk-form-group">
+                <label class="govuk-label govuk-fieldset__legend--s" for="event-name">
+                    Error detriment:
+                </label>
+                <input class="govuk-input govuk-input--width-10" id="event-name" name="eventName" type="text" disabled value="TBD">
+            </div>
+            <div class="govuk-form-group">
+                <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                    <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+                        <label class="govuk-label govuk-checkboxes__label govuk-fieldset__legend--s" for="waste">
+                            Secondary error
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="govuk-form-group">
+                <label class="govuk-label govuk-fieldset__legend--s" for="assessment_provider">
+                    Error impact
+                </label>
+                <select class="govuk-select" id="assessment_provider">
+                    <option value="#">Please select</option>
+                    <option value="#">Overpayment</option>
+                    <option value="#">Processing</option>
+                    <option value="#">Underpayment</option>
+                </select>
+            </div>
+            <div class="govuk-form-group">
+                <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                    <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+                        <label class="govuk-label govuk-checkboxes__label govuk-fieldset__legend--s" for="waste">
+                            Potential
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block pageScripts %}
+<script>
+
+/*content sections */
+const partner = document.getElementById("customer_partner");
+const telephony = document.getElementById("telephony_details");
+const additional_telephony = document.getElementById("additional_telephony_details");
+
+
+/*question sets*/
+const partner_question = document.querySelectorAll('input[name="partner"]');
+const telephony_question = document.querySelectorAll('input[name="telephony"]');
+const additional_telephony_question = document.querySelectorAll('input[name="additional_telephony"]');
+
+
+/*on load default */
+window.onload = function(){
+partner.style.display="none";
+telephony.style.display="none";
+additional_telephony.style.display="none";
+
+}
+
+/* radio logic */
+partner_question.forEach(element => {
+    element.addEventListener('change', function(){
+        if (this.value==='yes'){
+            partner.style.display="block";
+        }
+        else {
+            partner.style.display="none";
+        }
+    });
+});
+
+telephony_question.forEach(element => {
+    element.addEventListener('change', function(){
+        if (this.value==='yes'){
+            telephony.style.display="block";
+        }
+        else {
+            telephony.style.display="none";
+        }
+    });
+});
+
+additional_telephony_question.forEach(element => {
+    element.addEventListener('change', function(){
+        if (this.value==='yes'){
+            additional_telephony.style.display="block";
+        }
+        else {
+            additional_telephony.style.display="none";
+        }
+    });
+});
+
+
+
+</script>
+{% endblock %}
+

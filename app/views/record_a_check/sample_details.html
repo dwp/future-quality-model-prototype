@@ -21,24 +21,22 @@
     <div class="govuk-grid-row">
         <div class="govuk-grid-column-one-third">
             <div id="menu">
-                <p class="govuk-body">
-                    <a href="assurance_overview" class="govuk-link govuk-link--no-visited-state">Assurance Overview</a>
-                </p>
                 <h2 class="govuk-heading-m">Assurance details</h2>
                 <hr class="govuk-section-break govuk-section-break--visible">
                 <div class="govuk-!-static-margin-6"></div>
                 <p><a href="case_details" class="govuk-link govuk-link--no-visited-state">Case details</a></p>
                 <p class="govuk-body govuk-!-font-weight-bold">Sample details</a></p>
-                <p><a href="award_details" class="govuk-link govuk-link--no-visited-state">Award details</a></p>
+                <p class="govuk-body" style="color:#cecece;">Award details</a></p>
             </div>
         </div>
         <div class="govuk-grid-column-two-thirds">
             <a href="#" class="govuk-back-link">Back</a>
             <h3 class="govuk-caption-l">FQM-QA-1234</h3>
+            <div class="spacing govuk-!-margin-bottom-6"></div>
             <h1 class="govuk-heading-xl">Sample details</h1>
             <div class="govuk-form-group">
                 <label class="govuk-label govuk-fieldset__legend--s" for="telphony_office_select">
-                    Which office handled the telephony?
+                    Telephony Office
                 </label>
                 <select class="govuk-select" id="telphony_office_select">
                     <option value="#">Please select</option>
@@ -51,7 +49,7 @@
             </div>
             <div class="govuk-form-group">
                 <label class="govuk-label govuk-fieldset__legend--s" for="jobcenter_select">
-                    Which Jobcentre handled the case?
+                    Jobcentre office?
                 </label>
                 <select class="govuk-select" id="jobcenter_select">
                     <option value="#">Please select</option>
@@ -65,7 +63,7 @@
                 <fieldset class="govuk-fieldset" aria-describedby="changedName-hint">
                     <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
                     <h2 class="govuk-fieldset__heading">
-                        Was a secondary jobcentre involved?
+                        Is there a secondary jobcentre office?
                     </h2>
                     </legend>
                     <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
@@ -85,7 +83,7 @@
                     <div id="second_jobcentre" class="govuk-inset-text">
                         <div class="govuk-form-group">
                             <label class="govuk-label govuk-fieldset__legend--s" for="second_jobcentre_select">
-                                Secondary Jobcentre
+                                Secondary jobcentre office
                             </label>
                             <select class="govuk-select" id="second_jobcentre_select">
                                 <option value="#">Please select</option>
@@ -99,7 +97,7 @@
             </div>
             <div class="govuk-form-group">
                 <label class="govuk-label govuk-fieldset__legend--s" for="jobcenter">
-                    Which office processed the case?
+                    Processing office
                 </label>
                 <select class="govuk-select" id="jobcenter">
                     <option value="#">Please select</option>
@@ -115,7 +113,7 @@
                 <fieldset class="govuk-fieldset" aria-describedby="changedName-hint">
                     <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
                     <h2 class="govuk-fieldset__heading">
-                        Was a secondary processing office involved?
+                        Is there a secondary processing office?
                     </h2>
                     </legend>
                     <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
@@ -198,9 +196,13 @@
                 </select>
             </div>
             -->
-            <button type="submit" onclick="location.href='../record_a_check/assurance_overview.html'" class="govuk-button" data-module="govuk-button">
-                Save and continue
-            </button>
+            <div class="spacing govuk-!-margin-bottom-9"></div>
+            <div>
+                <button name="cd_complete" value="yes" onclick="location.href='../record_a_check/award_details.html'" class="govuk-button" data-module="govuk-button">
+                    Save and continue
+                </button>
+                <a class=" govuk-!-margin-9 govuk-link" href="#">Cancel</a>
+            </div>
         </div>
     </div>
 </div>
