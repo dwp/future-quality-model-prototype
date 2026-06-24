@@ -1,0 +1,133 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Root cause analysis - Record a check – {{ serviceName }} – GOV.UK Prototype
+{% endblock %}
+ 
+{% block header %}
+{{
+    dwpHeader({
+        serviceName: serviceName,
+        serviceHref: "/",
+        container: true
+    })
+}}
+
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-width-container">
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full">
+            <a href="assurance_overview.html" class="govuk-back-link">Back to assurance overview</a>
+            <h3 class="govuk-caption-l">RCA-12-34-56</h3>
+            <div class="spacing govuk-!-margin-bottom-6"></div>
+            <h1 class="govuk-heading-xl">Root cause analysis</h1>
+            <div id="overview_container" class="govuk-cookie-banner" style="padding: 10px 10px 1px 10px; border-bottom: 5px;">
+                <table class="govuk-table" style="margin-bottom: 10px !important;">
+                    <tbody class="govuk-table__body">
+                    <tr class="govuk-table__row">
+                        <th scope="row" class="govuk-table__header">Error</th>
+                        <td class="govuk-table__cell">Error-123-456</td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                        <th scope="row" class="govuk-table__header">Question</th>
+                        <td class="govuk-table__cell">Where appropriate has the outcome of the identity check been correctly recorded?</td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                        <th scope="row" class="govuk-table__header">Section</th>
+                        <td class="govuk-table__cell">Security and identity verification for DWP</td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                        <th scope="row" class="govuk-table__header">Case</th>
+                        <td class="govuk-table__cell">FQM-QA-4567</td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                        <th scope="row" class="govuk-table__header">Type</th>
+                        <td class="govuk-table__cell">Business event error</td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                        <th style="border-bottom: none;" scope="row" class="govuk-table__header">Detriment</th>
+                        <td style="border-bottom: none;" class="govuk-table__cell">Customer</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="spacing govuk-!-margin-bottom-9"></div>
+            <div class="govuk-form-group" id="question_one">
+                <label class="govuk-label govuk-fieldset__legend--s" for="error_occure">
+                    Where did the error occure?
+                </label>
+                <select class="govuk-select govuk-select--width-10" id="error_occure" name="error_occure">
+                    <option value="#">Please select</option>
+                    <option value="#">Option 1</option>
+                </select>
+            </div>
+            <div class="govuk-form-group" id="question_two">
+                <label class="govuk-label govuk-fieldset__legend--s" for="www">
+                    What went wrong?
+                </label>
+                <select class="govuk-select govuk-select--width-10" id="www" name="www">
+                    <option value="#">Please select</option>
+                    <option value="#">Option 1</option>
+                </select>
+            </div>
+            <div class="govuk-form-group" id="question_three">
+                <label class="govuk-label govuk-fieldset__legend--s" for="why_error">
+                    Why did the error occure?
+                </label>
+                <select class="govuk-select govuk-select--width-10" id="why_error" name="why_error">
+                    <option value="#">Please select</option>
+                    <option value="#">Option 1</option>
+                </select>
+            </div>
+            <div class="spacing govuk-!-margin-bottom-9"></div>
+            <div>
+                <button name="cd_complete" value="yes" onclick="location.href='../record_a_check/assurance_summary.html'" class="govuk-button" data-module="govuk-button">
+                    Save and continue
+                </button>
+                <a class=" govuk-!-margin-9 govuk-link" href="#">Cancel</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+
+{% block pageScripts %}
+<script>
+
+/*content sections */
+const question_one = document.getElementById("question_one");
+const error_occure_question = document.getElementById("error_occure");
+const question_two = document.getElementById("question_two");
+const www_question = document.getElementById("www");
+const question_three = document.getElementById("question_three");
+/*question sets*/
+
+
+/*on load default */
+window.onload = function(){
+    question_two.style.display="none";
+    question_three.style.display="none";
+}
+
+/* logic */
+error_occure_question.addEventListener("change", function(){
+    question_two.style.display = "block";
+  });
+
+www_question.addEventListener("change", function(){
+    question_three.style.display = "block";
+  });
+
+
+
+
+
+</script>
+{% endblock %}
+
+
+

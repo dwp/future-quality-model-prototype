@@ -312,4 +312,21 @@ $moj-button-menu-hover-color: #767676;
   }
 }
 
+.two_row_tabs {
+  width: min-content;
+  height:50px;
+}
+
+.govuk-tabs__list-item{
+  height:50px;
+  padding: 10px 10px !important;
+}
+
+.table_checkbox{
+    height: 100px;
+    vertical-align: bottom;
+}
+
+
+
 /*# sourceMappingURL=_filter.scss.map */

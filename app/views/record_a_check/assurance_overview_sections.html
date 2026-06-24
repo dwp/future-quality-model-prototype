@@ -1,0 +1,315 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+   Assurance overview - Record a check – {{ serviceName }} – GOV.UK Prototype
+{% endblock %}
+ 
+{% block header %}
+{{
+    dwpHeader({
+        serviceName: serviceName,
+        serviceHref: "/",
+        container: true
+    })
+}}
+
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+  <a href="#" class="govuk-back-link">Back to dashboard</a>
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full">
+            <h3 class="govuk-caption-l">FQM-QA-1234</h3>
+            <div class="spacing govuk-!-margin-bottom-6"></div>
+            <h1 class="govuk-heading-xl">Assurance overview</h1>
+        </div>
+    </div>
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full">
+            <p class="govuk-heading-m govuk-!-font-weight-bold">Assurance status 
+            <strong class="govuk-tag govuk-tag--blue">Active</strong>
+            </p>
+        </div>
+    </div>
+    <div class="spacing govuk-!-margin-bottom-6"></div>
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+            <div id="overview_container" class="govuk-cookie-banner" style="padding: 10px 10px 1px 10px; border-bottom: 5px;">
+                <div id="overview_table">
+                    <p class="govuk-heading-m govuk-!-font-weight-bold">Case overview</p>
+                    <table class="govuk-table" style="margin-bottom: 10px !important;">
+                        <tbody class="govuk-table__body">
+                        <tr class="govuk-table__row">
+                            <th scope="row" class="govuk-table__header">NINO</th>
+                            <td class="govuk-table__cell">AB 12 34 A</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <th scope="row" class="govuk-table__header">Product type</th>
+                            <td class="govuk-table__cell">Pension credit</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <th scope="row" class="govuk-table__header">Assurance type</th>
+                            <td class="govuk-table__cell">New claim</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <th style="border-bottom: none;" scope="row" class="govuk-table__header">Business event date</th>
+                            <td style="border-bottom: none;" class="govuk-table__cell">1st January 2025</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="spacing govuk-!-margin-bottom-4"></div>
+            <div class="govuk-grid-row">
+                <div class="govuk-grid-column-one-half">
+                    <button onclick="location.href='../record_a_check/assurance_overview.html'" class="govuk-button govuk-button--secondary">Deselect case</button>
+                </div>
+                <div class="govuk-grid-column-one-half">
+                    <button onclick="location.href='../record_a_check/assurance_overview.html'" class="govuk-button govuk-button--secondary">Reassign case</button>
+                </div>
+            </div>
+            <div class="spacing govuk-!-margin-bottom-4"></div>
+
+            <!-- Assurance details -->
+            
+            <h2 class="govuk-heading-l">Assurance details</h2>   
+            <p class="govuk-body">You need to complete all the tasks in Assurance details. Then choose the optional sections for this assurance.</p>
+            <ul class="govuk-task-list">
+                <li class="govuk-task-list__item govuk-task-list__item--with-link">
+                    <div class="govuk-task-list__name-and-hint">
+                    <a class="govuk-link govuk-task-list__link" href="case_details" aria-describedby="company-details-1-status">
+                        Case details
+                    </a>
+                    </div>
+                    {% if hasVisitedPageCaseDetails %}
+                    <div class="govuk-task-list__status" id="case-details-status">
+                        <strong class="govuk-tag govuk-tag--green">
+                            Complete
+                        </strong>
+                    </div>
+                    {% else %}
+                    <div class="govuk-task-list__status" id="case-details-status">
+                        <strong class="govuk-tag govuk-tag--blue">
+                            Incomplete
+                        </strong>
+                    </div>
+                    {% endif %}
+                </li>
+                <li class="govuk-task-list__item govuk-task-list__item--with-link">
+                    <div class="govuk-task-list__name-and-hint">
+                    <a class="govuk-link govuk-task-list__link" href="sample_details" aria-describedby="company-details-2-status">
+                        Sample details
+                    </a>
+                    </div>
+                    {% if hasVisitedPageSampleDetails %}
+                    <div class="govuk-task-list__status" id="sample-details-status">
+                        <strong class="govuk-tag govuk-tag--green">
+                            Complete
+                        </strong>
+                    </div>
+                    {% else %}
+                    <div class="govuk-task-list__status" id="sample-details-status">
+                        <strong class="govuk-tag govuk-tag--blue">
+                            Incomplete
+                        </strong>
+                    </div>
+                    {% endif %}
+                </li>
+                <li class="govuk-task-list__item govuk-task-list__item--with-link">
+                    <div class="govuk-task-list__name-and-hint">
+                    <a class="govuk-link govuk-task-list__link" href="award_details" aria-describedby="company-details-4-status">
+                        Award details 
+                    </a>
+                    </div>
+                        {% if hasVisitedPageAwardDetails %}
+                    <div class="govuk-task-list__status" id="sample-details-status">
+                        <strong class="govuk-tag govuk-tag--green">
+                            Complete
+                        </strong>
+                    </div>
+                    {% else %}
+                    <div class="govuk-task-list__status" id="sample-details-status">
+                        <strong class="govuk-tag govuk-tag--blue">
+                            Incomplete
+                        </strong>
+                    </div>
+                    {% endif %}
+                </li>
+            </ul>
+            <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+            <!-- Sections and questions -->
+
+            <h2 class="govuk-heading-l">Sections and Questions</h2>
+            <p>Choose the additional sections for this assurance by adding those that apply. You can change these at any point during the assurance check.</p>
+            <p class="govuk-heading-m govuk-!-font-weight-bold">Mandatory sections</p>
+            <ul class="govuk-task-list">
+                <li class="govuk-task-list__item govuk-task-list__item--with-link">
+                    <div class="govuk-task-list__name-and-hint">
+                    <a class="govuk-link govuk-task-list__link" href="case_details" aria-describedby="company-details-1-status">
+                        Security and identity verification for DWP
+                    </a>
+                    </div>
+                    {% if hasVisitedPageCaseDetails %}
+                    <div class="govuk-task-list__status" id="case-details-status">
+                        <strong class="govuk-tag govuk-tag--green">
+                            Complete
+                        </strong>
+                    </div>
+                    {% else %}
+                    <div class="govuk-task-list__status" id="case-details-status">
+                        <strong class="govuk-tag govuk-tag--blue">
+                            Incomplete
+                        </strong>
+                    </div>
+                    {% endif %}
+                </li>
+                <li class="govuk-task-list__item govuk-task-list__item--with-link">
+                    <div class="govuk-task-list__name-and-hint">
+                    <a class="govuk-link govuk-task-list__link" href="sample_details" aria-describedby="company-details-2-status">
+                        Housing cost
+                    </a>
+                    </div>
+                    {% if hasVisitedPageSampleDetails %}
+                    <div class="govuk-task-list__status" id="sample-details-status">
+                        <strong class="govuk-tag govuk-tag--green">
+                            Complete
+                        </strong>
+                    </div>
+                    {% else %}
+                    <div class="govuk-task-list__status" id="sample-details-status">
+                        <strong class="govuk-tag govuk-tag--blue">
+                            Incomplete
+                        </strong>
+                    </div>
+                    {% endif %}
+                </li>
+            </ul>
+            <div class="spacing govuk-!-margin-bottom-6"></div>
+            <p class="govuk-heading-m govuk-!-font-weight-bold">Additional sections</p>
+            <button onclick="location.href='../record_a_check/sections.html'" class="govuk-button govuk-button--secondary">Add additional sections</button>
+            <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+            
+
+            <!-- RCA -->
+
+            <h2 class="govuk-heading-l">Root cause analysis</h2>
+            <p>Lorem Ipsum dolor sit amet consecter.</p>
+            <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+            <!-- Check Summary -->
+
+            <h2 class="govuk-heading-l">Check summary</h2>
+            <p>Lorem Ipsum dolor sit amet consecter.</p>
+            <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+
+        </div>
+        <div class="govuk-grid-column-one-third">
+            <div id="overview_history">
+                <h2 class="govuk-heading-l">Assurance History</h2>
+                <ol class="hmrc-timeline">
+                    <li class="hmrc-timeline__event">
+                        <h2 class="hmrc-timeline__event-title">Assurance selected</h2>
+                        <time class="hmrc-timeline__event-meta" datetime="2026-04-01">01 April 2026</time>
+                        <div class="hmrc-timeline__event-content">
+                            <p class="govuk-body">By System</p>
+                        </div>
+                    </li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+<!-- add script for css here-->
+{% block stylesheets %}
+{{ super() }}
+<style type="text/css" />
+.hmrc-timeline {
+    border-left: 5px solid #1d70b8;
+    margin: 0 0 30px;
+    padding: 0;
+}
+
+ol {
+    display: block;
+    list-style-type: decimal;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    padding-inline-start: 40px;
+    unicode-bidi: isolate;
+}
+
+.hmrc-timeline__event {
+    list-style: none;
+    padding-bottom: 20px;
+    padding-left: 15px;
+    position: relative;
+}
+
+li {
+    display: list-item;
+    unicode-bidi: isolate;
+}
+
+.hmrc-timeline__event-title {
+    margin-bottom: 5px;
+}
+
+    .govuk-heading-m, .hmrc-timeline__event-title, .subsection-collection .js-title-controls-wrap .section-title {
+        font-size: 1.5rem;
+        line-height: 1.25;
+    }
+
+    .govuk-heading-m, .hmrc-timeline__event-title, .subsection-collection .js-title-controls-wrap .section-title {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: var(--govuk-text-colour, #0b0c0c);
+    display: block;
+    font-family: GDS Transport, arial, sans-serif;
+    font-size: 1.3125rem;
+    font-weight: 700;
+    line-height: 1.1904761905;
+    margin-bottom: 15px;
+    margin-top: 0;
+}
+
+.hmrc-timeline__event-title:before {
+    background-color: #1d70b8;
+    content: "";
+    height: 5px;
+    left: 0;
+    position: absolute;
+    top: .5em;
+    width: 7px;
+}
+
+.hmrc-timeline__event-meta {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: var(--govuk-text-colour, #0b0c0c);
+    display: block;
+    font-family: GDS Transport, arial, sans-serif;
+    font-size: 1.1875rem;
+    font-weight: 400;
+    line-height: 1.3157894737;
+    margin-bottom: 15px;
+}
+</style>
+{% endblock %}
+
+{% block pageScripts %}
+<script>
+ 
+  
+  window.onload = function(){
+  }
+
+
+</script>
+{% endblock %}
+

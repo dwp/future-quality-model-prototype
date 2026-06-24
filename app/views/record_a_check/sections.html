@@ -32,7 +32,7 @@
         <div class="govuk-grid-column-two-thirds">
             <table class="govuk-table">
                 <tbody class="govuk-table__body">
-                    <th scope="row" class="govuk-table__header">Mandatory sections 2/20</th>
+                    <th scope="row" class="govuk-table__header">Mandatory sections</th>
                     <tr class="govuk-table__row">
                         <td class="govuk-table__cell">Security and identity verification for DWP</td>
                     </tr>
@@ -42,157 +42,165 @@
                 </tbody>
             </table>
             <div class="spacing govuk-!-margin-bottom-9"></div>
-            <h2 class="govuk-heading-l">Select applicable sections 0/20</h2>
-            <button onclick="" class="govuk-button govuk-button--secondary">Select all</button>
+            <div id="optional">
+                <table class="govuk-table">
+                    <tbody class="govuk-table__body" id="optional_content">
+                        <th id="counter" cope="row" class="govuk-table__header">Applicable sections</th>
+                    </tbody>
+                </table>
+            </div>
+            <div class="spacing govuk-!-margin-bottom-9"></div>
+            <h2 class="govuk-heading-l">Select applicable sections</h2>
+            <button onclick="javascript: selectAll();" class="govuk-button govuk-button--secondary" id="select_toggle">Select all</button>
             <div class="govuk-form-group">
                 <div class="govuk-checkboxes" data-module="govuk-checkboxes">
                      <div class="govuk-checkboxes__item">
-                        <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
-                        <label class="govuk-label govuk-checkboxes__label govuk-fieldset__legend--s" for="waste">
+                        <input class="govuk-checkboxes__input" id="6_point_plan" name="6_point_plan" type="checkbox" value="6 point plan">
+                        <label class="govuk-label govuk-checkboxes__label govuk-fieldset__legend--s" for="6_point_plan">
                             6 point plan
                         </label>
                     </div> 
                     <div class="govuk-checkboxes__item">
-                        <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
-                        <label class="govuk-label govuk-checkboxes__label govuk-fieldset__legend--s" for="waste">
-                            Accessbiliby
+                        <input class="govuk-checkboxes__input" id="Accessibility" name="Accessibility" type="checkbox" value="Accessibility">
+                        <label class="govuk-label govuk-checkboxes__label govuk-fieldset__legend--s" for="Accessibility">
+                            Accessibility
                         </label>
                     </div>
                     <div class="govuk-checkboxes__item">
-                        <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
-                        <label class="govuk-label govuk-checkboxes__label govuk-fieldset__legend--s" for="waste">
+                        <input class="govuk-checkboxes__input" id="advanced_customer_support" name="advanced_customer_support" type="checkbox" value="Advanced customer support">
+                        <label class="govuk-label govuk-checkboxes__label govuk-fieldset__legend--s" for="advanced_customer_support">
                             Advanced customer support
                         </label>
                     </div>
                     <div class="govuk-checkboxes__item">
-                        <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
-                        <label class="govuk-label govuk-checkboxes__label govuk-fieldset__legend--s" for="waste">
+                        <input class="govuk-checkboxes__input" id="appointees" name="appointees" type="checkbox" value="Appointees">
+                        <label class="govuk-label govuk-checkboxes__label govuk-fieldset__legend--s" for="appointees">
                             Appointees
                         </label>
                     </div>
                     <div class="govuk-checkboxes__item">
-                        <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
-                        <label class="govuk-label govuk-checkboxes__label govuk-fieldset__legend--s" for="waste">
+                        <input class="govuk-checkboxes__input" id="claim_date_and_eligibility" name="claim_date_and_eligibility" type="checkbox" value="Claim date and eligibility">
+                        <label class="govuk-label govuk-checkboxes__label govuk-fieldset__legend--s" for="claim_date_and_eligibility">
                             Claim date and eligibility
                         </label>
                     </div>
                     <div class="govuk-checkboxes__item">
-                        <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
-                        <label class="govuk-label govuk-checkboxes__label govuk-fieldset__legend--s" for="waste">
+                        <input class="govuk-checkboxes__input" id="conditions_contributions_and_tax" name="conditions_contributions_and_tax" type="checkbox" value="Conditions, contributions, and tax">
+                        <label class="govuk-label govuk-checkboxes__label govuk-fieldset__legend--s" for="conditions_contributions_and_tax">
                             Conditions, contributions, and tax
                         </label>
                     </div>
                     <div class="govuk-checkboxes__item">
-                        <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
-                        <label class="govuk-label govuk-checkboxes__label govuk-fieldset__legend--s" for="waste">
+                        <input class="govuk-checkboxes__input" id="controls_and_notifications" name="controls_and_notifications" type="checkbox" value="Controls and notifications">
+                        <label class="govuk-label govuk-checkboxes__label govuk-fieldset__legend--s" for="controls_and_notifications">
                             Controls and notifications
                         </label>
                     </div>
                      <div class="govuk-checkboxes__item">
-                        <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
-                        <label class="govuk-label govuk-checkboxes__label govuk-fieldset__legend--s" for="waste">
+                        <input class="govuk-checkboxes__input" id="employment_self_employment_and_earnings" name="employment_self_employment_and_earnings" type="checkbox" value="Employment, self employment, and earnings">
+                        <label class="govuk-label govuk-checkboxes__label govuk-fieldset__legend--s" for="employment_self_employment_and_earnings">
                             Employment, self employment, and earnings
                         </label>
                     </div>
                     <div class="govuk-checkboxes__item">
-                        <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
-                        <label class="govuk-label govuk-checkboxes__label govuk-fieldset__legend--s" for="waste">
+                        <input class="govuk-checkboxes__input" id="hospital_and_care_home" name="hospital_and_care_home" type="checkbox" value="Hospital and care home">
+                        <label class="govuk-label govuk-checkboxes__label govuk-fieldset__legend--s" for="hospital_and_care_home">
                             Hospital and care home
                         </label>
                     </div>
                     <div class="govuk-checkboxes__item">
-                        <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
-                        <label class="govuk-label govuk-checkboxes__label govuk-fieldset__legend--s" for="waste">
+                        <input class="govuk-checkboxes__input" id="household_composition" name="household_composition" type="checkbox" value="Household composition">
+                        <label class="govuk-label govuk-checkboxes__label govuk-fieldset__legend--s" for="household_composition">
                             Household composition
                         </label>
                     </div>
                     <div class="govuk-checkboxes__item">
-                        <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
-                        <label class="govuk-label govuk-checkboxes__label govuk-fieldset__legend--s" for="waste">
+                        <input class="govuk-checkboxes__input" id="housing_benefit_and_council_tax" name="housing_benefit_and_council_tax" type="checkbox" value="Housing benefit and council tax">
+                        <label class="govuk-label govuk-checkboxes__label govuk-fieldset__legend--s" for="housing_benefit_and_council_tax">
                             Housing benefit and council tax
                         </label>
                     </div>
                     <div class="govuk-checkboxes__item">
-                        <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
-                        <label class="govuk-label govuk-checkboxes__label govuk-fieldset__legend--s" for="waste">
+                        <input class="govuk-checkboxes__input" id="income" name="income" type="checkbox" value="Income">
+                        <label class="govuk-label govuk-checkboxes__label govuk-fieldset__legend--s" for="income">
                             Income
                         </label>
                     </div>
                     <div class="govuk-checkboxes__item">
-                        <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
-                        <label class="govuk-label govuk-checkboxes__label govuk-fieldset__legend--s" for="waste">
+                        <input class="govuk-checkboxes__input" id="labour_market" name="labour_market" type="checkbox" value="Labour market">
+                        <label class="govuk-label govuk-checkboxes__label govuk-fieldset__legend--s" for="labour_market">
                            Labour market
                         </label>
                     </div>
                     <div class="govuk-checkboxes__item">
-                        <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
-                        <label class="govuk-label govuk-checkboxes__label govuk-fieldset__legend--s" for="waste">
+                        <input class="govuk-checkboxes__input" id="linking" name="linking" type="checkbox" value="Linking">
+                        <label class="govuk-label govuk-checkboxes__label govuk-fieldset__legend--s" for="linking">
                             Linking
                         </label>
                     </div>
                     <div class="govuk-checkboxes__item">
-                        <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
-                        <label class="govuk-label govuk-checkboxes__label govuk-fieldset__legend--s" for="waste">
+                        <input class="govuk-checkboxes__input" id="medical_details" name="medical_details" type="checkbox" value=" Medical details">
+                        <label class="govuk-label govuk-checkboxes__label govuk-fieldset__legend--s" for="medical_details">
                             Medical details
                         </label>
                     </div>
                     <div class="govuk-checkboxes__item">
-                        <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
-                        <label class="govuk-label govuk-checkboxes__label govuk-fieldset__legend--s" for="waste">
+                        <input class="govuk-checkboxes__input" id="migration" name="migration" type="checkbox" value="Migration">
+                        <label class="govuk-label govuk-checkboxes__label govuk-fieldset__legend--s" for="migration">
                             Migration
                         </label>
                     </div>
                     <div class="govuk-checkboxes__item">
-                        <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
-                        <label class="govuk-label govuk-checkboxes__label govuk-fieldset__legend--s" for="waste">
+                        <input class="govuk-checkboxes__input" id="mop" name="mop" type="checkbox" value="MOP">
+                        <label class="govuk-label govuk-checkboxes__label govuk-fieldset__legend--s" for="mop">
                             MOP
                         </label>
                     </div>
                     <div class="govuk-checkboxes__item">
-                        <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
-                        <label class="govuk-label govuk-checkboxes__label govuk-fieldset__legend--s" for="waste">
+                        <input class="govuk-checkboxes__input" id="non-state_pension" name="non-state_pension" type="checkbox" value="Non-state pension">
+                        <label class="govuk-label govuk-checkboxes__label govuk-fieldset__legend--s" for="non-state_pension">
                             Non-state pension
                         </label>
                     </div>
                     <div class="govuk-checkboxes__item">
-                        <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
-                        <label class="govuk-label govuk-checkboxes__label govuk-fieldset__legend--s" for="waste">
+                        <input class="govuk-checkboxes__input" id="other_benefits" name="other_benefits" type="checkbox" value="Other benefits">
+                        <label class="govuk-label govuk-checkboxes__label govuk-fieldset__legend--s" for="other_benefits">
                             Other benefits
                         </label>
                     </div>
                     <div class="govuk-checkboxes__item">
-                        <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
-                        <label class="govuk-label govuk-checkboxes__label govuk-fieldset__legend--s" for="waste">
+                        <input class="govuk-checkboxes__input" id="other_income" name="other_income" type="checkbox" value="Other income">
+                        <label class="govuk-label govuk-checkboxes__label govuk-fieldset__legend--s" for="other_income">
                             Other income
                         </label>
                     </div>
                      <div class="govuk-checkboxes__item">
-                        <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
-                        <label class="govuk-label govuk-checkboxes__label govuk-fieldset__legend--s" for="waste">
+                        <input class="govuk-checkboxes__input" id="payments" name="payments" type="checkbox" value="Payments">
+                        <label class="govuk-label govuk-checkboxes__label govuk-fieldset__legend--s" for="payments">
                             Payments
                         </label>
                     </div>
                     <div class="govuk-checkboxes__item">
-                        <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
-                        <label class="govuk-label govuk-checkboxes__label govuk-fieldset__legend--s" for="waste">
+                        <input class="govuk-checkboxes__input" id="personal_details" name="personal_details" type="checkbox" value="Personal details">
+                        <label class="govuk-label govuk-checkboxes__label govuk-fieldset__legend--s" for="personal_details">
                             Personal details
                         </label>
                     </div>
                     <div class="govuk-checkboxes__item">
-                        <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
-                        <label class="govuk-label govuk-checkboxes__label govuk-fieldset__legend--s" for="waste">
+                        <input class="govuk-checkboxes__input" id="premiums_and_extra_amounts" name="premiums_and_extra_amounts" type="checkbox" value="Premiums and extra amounts">
+                        <label class="govuk-label govuk-checkboxes__label govuk-fieldset__legend--s" for="premiums_and_extra_amounts">
                             Premiums and extra amounts
                         </label>
                     </div>
                     <div class="govuk-checkboxes__item">
-                        <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
-                        <label class="govuk-label govuk-checkboxes__label govuk-fieldset__legend--s" for="waste">
+                        <input class="govuk-checkboxes__input" id="savings_and_investments" name="savings_and_investments" type="checkbox" value="Savings and investments">
+                        <label class="govuk-label govuk-checkboxes__label govuk-fieldset__legend--s" for="savings_and_investments">
                             Savings and investments
                         </label>
                     </div>
                     <div class="govuk-checkboxes__item">
-                        <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
-                        <label class="govuk-label govuk-checkboxes__label govuk-fieldset__legend--s" for="waste">
+                        <input class="govuk-checkboxes__input" id="special_rules_end_of_life" name="special_rules_end_of_life" type="checkbox" value="Special rules End of life">
+                        <label class="govuk-label govuk-checkboxes__label govuk-fieldset__legend--s" for="special_rules_end_of_life">
                             Special rules End of life
                         </label>
                     </div>
@@ -215,14 +223,67 @@
 {% block pageScripts %}
 <script>
 
-/*content sections */
+const check_boxes = document.querySelectorAll('input[type="checkbox"]');
+const optional_sections = document.getElementById("optional");
+const optional_content = document.getElementById("optional_content");
+const counter = document.getElementById("counter");
+let count = 0;
+/*onload default */
+window.onload = function(){
+}
+
+
+
+check_boxes.forEach(check_box => {
+  check_box.addEventListener("change", function(){
+    if (check_box.checked == true){
+        add_to_table(this.value);
+    }
+    else if (check_box.checked == false){
+        remove_from_table(this.value);
+    }
+  });
+});
+
+
+
+/*functions*/
+function selectAll(){
+    var toggle = document.getElementById("select_toggle")
+    var checkboxes = document.querySelectorAll('input[type="checkbox"]');
+        if ( toggle.innerHTML == "Select all"){
+            for(var i = 0; i < checkboxes.length; i++) {
+                checkboxes[i].checked = true;
+                add_to_table(checkboxes[i].value);
+                toggle.innerHTML = "Deselect all"
+            }
+        }
+        else{
+            for(var i = 0; i < checkboxes.length; i++) {
+                checkboxes[i].checked = false;
+                remove_from_table(checkboxes[i].value);
+                toggle.innerHTML = "Select all"
+            }
+        }
+}
+
+function add_to_table(value){
+    count++;
+    optional_content.innerHTML += '<tr id="'+value+'" class="govuk-table__row"><td class="govuk-table__cell">'+value+'</td></tr>';
+    counter.textContent = "";
+}
+
+function remove_from_table(value){
+    var element = document.getElementById(value);
+    element.remove();
+}
+
+
 
 /*question sets*/
 
 
 /*on load default */
-window.onload = function(){
-}
 
 /* radio logic */
 

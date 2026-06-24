@@ -79,12 +79,256 @@
             <div class="govuk-form-group">
                 <div class="govuk-checkboxes" data-module="govuk-checkboxes">
                     <div class="govuk-checkboxes__item">
-                        <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
-                        <label class="govuk-label govuk-checkboxes__label govuk-fieldset__legend--s" for="waste">
+                        <input class="govuk-checkboxes__input" id="potential" name="potential" type="checkbox" value="potential">
+                        <label class="govuk-label govuk-checkboxes__label govuk-fieldset__legend--s" for="potential">
                             Potential
                         </label>
                     </div>
                 </div>
+            </div>
+            <!-- Error tabs-->
+            <div class="govuk-tabs" data-module="govuk-tabs">
+                <h2 class="govuk-tabs__title">
+                    Contents
+                </h2>
+                <ul class="govuk-tabs__list">
+                    <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+                    <a class="govuk-tabs__tab" href="#error-contributor">
+                        Error contributor
+                    </a>
+                    </li>
+                    <li class="govuk-tabs__list-item">
+                    <a class="govuk-tabs__tab" href="#error-reason">
+                        Error reason
+                    </a>
+                    </li>
+                    <li class="govuk-tabs__list-item">
+                    <a class="govuk-tabs__tab" href="#mve-info">
+                        MVE info
+                    </a>
+                    </li>
+                    <div id="potential_tab">
+                        <li class="govuk-tabs__list-item">
+                        <a class="govuk-tabs__tab" href="#potential-error">
+                            Potential error
+                        </a>
+                        </li>
+                    </div>
+                    </li>
+                    <li class="govuk-tabs__list-item">
+                    <a class="govuk-tabs__tab" href="#feedback-info">
+                        Feedback info
+                    </a>
+                    </li>
+                    </li>
+                    <li class="govuk-tabs__list-item two_row_tabs">
+                    <a class="govuk-tabs__tab" href="#operational-instructions">
+                        Operational instructions
+                    </a>
+                    </li>
+                </ul>
+                <!-- Tabs -->
+                <div class="govuk-tabs__panel" id="error-contributor">
+                    <h2 class="govuk-heading-l">Error contributor</h2>
+                    <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="telephony" name="telephony" type="checkbox" value="telephony">
+                        <label class="govuk-label govuk-checkboxes__label govuk-fieldset__legend--s" for="telephony">
+                            telephony
+                        </label>
+                    </div>
+                    <div id="sub_telephony" class="govuk-inset-text">
+                        <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+                        <label class="govuk-label govuk-checkboxes__label govuk-fieldset__legend--s" for="waste">
+                            People
+                        </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+                            <label class="govuk-label govuk-checkboxes__label govuk-fieldset__legend--s" for="waste">
+                                Policy or instruction
+                            </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+                            <label class="govuk-label govuk-checkboxes__label govuk-fieldset__legend--s" for="waste">
+                                system
+                            </label>
+                        </div>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+                        <label class="govuk-label govuk-checkboxes__label govuk-fieldset__legend--s" for="waste">
+                            jobcentre
+                        </label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+                        <label class="govuk-label govuk-checkboxes__label govuk-fieldset__legend--s" for="waste">
+                            Processing office
+                        </label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+                        <label class="govuk-label govuk-checkboxes__label govuk-fieldset__legend--s" for="waste">
+                            Business partner team
+                        </label>
+                    </div>
+                </div>
+                <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="error-reason">
+                    <h2 class="govuk-heading-l">Error reason</h2>
+                    <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+                        <label class="govuk-label govuk-checkboxes__label govuk-fieldset__legend--s" for="waste">
+                            Amount incorrect
+                        </label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+                        <label class="govuk-label govuk-checkboxes__label govuk-fieldset__legend--s" for="waste">
+                            No - overpayment
+                        </label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+                        <label class="govuk-label govuk-checkboxes__label govuk-fieldset__legend--s" for="waste">
+                            No - underpayment
+                        </label>
+                    </div>
+                </div>
+                <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="mve-info">
+                    <h2 class="govuk-heading-l">MVE info</h2>
+                    <div class="govuk-form-group">
+                        <label class="govuk-label govuk-!-font-weight-bold" for="award_value">
+                            Enter the monetary value of the error (MVE) amount in pounds:
+                        </label>
+                        <div class="govuk-input__wrapper">
+                            <div class="govuk-input__prefix" aria-hidden="true">£</div>
+                            <input class="govuk-input govuk-input--width-10" id="award_value" name="award_value" type="text" spellcheck="false">
+                        </div>
+                    </div>
+                    <div class="govuk-form-group">
+                        <fieldset class="govuk-fieldset" aria-describedby="changedName-hint">
+                            <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                            <h2 class="govuk-fieldset__heading">
+                                MVE categorisation
+                            </h2>
+                            </legend>
+                            <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+                                <div class="govuk-radios__item">
+                                    <input class="govuk-radios__input" id="telephony_yes" name="telephony" type="radio" value="yes">
+                                    <label class="govuk-label govuk-radios__label" for="telephony_yes">
+                                    Monetary
+                                    </label>
+                                </div>
+                                <div class="govuk-radios__item">
+                                    <input class="govuk-radios__input" id="telephony_no" name="telephony" type="radio" value="no">
+                                    <label class="govuk-label govuk-radios__label" for="telephony_no">
+                                    Entitlement
+                                    </label>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div>
+                </div>
+                <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="potential_error_content">
+                    <h2 class="govuk-heading-l">Potential error</h2>
+                    <div class="govuk-form-group">
+                        <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+                            <div class="govuk-radios" data-module="govuk-radios">
+                                <div class="govuk-radios__item">
+                                    <input class="govuk-radios__input" id="contact" name="pot_err_choice" type="radio" value="telephone_office" data-aria-controls="conditional-contact">
+                                    <label class="govuk-label govuk-radios__label" for="contact">
+                                    Telephone office
+                                    </label>
+                                </div>
+                                <div id="pot_tell_more" id="sub_telephony" class="govuk-inset-text">
+                                    <div id="more-detail-hint" class="govuk-hint">
+                                        Record the reason why you think this potentail error and the information you are requesting from the office above.
+                                    </div>
+                                    <textarea class="govuk-textarea" id="more-detail" name="moreDetail" rows="5" aria-describedby="more-detail-hint"></textarea>
+                                    <div id="more-detail-hint" class="govuk-hint">
+                                        5,000 characters remaining
+                                    </div>
+                                </div>
+                                <div class="govuk-radios__item">
+                                    <input class="govuk-radios__input" id="contact-2" name="pot_err_choice" type="radio" value="Processing office" data-aria-controls="conditional-contact-2">
+                                    <label class="govuk-label govuk-radios__label" for="contact-2">
+                                    Processing office
+                                    </label>
+                                </div>
+                                <div class="govuk-radios__item">
+                                    <input class="govuk-radios__input" id="contact-3" name="pot_err_choice" type="radio" value="Secondary processing office" data-aria-controls="conditional-contact-3">
+                                    <label class="govuk-label govuk-radios__label" for="contact-3">
+                                    Secondary processing office
+                                    </label>
+                                </div>
+                                <div class="govuk-radios__item">
+                                    <input class="govuk-radios__input" id="contact-4" name="pot_err_choice" type="radio" value="Non busineess event office" data-aria-controls="conditional-contact-3">
+                                    <label class="govuk-label govuk-radios__label" for="contact-3">
+                                    Non busineess event office
+                                    </label>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div>
+                </div>
+                <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="feedback-info">
+                    <h2 class="govuk-heading-l">Feedback info</h2>
+                    <div id="more-detail-hint" class="govuk-hint">
+                        Use this box to record the relevant information about the error you want to send as feedback.
+                    </div>
+                    <textarea class="govuk-textarea" id="more-detail" name="moreDetail" rows="5" aria-describedby="more-detail-hint"></textarea>
+                </div>
+                <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="operational-instructions">
+                    <h2 class="govuk-heading-l">DWP operational instructions</h2>
+                    <div id="more-detail-hint" class="govuk-hint">
+                        Enter DWP intranet links to policy or operational instructions that are relvant to this error. You can enter up to 5 links. The links are optional.
+                    </div>
+                    <div class="govuk-form-group">
+                        <label class="govuk-label govuk-fieldset__legend--s" for="event-name">
+                            DWP intranet link
+                        </label>
+                        <input class="govuk-input " id="event-name" name="eventName" type="text">
+                    </div>
+                    <div class="govuk-form-group">
+                        <label class="govuk-label govuk-fieldset__legend--s" for="event-name">
+                            DWP intranet link
+                        </label>
+                        <input class="govuk-input " id="event-name" name="eventName" type="text">
+                    </div>
+                    <div class="govuk-form-group">
+                        <label class="govuk-label govuk-fieldset__legend--s" for="event-name">
+                            DWP intranet link
+                        </label>
+                        <input class="govuk-input " id="event-name" name="eventName" type="text">
+                    </div>
+                    <div class="govuk-form-group">
+                        <label class="govuk-label govuk-fieldset__legend--s" for="event-name">
+                            DWP intranet link
+                        </label>
+                        <input class="govuk-input " id="event-name" name="eventName" type="text">
+                    </div>
+                    <div class="govuk-form-group">
+                        <label class="govuk-label govuk-fieldset__legend--s" for="event-name">
+                            DWP intranet link
+                        </label>
+                        <input class="govuk-input " id="event-name" name="eventName" type="text">
+                    </div>
+                </div>
+            </div>
+            <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+                <label class="govuk-label govuk-checkboxes__label govuk-fieldset__legend--s" for="waste">
+                    Not correctable
+                </label>
+            </div>
+            <div class="spacing govuk-!-margin-bottom-9"></div>
+            <div>
+                <button name="cd_complete" value="yes" onclick="location.href='../record_a_check/security_questions.html'" class="govuk-button" data-module="govuk-button">
+                    Save and continue
+                </button>
+                <a class=" govuk-!-margin-9 govuk-link" href="#">Cancel</a>
             </div>
         </div>
     </div>
@@ -95,58 +339,66 @@
 <script>
 
 /*content sections */
-const partner = document.getElementById("customer_partner");
-const telephony = document.getElementById("telephony_details");
-const additional_telephony = document.getElementById("additional_telephony_details");
+const sub_telephony = document.getElementById("sub_telephony");
+const potential_error_content = document.getElementById("potential_error_content");
+const potential_tab = document.getElementById("potential_tab");
+const pot_tell_more = document.getElementById('pot_tell_more');
+
 
 
 /*question sets*/
-const partner_question = document.querySelectorAll('input[name="partner"]');
-const telephony_question = document.querySelectorAll('input[name="telephony"]');
-const additional_telephony_question = document.querySelectorAll('input[name="additional_telephony"]');
+const telephony_question = document.querySelector('input[name="telephony"]');
+const potential_question = document.querySelector('input[name="potential"]');
+const potential_choices = document.querySelectorAll('input[name="pot_err_choice"]');
+
 
 
 /*on load default */
 window.onload = function(){
-partner.style.display="none";
-telephony.style.display="none";
-additional_telephony.style.display="none";
+sub_telephony.style.display="none";
+potential_tab.style.display="none";
+pot_tell_more.style.display="none";
+potential_error_content.style.display = "none";
+
 
 }
 
 /* radio logic */
-partner_question.forEach(element => {
+
+telephony_question.addEventListener('change', function(){
+    if (this.checked == true){
+        sub_telephony.style.display="block";
+    }
+    else {
+        sub_telephony.style.display="none";
+    }
+});
+
+potential_question.addEventListener('change', function(){
+    if (this.checked == true){
+        potential_tab.style.display="block";
+        potential_error_content.style.display = "block";
+    }
+    else {
+        potential_tab.style.display="none";
+        potential_error_content.style.display = "none";
+    }
+});
+
+potential_choices.forEach(element => {
     element.addEventListener('change', function(){
-        if (this.value==='yes'){
-            partner.style.display="block";
+        if (this.value=='telephone_office'){
+            pot_tell_more.style.display = "block";
         }
         else {
-            partner.style.display="none";
+            pot_tell_more.style.display = "none";
         }
     });
 });
 
-telephony_question.forEach(element => {
-    element.addEventListener('change', function(){
-        if (this.value==='yes'){
-            telephony.style.display="block";
-        }
-        else {
-            telephony.style.display="none";
-        }
-    });
-});
-
-additional_telephony_question.forEach(element => {
-    element.addEventListener('change', function(){
-        if (this.value==='yes'){
-            additional_telephony.style.display="block";
-        }
-        else {
-            additional_telephony.style.display="none";
-        }
-    });
-});
+//function potential_error_link_override(){   
+  //  .classList.remove("govuk-tabs__panel--hidden");
+//}
 
 
 

@@ -1,0 +1,127 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Root cause analysis - Record a check – {{ serviceName }} – GOV.UK Prototype
+{% endblock %}
+ 
+{% block header %}
+{{
+    dwpHeader({
+        serviceName: serviceName,
+        serviceHref: "/",
+        container: true
+    })
+}}
+
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-width-container">
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full">
+            <a href="assurance_overview.html" class="govuk-back-link">Back to assurance overview</a>
+            <h3 class="govuk-caption-l">FQM-QA-1234</h3>
+            <div class="spacing govuk-!-margin-bottom-6"></div>
+            <h1 class="govuk-heading-xl">Select errors for root cause analysis</h1>
+            <h2 class="govuk-heading-l">Automatically selected</h2>
+            <table class="govuk-table">
+                <tbody class="govuk-table__body">
+                    <tr class="govuk-table__row">
+                        <td class="govuk-table__body">
+                            <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                                <div class="govuk-checkboxes__item">
+                                    <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses" checked disabled>
+                                    <label class="govuk-label govuk-checkboxes__label govuk-fieldset__legend--s" for="waste">
+                                    </label>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="govuk-table__body"><a href="#" class="govuk-link">Error-123-456</a></td>
+                        <td class="govuk-table__body">Cutomer detriment</td>
+                        <td class="govuk-table__body">Policy, system</td>
+                        <td class="govuk-table__body">Business error</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="spacing govuk-!-margin-bottom-9"></div>
+            <h2 class="govuk-heading-l">Manual selection</h2>
+            <p class=""govuk-body>There needs to be 2 errors selected for root cause analysis. Please select appropriate errors from the list below</p>
+            <table class="govuk-table">
+                <thead class="govuk-table__head">
+                    <tr class="govuk-table__row">
+                    <th scope="col" class="govuk-table__header"></th>
+                    <th scope="col" class="govuk-table__header"></th>
+                    <th scope="col" class="govuk-table__header" style="text-align: left;">Detriment</th>
+                    <th scope="col" class="govuk-table__header govuk-table__header--numeric" style="text-align: left;">Error sub contributiors</th>
+                    <th scope="col" class="govuk-table__header govuk-table__header--numeric" style="text-align: left;">Type of error</th>
+                    </tr>
+                </thead>
+                <tbody class="govuk-table__body">
+                    <tr class="govuk-table__row">
+                        <td class="govuk-table__body">  
+                            <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                                <div class="govuk-checkboxes__item">
+                                    <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+                                    <label class="govuk-label govuk-checkboxes__label govuk-fieldset__legend--s" for="waste">
+                                    </label>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="govuk-table__body"><a href="#" class="govuk-link">Error-234-567</a></td>
+                        <td class="govuk-table__body">Cutomer detriment</td>
+                        <td class="govuk-table__body">Policy, system</td>
+                        <td class="govuk-table__body">Business error</td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                        <td class="govuk-table__body">
+                            <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                                <div class="govuk-checkboxes__item">
+                                    <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+                                    <label class="govuk-label govuk-checkboxes__label govuk-fieldset__legend--s" for="waste">
+                                    </label>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="govuk-table__body"><a href="#" class="govuk-link">Error-345-678</a></td>
+                        <td class="govuk-table__body">Cutomer detriment</td>
+                        <td class="govuk-table__body">Policy, system</td>
+                        <td class="govuk-table__body">Business error</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="spacing govuk-!-margin-bottom-9"></div>
+                <div>
+                    <button name="cd_complete" value="yes" onclick="location.href='../record_a_check/root_cause_analysis.html'" class="govuk-button" data-module="govuk-button">
+                        Save and continue
+                    </button>
+                    <a class=" govuk-!-margin-9 govuk-link" href="#">Cancel</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+
+{% block pageScripts %}
+<script>
+
+/*content sections */
+
+/*question sets*/
+
+
+/*on load default */
+window.onload = function(){
+}
+
+/* radio logic */
+
+
+
+
+
+</script>
+{% endblock %}
+
