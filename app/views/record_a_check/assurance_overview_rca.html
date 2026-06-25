@@ -82,19 +82,13 @@
                         Case details
                     </a>
                     </div>
-                    {% if hasVisitedPageCaseDetails %}
+                    
                     <div class="govuk-task-list__status" id="case-details-status">
                         <strong class="govuk-tag govuk-tag--green">
                             Complete
                         </strong>
                     </div>
-                    {% else %}
-                    <div class="govuk-task-list__status" id="case-details-status">
-                        <strong class="govuk-tag govuk-tag--blue">
-                            Incomplete
-                        </strong>
-                    </div>
-                    {% endif %}
+                    
                 </li>
                 <li class="govuk-task-list__item govuk-task-list__item--with-link">
                     <div class="govuk-task-list__name-and-hint">
@@ -102,19 +96,13 @@
                         Sample details
                     </a>
                     </div>
-                    {% if hasVisitedPageSampleDetails %}
+                    
                     <div class="govuk-task-list__status" id="sample-details-status">
                         <strong class="govuk-tag govuk-tag--green">
                             Complete
                         </strong>
                     </div>
-                    {% else %}
-                    <div class="govuk-task-list__status" id="sample-details-status">
-                        <strong class="govuk-tag govuk-tag--blue">
-                            Incomplete
-                        </strong>
-                    </div>
-                    {% endif %}
+                    
                 </li>
                 <li class="govuk-task-list__item govuk-task-list__item--with-link">
                     <div class="govuk-task-list__name-and-hint">
@@ -122,19 +110,13 @@
                         Award details 
                     </a>
                     </div>
-                        {% if hasVisitedPageAwardDetails %}
+                        
                     <div class="govuk-task-list__status" id="sample-details-status">
                         <strong class="govuk-tag govuk-tag--green">
                             Complete
                         </strong>
                     </div>
-                    {% else %}
-                    <div class="govuk-task-list__status" id="sample-details-status">
-                        <strong class="govuk-tag govuk-tag--blue">
-                            Incomplete
-                        </strong>
-                    </div>
-                    {% endif %}
+                    
                 </li>
             </ul>
             <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
@@ -151,19 +133,13 @@
                         Security and identity verification for DWP
                     </a>
                     </div>
-                    {% if hasVisitedPageCaseDetails %}
+                    
                     <div class="govuk-task-list__status" id="case-details-status">
                         <strong class="govuk-tag govuk-tag--green">
                             Complete
                         </strong>
                     </div>
-                    {% else %}
-                    <div class="govuk-task-list__status" id="case-details-status">
-                        <strong class="govuk-tag govuk-tag--blue">
-                            Incomplete
-                        </strong>
-                    </div>
-                    {% endif %}
+                    
                 </li>
                 <li class="govuk-task-list__item govuk-task-list__item--with-link">
                     <div class="govuk-task-list__name-and-hint">
@@ -171,24 +147,58 @@
                         Housing cost
                     </a>
                     </div>
-                    {% if hasVisitedPageSampleDetails %}
+                    
                     <div class="govuk-task-list__status" id="sample-details-status">
                         <strong class="govuk-tag govuk-tag--green">
                             Complete
                         </strong>
                     </div>
-                    {% else %}
-                    <div class="govuk-task-list__status" id="sample-details-status">
-                        <strong class="govuk-tag govuk-tag--blue">
-                            Incomplete
-                        </strong>
-                    </div>
-                    {% endif %}
+                    
                 </li>
             </ul>
             <div class="spacing govuk-!-margin-bottom-6"></div>
             <p class="govuk-heading-m govuk-!-font-weight-bold">Additional sections</p>
+            <ul class="govuk-task-list">
+                <li class="govuk-task-list__item govuk-task-list__item--with-link">
+                    <div class="govuk-task-list__name-and-hint">
+                    <a class="govuk-link govuk-task-list__link" href="case_details" aria-describedby="company-details-1-status">
+                        Payment details
+                    </a>
+                    </div>
+                   
+                    <div class="govuk-task-list__status" id="case-details-status">
+                        <strong class="govuk-tag govuk-tag--green">
+                            Complete
+                        </strong>
+                    </div>
+                    
+                </li>
+                <li class="govuk-task-list__item govuk-task-list__item--with-link">
+                    <div class="govuk-task-list__name-and-hint">
+                    <a class="govuk-link govuk-task-list__link" href="sample_details" aria-describedby="company-details-2-status">
+                        Payment
+                    </a>
+                    </div>
+                    
+                    <div class="govuk-task-list__status" id="sample-details-status">
+                        <strong class="govuk-tag govuk-tag--green">
+                            Complete
+                        </strong>
+                    </div>
+                    
+                </li>
+            </ul>
             <button onclick="location.href='../record_a_check/sections.html'" class="govuk-button govuk-button--secondary">Add additional sections</button>
+            <div class="govuk-cookie-banner" style="padding: 10px 10px 1px 10px; border-bottom: 5px;">
+                <table class="govuk-table" style="margin-bottom: 10px !important;">
+                    <tbody class="govuk-table__body">
+                    <tr class="govuk-table__row">
+                        <th style="border-bottom: none;" scope="row" class="govuk-table__header">Total errors:</th>
+                        <td style="border-bottom: none; text-align: right;" class="govuk-table__cell">2 errors</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
             <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
             
 
@@ -196,7 +206,9 @@
 
             <h2 class="govuk-heading-l">Root cause analysis</h2>
             <p class="govuk-body">Lorem Ipsum dolor sit amet consecter.</p>
+            <button onclick="location.href='../record_a_check/choose_root_cause_analysis.html'" class="govuk-button govuk-button--secondary">Run Root Cause analysis</button>
             <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+            
 
             <!-- Check Summary -->
 
