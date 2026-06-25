@@ -61,7 +61,10 @@
                 </label>
                 <select class="govuk-select govuk-select--width-10" id="error_occure" name="error_occure">
                     <option value="#">Please select</option>
-                    <option value="#">Option 1</option>
+                    <option value="Customer_information_and_eligibility">Customer information and eligibility</option>
+                    <option value="#">Process compliance</option>
+                    <option value="#">Award assessment</option>
+                    <option value="#">Customer experience</option>
                 </select>
             </div>
             <div class="govuk-form-group" id="question_two">
@@ -70,7 +73,15 @@
                 </label>
                 <select class="govuk-select govuk-select--width-10" id="www" name="www">
                     <option value="#">Please select</option>
-                    <option value="#">Option 1</option>
+                    <option value="#">identity verification</option>
+                    <option value="#">Customers personal or contact details</option>
+                    <option value="#">Partner details</option>
+                    <option value="#">Eligibility</option>
+                    <option value="#">Special rules: End of Life</option>
+                    <option value="#">Claim type</option>
+                    <option value="#">Date of claim or change</option>
+                    <option value="#">Claimant commitment</option>
+                    <option value="#">Linking</option>
                 </select>
             </div>
             <div class="govuk-form-group" id="question_three">
@@ -79,7 +90,32 @@
                 </label>
                 <select class="govuk-select govuk-select--width-10" id="why_error" name="why_error">
                     <option value="#">Please select</option>
-                    <option value="#">Option 1</option>
+                    <option value="#">Instructions missing, ambiguous or incorrect </option>
+                    <option value="#">System issue</option>
+                    <option value="#">Incorrect, missed or inappropriate questioning</option>
+                    <option value="#">Documentation not requested or received</option>
+                    <option value="#">Documentation not uploaded</option>
+                    <option value="#">Documentation uploaded incorrectly</option>
+                    <option value="#">Incorrect documentation uploaded</option>
+                    <option value="#">Notification incomplete, incorrect or not issued</option>
+                    <option value="#">Inappropriate information given</option>
+                    <option value="#">Field not completed</option>
+                    <option value="#">Notes missing, inadequate or incorrect</option>
+                    <option value="#">Payments not suspended</option>
+                    <option value="#">Payments suspended incorrectly</option>
+                    <option value="#">Review not completed</option>
+                    <option value="#">Script not followed</option>
+                    <option value="#">Control not set</option>
+                    <option value="#">Control not actioned</option>
+                    <option value="#">Calculation incorrect</option>
+                    <option value="#">Decision missed or incorrect</option>
+                    <option value="#">Customer needs not considered</option>
+                    <option value="#">Customer preferences not considered</option>
+                    <option value="#">Incorrect advice given (or no advice given)</option>
+                    <option value="#">Poor communication skills from the agent</option>
+                    <option value="#">Information on action received - action not taken</option>
+                    <option value="#">Internal communications error</option>
+                    <option value="#">Other: discuss with team leader</option>
                 </select>
             </div>
             <div class="spacing govuk-!-margin-bottom-9"></div>
@@ -115,7 +151,9 @@ window.onload = function(){
 
 /* logic */
 error_occure_question.addEventListener("change", function(){
+    if (this.value=="Customer_information_and_eligibility"){
     question_two.style.display = "block";
+}
   });
 
 www_question.addEventListener("change", function(){
