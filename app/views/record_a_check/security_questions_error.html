@@ -80,7 +80,7 @@
                         </div>
                     </div>
                     <div class="spacing govuk-!-margin-bottom-6"></div>
-                    <button id="record_error_1" onclick="location.href='../record_a_check/error.html'" class="govuk-button govuk-button--secondary">Record error</button>
+                    <p class="govuk-body"><a class="govuk-link" href="error.html">View recorded error-234-567</a></p>
                 </fieldset>
             </div>
             <div class="spacing govuk-!-margin-bottom-9"></div>
@@ -238,7 +238,7 @@
 
 {% block pageScripts %}
 <script>
-const record_error_1 = document.getElementById("record_error_1");
+
 const record_error_2 = document.getElementById("record_error_2");
 const record_error_3 = document.getElementById("record_error_3");
 const record_error_4 = document.getElementById("record_error_4");
@@ -254,7 +254,6 @@ const question_five = document.querySelectorAll('input[name="security_marker"]')
 
 /*on load default */
 window.onload = function(){
-record_error_1.style.display = "none";
 record_error_2.style.display = "none";
 record_error_3.style.display = "none";
 record_error_4.style.display = "none";
@@ -267,16 +266,7 @@ record_error_5.style.display = "none";
 //}
 
 
-question_one.forEach(element => {
-    element.addEventListener('change', function(){
-        if (this.value=='no'){
-            record_error_1.style.display = "inline";
-        }
-        else {
-            record_error_1.style.display = "none";
-        }
-    });
-});
+
 
 question_two.forEach(element => {
     element.addEventListener('change', function(){

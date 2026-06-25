@@ -1,0 +1,87 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+   Case overview - Record a check – {{ serviceName }} – GOV.UK Prototype
+{% endblock %}
+ 
+{% block header %}
+{{
+    dwpHeader({
+        serviceName: serviceName,
+        serviceHref: "/",
+        container: true
+    })
+}}
+
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+  <a href="#" class="govuk-back-link">Back to dashboard</a>
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full">
+            <h3 class="govuk-caption-l">FQM-QA-1234</h3>
+            <div class="spacing govuk-!-margin-bottom-6"></div>
+            <h1 class="govuk-heading-xl">Start a new assurance</h1>
+        </div>
+    </div>
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+            <div id="overview_container" class="govuk-cookie-banner" style="padding: 10px 10px 1px 10px; border-bottom: 5px;">
+                <div id="overview_table">
+                    <p class="govuk-heading-m govuk-!-font-weight-bold">Case overview</p>
+                    <table class="govuk-table" style="margin-bottom: 10px !important;">
+                        <tbody class="govuk-table__body">
+                        <tr class="govuk-table__row">
+                            <th scope="row" class="govuk-table__header">NINO</th>
+                            <td class="govuk-table__cell">AB 12 34 A</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <th scope="row" class="govuk-table__header">Product line</th>
+                            <td class="govuk-table__cell">Pension credit</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <th scope="row" class="govuk-table__header">Assurance type</th>
+                            <td class="govuk-table__cell">New claim</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <th style="border-bottom: none;" scope="row" class="govuk-table__header">Business event date</th>
+                            <td style="border-bottom: none;" class="govuk-table__cell">1st January 2025</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="spacing govuk-!-margin-bottom-4"></div>
+            <div class="govuk-grid-row">
+                <div class="govuk-grid-column-one-third">
+                    <button onclick="location.href='../record_a_check/assurance_overview.html'" class="govuk-button govuk-button--primary">Start assurance</button>
+                </div>
+                <div class="govuk-grid-column-one-third">
+                    <button onclick="location.href='../case_assignment/deselection.html'" class="govuk-button govuk-button--secondary">Deselect case</button>
+                </div>
+                <div class="govuk-grid-column-one-third">
+                    <button onclick="location.href='case_overview.html'" class="govuk-button govuk-button--secondary">Reassign case</button>
+                </div>
+            </div>
+            <div class="spacing govuk-!-margin-bottom-4"></div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+<!-- add script for css here-->
+{% block stylesheets %}
+{{ super() }}
+<style type="text/css" />
+
+</style>
+{% endblock %}
+
+{% block pageScripts %}
+<script>
+  
+</script>
+{% endblock %}
+

@@ -20,7 +20,7 @@
 <div class="govuk-width-container">
     <div class="govuk-grid-row">
         <div class="govuk-grid-column-full">
-            <a href="assurance_overview.html" class="govuk-back-link">Back to Security and identity verification for DWP</a>
+            <a href="security_questions.html" class="govuk-back-link">Back to Security and identity verification for DWP</a>
             <h3 class="govuk-caption-l">Error-12-34-56</h3>
             <div class="spacing govuk-!-margin-bottom-6"></div>
             <h1 class="govuk-heading-xl">Record an error</h1>
@@ -318,14 +318,48 @@
                 </div>
             </div>
             <div class="govuk-checkboxes__item">
-                <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+                <input class="govuk-checkboxes__input" id="not_correctable" name="not_correctable" type="checkbox" value="not_correctable">
                 <label class="govuk-label govuk-checkboxes__label govuk-fieldset__legend--s" for="waste">
                     Not correctable
                 </label>
             </div>
+            <div id="sub_not_correctable" class="govuk-inset-text">
+                <div class="govuk-form-group">
+                    <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
+                        <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                            <h2 class="govuk-fieldset__heading">
+                                Date applicable
+                            </h2>
+                        </legend>
+                        <div id="passport-issued-hint" class="govuk-hint">
+                            For example, 13/12/1970
+                        </div>
+                        <input class="govuk-input govuk-input--width-10" id="tel_call_date" name="tel_call_date" type="date" spellcheck="false">
+                    </fieldset>
+                </div>
+                <div class="govuk-form-group">
+                    <label class="govuk-label govuk-fieldset__legend--s" for="event-name">
+                        Reason
+                    </label>
+                    <select class="govuk-select govuk-select--width-10" id="error_occure" name="error_occure">
+                        <option value="#">Please select</option>
+                        <option value="#">Claim Closed</option>
+                        <option value="#">Nil Claim</option>
+                        <option value="#">Minor Rework Error</option>
+                        <option value="#">Issues with operational instruction</option>
+                        <option value="#">Business Easement</option>
+                        <option value="#">Escalated to OGB</option>
+                        <option value="#">Fraud Referral</option>
+                        <option value="#">Customer Deceased</option>
+                        <option value="#">Error Cannot Be Changed</option>
+                        <option value="#">Telephony Error</option>
+                        <option value="#">Other</option>
+                    </select>
+                </div> 
+            </div>
             <div class="spacing govuk-!-margin-bottom-9"></div>
             <div>
-                <button name="cd_complete" value="yes" onclick="location.href='../record_a_check/security_questions.html'" class="govuk-button" data-module="govuk-button">
+                <button name="cd_complete" value="yes" onclick="location.href='../record_a_check/security_questions_error.html'" class="govuk-button" data-module="govuk-button">
                     Save and continue
                 </button>
                 <a class=" govuk-!-margin-9 govuk-link" href="#">Cancel</a>
@@ -343,6 +377,7 @@ const sub_telephony = document.getElementById("sub_telephony");
 const potential_error_content = document.getElementById("potential_error_content");
 const potential_tab = document.getElementById("potential_tab");
 const pot_tell_more = document.getElementById('pot_tell_more');
+const sub_not_correctable = document.getElementById('sub_not_correctable');
 
 
 
@@ -350,7 +385,7 @@ const pot_tell_more = document.getElementById('pot_tell_more');
 const telephony_question = document.querySelector('input[name="telephony"]');
 const potential_question = document.querySelector('input[name="potential"]');
 const potential_choices = document.querySelectorAll('input[name="pot_err_choice"]');
-
+const not_correctable = document.querySelector('input[name="not_correctable"]');
 
 
 /*on load default */
@@ -359,11 +394,21 @@ sub_telephony.style.display="none";
 potential_tab.style.display="none";
 pot_tell_more.style.display="none";
 potential_error_content.style.display = "none";
+sub_not_correctable.style.display = "none";
 
 
 }
 
 /* radio logic */
+
+not_correctable.addEventListener('change', function(){
+    if (this.checked == true){
+        sub_not_correctable.style.display="block";
+    }
+    else {
+        sub_not_correctable.style.display="none";
+    }
+});
 
 telephony_question.addEventListener('change', function(){
     if (this.checked == true){
