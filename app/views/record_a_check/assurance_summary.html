@@ -31,22 +31,53 @@
                     <tr class="govuk-table__row">
                         <th scope="row" class="govuk-table__header">Current award total</th>
                         <td class="govuk-table__cell">£100.00</td>
+                        <td class="govuk-table__cell"></td>
                     </tr>
                     <tr class="govuk-table__row">
                         <th scope="row" class="govuk-table__header">Award due</th>
                         <td class="govuk-table__cell">£0.00</td>
+                        <td class="govuk-table__cell"><p class="govuk-body"><a onclick="javascript: show_award_override();" class="govuk-link">Override</a></p></td>
+                    </tr>
+                    <tr id="award_override" class="govuk-table__row">
+                        <td colspan="3" class="govuk-table__cell">
+                            <div class="govuk-form-group">
+                                <label class="govuk-label govuk-fieldset__legend--s" for="event-name">
+                                    New award amount
+                                </label>
+                                <div class="govuk-input__wrapper">
+                                    <div class="govuk-input__prefix" aria-hidden="true">£</div>
+                                    <input class="govuk-input govuk-input--width-10" id="award_value" name="award_value" type="text" spellcheck="false">
+                                </div>
+                            </div>
+                            <div>
+                                <button onclick="javascript: show_override_summary();" value="yes" class="govuk-button" data-module="govuk-button">
+                                    Save
+                                </button>
+                                <a class="govuk-!-margin-9 govuk-link" onclick="javascript: cancel_award_override()">Cancel</a>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr id="override_summary" class="govuk-table__row">
+                        <th scope="row" class="govuk-table__header">Officer added award</th>
+                        <td class="govuk-table__cell">£100.00</td>
+                        <td class="govuk-table__cell"><p class="govuk-body"><a class="govuk-link">Change</a></p></td>
+                        
                     </tr>
                     <tr class="govuk-table__row">
                         <th scope="row" class="govuk-table__header">Assurance outcome</th>
                         <td class="govuk-table__cell">DWP & customer detriment</td>
+                        <td class="govuk-table__cell"></td>
                     </tr>
                     <tr class="govuk-table__row">
                         <th style="border-bottom: none;" scope="row" class="govuk-table__header">Business event outcome</th>
                         <td style="border-bottom: none;" class="govuk-table__cell">Customer detriment</td>
+                        <td style="border-bottom: none;" class="govuk-table__cell"></td>
                     </tr>
                     </tbody>
                 </table>
             </div>
+        </div>
+        <div class="govuk-grid-column-two-thirds">
             <div class="spacing govuk-!-margin-bottom-9"></div>
             <h2 class="govuk-heading-l">Error summary details</h2>
             <div id="overview_container" class="govuk-cookie-banner" style="padding: 10px 10px 1px 10px; border-bottom: 5px;">
@@ -55,26 +86,32 @@
                     <tr class="govuk-table__row">
                         <th scope="row" class="govuk-table__header">Process error count</th>
                         <td class="govuk-table__cell">2</td>
+                        <td class="govuk-table__cell"></td>
                     </tr>
                     <tr class="govuk-table__row">
                         <th scope="row" class="govuk-table__header">Overpayment error count</th>
                         <td class="govuk-table__cell">0</td>
+                        <td class="govuk-table__cell"></td>
                     </tr>
                     <tr class="govuk-table__row">
                         <th scope="row" class="govuk-table__header">Overpayment errors total</th>
                         <td class="govuk-table__cell">£0.00</td>
+                        <td class="govuk-table__cell"></td>
                     </tr>
                     <tr class="govuk-table__row">
                         <th scope="row" class="govuk-table__header">Underpayment error count</th>
                         <td class="govuk-table__cell">0</td>
+                        <td class="govuk-table__cell"></td>
                     </tr>
                     <tr class="govuk-table__row">
                         <th scope="row" class="govuk-table__header">Underpayment errors total</th>
                         <td class="govuk-table__cell">£0.00</td>
+                        <td class="govuk-table__cell"></td>
                     </tr>
                     <tr class="govuk-table__row">
                         <th style="border-bottom: none;" scope="row" class="govuk-table__header">Potential error count</th>
                         <td style="border-bottom: none;" class="govuk-table__cell">0</td>
+                        <td class="govuk-table__cell"></td>
                     </tr>
                     </tbody>
                 </table>
@@ -91,18 +128,33 @@
 <script>
 
 /*content sections */
+const award_override = document.getElementById("award_override");
+const override_summary = document.getElementById("override_summary");
 
 /*question sets*/
 
 
 /*on load default */
 window.onload = function(){
+    award_override.style.display="none";
+    override_summary.style.display="none";
 }
 
 /* radio logic */
 
+function show_award_override(){
+    award_override.style.display="table-row";
+}
 
+function show_override_summary(){
+    award_override.style.display="none";
+    override_summary.style.display="table-row";
+}
 
+function cancel_award_override(){
+    award_override.style.display="none";
+    override_summary.style.display="none";
+}
 
 
 </script>
