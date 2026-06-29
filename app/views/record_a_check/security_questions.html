@@ -43,8 +43,8 @@
                 </label>
                 <select class="govuk-select" id="mark_as">
                     <option value="#">Please select</option>
-                    <option value="#">Yes</option>
-                    <option value="#">N/A</option>
+                    <option value="yes">Yes</option>
+                    <option value="na">N/A</option>
                 </select>
             </div>
             <div class="spacing govuk-!-margin-bottom-9"></div>
@@ -251,6 +251,8 @@ const question_two = document.querySelectorAll('input[name="identity_verificatio
 const question_three = document.querySelectorAll('input[name="required_identity_documents"]');
 const question_four = document.querySelectorAll('input[name="fraud_referral_process"]');
 const question_five = document.querySelectorAll('input[name="security_marker"]');
+const mark_as = document.querySelector('select[name="mark_as"]');
+
 
 /*on load default */
 window.onload = function(){
@@ -266,7 +268,15 @@ record_error_5.style.display = "none";
 //    record_error_1.style.display = "inline";
 //}
 
-
+/*mark_as.addEventListener('change', function(){
+    if (this.value == "yes"){
+        question_one.forEach(element => {
+            //if no selection has been made
+                //check the yes box
+        });
+    }
+});
+*/
 question_one.forEach(element => {
     element.addEventListener('change', function(){
         if (this.value=='no'){

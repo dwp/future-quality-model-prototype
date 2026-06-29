@@ -36,7 +36,7 @@
                     <tr class="govuk-table__row">
                         <th scope="row" class="govuk-table__header">Award due</th>
                         <td class="govuk-table__cell">£0.00</td>
-                        <td class="govuk-table__cell"><p class="govuk-body"><a onclick="javascript: show_award_override();" class="govuk-link">Override</a></p></td>
+                        <td class="govuk-table__cell"><p id="override_button" class="govuk-body"><a onclick="javascript: show_award_override();" class="govuk-link">Override</a></p></td>
                     </tr>
                     <tr id="award_override" class="govuk-table__row">
                         <td colspan="3" class="govuk-table__cell">
@@ -60,7 +60,7 @@
                     <tr id="override_summary" class="govuk-table__row">
                         <th scope="row" class="govuk-table__header">Officer added award</th>
                         <td class="govuk-table__cell">£100.00</td>
-                        <td class="govuk-table__cell"><p class="govuk-body"><a class="govuk-link">Change</a></p></td>
+                        <td class="govuk-table__cell"><p class="govuk-body"><a class="govuk-link" onclick="javascript: show_award_override();">Change</a></p></td>
                         
                     </tr>
                     <tr class="govuk-table__row">
@@ -130,6 +130,8 @@
 /*content sections */
 const award_override = document.getElementById("award_override");
 const override_summary = document.getElementById("override_summary");
+const override_button = document.getElementById("override_button");
+
 
 /*question sets*/
 
@@ -144,16 +146,19 @@ window.onload = function(){
 
 function show_award_override(){
     award_override.style.display="table-row";
+     override_summary.style.display="none";
 }
 
 function show_override_summary(){
     award_override.style.display="none";
     override_summary.style.display="table-row";
+    override_button.innerHTML="";
 }
 
 function cancel_award_override(){
     award_override.style.display="none";
     override_summary.style.display="none";
+    override_button.innerHTML="<a onclick='javascript: show_award_override();' class='govuk-link'>Override</a>";
 }
 
 

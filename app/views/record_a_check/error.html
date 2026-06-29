@@ -233,7 +233,7 @@
                         </fieldset>
                     </div>
                 </div>
-                <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="potential_error_content">
+                <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="potential-error">
                     <h2 class="govuk-heading-l">Potential error</h2>
                     <div class="govuk-form-group">
                         <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
@@ -399,7 +399,7 @@ window.onload = function(){
 sub_telephony.style.display="none";
 potential_tab.style.display="none";
 pot_tell_more.style.display="none";
-potential_error_content.style.display = "none";
+//potential_error_content.style.display = "none";
 sub_not_correctable.style.display = "none";
 
 
@@ -427,7 +427,7 @@ telephony_question.addEventListener('change', function(){
     }
 });
 
-potential_question.addEventListener('change', function(){
+/*potential_question.addEventListener('change', function(){
     if (this.checked == true){
         potential_tab.style.display="block";
         potential_error_content.style.display = "block";
@@ -435,6 +435,17 @@ potential_question.addEventListener('change', function(){
     else {
         potential_tab.style.display="none";
         potential_error_content.style.display = "none";
+    }
+});
+*/
+
+potential_question.addEventListener('change', function(){
+    if (this.checked == true){
+        potential_tab.style.display="inline";
+    }
+    else{
+        potential_tab.style.display="none";
+        window.location="#error-contributor";
     }
 });
 
@@ -453,6 +464,7 @@ potential_choices.forEach(element => {
 assessment_provider.addEventListener('change', function(){
     if (this.value=='process'){
         mve_tab.style.display = "none";
+        window.location="#error-contributor";
     }
     else {
         mve_tab.style.display = "block";
