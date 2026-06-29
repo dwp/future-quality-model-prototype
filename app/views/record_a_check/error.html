@@ -69,10 +69,10 @@
                 <label class="govuk-label govuk-fieldset__legend--s" for="assessment_provider">
                     Error impact
                 </label>
-                <select class="govuk-select" id="assessment_provider">
+                <select class="govuk-select" id="assessment_provider" name="assessment_provider">
                     <option value="#">Please select</option>
                     <option value="#">Overpayment</option>
-                    <option value="#">Process</option>
+                    <option value="process">Process</option>
                     <option value="#">Underpayment</option>
                 </select>
             </div>
@@ -102,11 +102,13 @@
                         Error reason
                     </a>
                     </li>
-                    <li class="govuk-tabs__list-item">
-                    <a class="govuk-tabs__tab" href="#mve-info">
-                        MVE info
-                    </a>
-                    </li>
+                    <div id="mve_tab">
+                        <li class="govuk-tabs__list-item">
+                        <a class="govuk-tabs__tab" href="#mve-info">
+                            MVE info
+                        </a>
+                        </li>
+                    </div>
                     <div id="potential_tab">
                         <li class="govuk-tabs__list-item">
                         <a class="govuk-tabs__tab" href="#potential-error">
@@ -283,7 +285,7 @@
                 <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="operational-instructions">
                     <h2 class="govuk-heading-l">DWP operational instructions</h2>
                     <div id="more-detail-hint" class="govuk-hint">
-                        Enter DWP intranet links to policy or operational instructions that are relvant to this error. You can enter up to 5 links. The links are optional.
+                        Enter DWP intranet links to policy or operational instructions that are relevant to this error. You can enter up to 5 links. The links are optional.
                     </div>
                     <div class="govuk-form-group">
                         <label class="govuk-label govuk-fieldset__legend--s" for="event-name">
@@ -360,7 +362,7 @@
             <div class="spacing govuk-!-margin-bottom-9"></div>
             <div>
                 <button name="cd_complete" value="yes" onclick="location.href='../record_a_check/security_questions_error.html'" class="govuk-button" data-module="govuk-button">
-                    Save and continue
+                    Save error
                 </button>
                 <a class=" govuk-!-margin-9 govuk-link" href="#">Cancel</a>
             </div>
@@ -378,6 +380,8 @@ const potential_error_content = document.getElementById("potential_error_content
 const potential_tab = document.getElementById("potential_tab");
 const pot_tell_more = document.getElementById('pot_tell_more');
 const sub_not_correctable = document.getElementById('sub_not_correctable');
+const mve_tab = document.getElementById('mve_tab');
+mve_tab
 
 
 
@@ -386,6 +390,8 @@ const telephony_question = document.querySelector('input[name="telephony"]');
 const potential_question = document.querySelector('input[name="potential"]');
 const potential_choices = document.querySelectorAll('input[name="pot_err_choice"]');
 const not_correctable = document.querySelector('input[name="not_correctable"]');
+const assessment_provider = document.querySelector('select[name="assessment_provider"]');
+
 
 
 /*on load default */
@@ -400,6 +406,8 @@ sub_not_correctable.style.display = "none";
 }
 
 /* radio logic */
+
+
 
 not_correctable.addEventListener('change', function(){
     if (this.checked == true){
@@ -440,6 +448,17 @@ potential_choices.forEach(element => {
         }
     });
 });
+
+
+assessment_provider.addEventListener('change', function(){
+    if (this.value=='process'){
+        mve_tab.style.display = "none";
+    }
+    else {
+        mve_tab.style.display = "block";
+    }
+});
+
 
 //function potential_error_link_override(){   
   //  .classList.remove("govuk-tabs__panel--hidden");
