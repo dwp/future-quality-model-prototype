@@ -1,5 +1,5 @@
 {
-  "serviceName": "Quality Assurance App",
+  "serviceName": "Quality Assurance application",
   "useServiceNavigation": true,
   "plugins": {
     "govuk-frontend": {
