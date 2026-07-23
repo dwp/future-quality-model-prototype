@@ -19,7 +19,7 @@
 
 <div class="govuk-width-container">
     <div class="govuk-grid-row">
-        <div class="govuk-grid-column-full">
+        <div class="govuk-grid-column-two-thirds">
             <a href="security_questions.html" class="govuk-back-link">Back to Security and identity verification for DWP</a>
             <h3 class="govuk-caption-l">Error-12-34-56</h3>
             <div class="spacing govuk-!-margin-bottom-6"></div>
@@ -29,12 +29,12 @@
                     <table class="govuk-table" style="margin-bottom: 10px !important;">
                         <tbody class="govuk-table__body">
                         <tr class="govuk-table__row">
-                            <th scope="row" class="govuk-table__header">Question</th>
-                            <td class="govuk-table__cell">Where appropriate has the outcome of the identity check been correctly recorded?</td>
-                        </tr>
-                        <tr class="govuk-table__row">
                             <th scope="row" class="govuk-table__header">Section</th>
                             <td class="govuk-table__cell">Security and identity verification for DWP</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <th scope="row" class="govuk-table__header">Question</th>
+                            <td class="govuk-table__cell">Where appropriate has the outcome of the identity check been correctly recorded?</td>
                         </tr>
                         <tr class="govuk-table__row">
                             <th scope="row" class="govuk-table__header">Case</th>
@@ -49,12 +49,6 @@
                 </div>
             </div>
             <div class="spacing govuk-!-margin-bottom-9"></div>
-            <div class="govuk-form-group">
-                <label class="govuk-label govuk-fieldset__legend--s" for="event-name">
-                    Error detriment:
-                </label>
-                <input class="govuk-input govuk-input--width-10" id="event-name" name="eventName" type="text" disabled value="TBD">
-            </div>
             <div class="govuk-form-group">
                 <div class="govuk-checkboxes" data-module="govuk-checkboxes">
                     <div class="govuk-checkboxes__item">
@@ -94,38 +88,38 @@
                 <ul class="govuk-tabs__list">
                     <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
                     <a class="govuk-tabs__tab" href="#error-contributor">
-                        Error contributor
+                        Error <br/>contributor
                     </a>
                     </li>
                     <li class="govuk-tabs__list-item">
                     <a class="govuk-tabs__tab" href="#error-reason">
-                        Error reason
+                        Error <br />reason
                     </a>
                     </li>
                     <div id="mve_tab">
                         <li class="govuk-tabs__list-item">
                         <a class="govuk-tabs__tab" href="#mve-info">
-                            MVE info
+                            MVE <br />info
                         </a>
                         </li>
                     </div>
                     <div id="potential_tab">
                         <li class="govuk-tabs__list-item">
                         <a class="govuk-tabs__tab" href="#potential-error">
-                            Potential error
+                            Potential <br />error
                         </a>
                         </li>
                     </div>
                     </li>
                     <li class="govuk-tabs__list-item">
                     <a class="govuk-tabs__tab" href="#feedback-info">
-                        Feedback info
+                        Feedback <br />info
                     </a>
                     </li>
                     </li>
                     <li class="govuk-tabs__list-item two_row_tabs">
                     <a class="govuk-tabs__tab" href="#operational-instructions">
-                        Operational instructions
+                        Operational <br/>instructions
                     </a>
                     </li>
                 </ul>
@@ -249,9 +243,6 @@
                                         Record the reason why you think this potential error and the information you are requesting from the office above.
                                     </div>
                                     <textarea class="govuk-textarea" id="more-detail" name="moreDetail" rows="5" aria-describedby="more-detail-hint"></textarea>
-                                    <div id="more-detail-hint" class="govuk-hint">
-                                        5,000 characters remaining
-                                    </div>
                                 </div>
                                 <div class="govuk-radios__item">
                                     <input class="govuk-radios__input" id="contact-2" name="pot_err_choice" type="radio" value="Processing office" data-aria-controls="conditional-contact-2">
@@ -291,33 +282,47 @@
                         <label class="govuk-label govuk-fieldset__legend--s" for="event-name">
                             DWP intranet link
                         </label>
-                        <input class="govuk-input " id="event-name" name="eventName" type="text">
+                        <input class="govuk-input govuk-input--width-20 links" id="event-name" name="eventName" type="text">
+                        <div id="links">
+                            <a href="#">Open</a>
+                            <a href="#">Delete</a>
+                        </div>
                     </div>
                     <div class="govuk-form-group">
                         <label class="govuk-label govuk-fieldset__legend--s" for="event-name">
                             DWP intranet link
                         </label>
-                        <input class="govuk-input " id="event-name" name="eventName" type="text">
+                        <input class="govuk-input govuk-input--width-20 links" id="event-name" name="eventName" type="text">
                     </div>
                     <div class="govuk-form-group">
                         <label class="govuk-label govuk-fieldset__legend--s" for="event-name">
                             DWP intranet link
                         </label>
-                        <input class="govuk-input " id="event-name" name="eventName" type="text">
+                        <input class="govuk-input govuk-input--width-20 links" id="event-name" name="eventName" type="text">
                     </div>
                     <div class="govuk-form-group">
                         <label class="govuk-label govuk-fieldset__legend--s" for="event-name">
                             DWP intranet link
                         </label>
-                        <input class="govuk-input " id="event-name" name="eventName" type="text">
+                        <input class="govuk-input govuk-input--width-20 links" id="event-name" name="eventName" type="text">
                     </div>
                     <div class="govuk-form-group">
                         <label class="govuk-label govuk-fieldset__legend--s" for="event-name">
                             DWP intranet link
                         </label>
-                        <input class="govuk-input " id="event-name" name="eventName" type="text">
+                        <input class="govuk-input govuk-input--width-20 links" id="event-name" name="eventName" type="text">
                     </div>
                 </div>
+            </div>
+            <div class="govuk-form-group">
+                <label class="govuk-label govuk-fieldset__legend--s" for="assessment_provider">
+                    Error detriment
+                </label>
+                <select class="govuk-select" id="assessment_provider" name="assessment_provider">
+                    <option value="#">Please select</option>
+                    <option value="#">Customer</option>
+                    <option value="process">DWP</option>
+                </select>
             </div>
             <div class="govuk-checkboxes__item">
                 <input class="govuk-checkboxes__input" id="not_correctable" name="not_correctable" type="checkbox" value="not_correctable">
@@ -367,6 +372,20 @@
                 <a class=" govuk-!-margin-9 govuk-link" onclick="location.href='../record_a_check/security_questions.html'">Cancel</a>
             </div>
         </div>
+        <div class="govuk-grid-column-one-third">
+            <div id="error_history">
+                <h2 class="govuk-heading-l">Error history</h2>
+                <ol class="hmrc-timeline">
+                    <li class="hmrc-timeline__event">
+                        <time class="hmrc-timeline__event-meta" datetime="2026-04-01">01 April 2026</time>
+                        <h2 class="hmrc-timeline__event-title">Error recorded</h2>
+                        <div class="hmrc-timeline__event-content">
+                            <p class="govuk-body">By User 1</p>
+                        </div>
+                    </li>
+                </ol>
+            </div>
+        </div>
     </div>
 </div>
 {% endblock %}
@@ -381,11 +400,12 @@ const potential_tab = document.getElementById("potential_tab");
 const pot_tell_more = document.getElementById('pot_tell_more');
 const sub_not_correctable = document.getElementById('sub_not_correctable');
 const mve_tab = document.getElementById('mve_tab');
-mve_tab
+const links = document.getElementById("links");
 
 
 
 /*question sets*/
+const link_inputs = document.querySelectorAll('.links');
 const telephony_question = document.querySelector('input[name="telephony"]');
 const potential_question = document.querySelector('input[name="potential"]');
 const potential_choices = document.querySelectorAll('input[name="pot_err_choice"]');
@@ -396,6 +416,7 @@ const assessment_provider = document.querySelector('select[name="assessment_prov
 
 /*on load default */
 window.onload = function(){
+links.style.display="none";
 sub_telephony.style.display="none";
 potential_tab.style.display="none";
 pot_tell_more.style.display="none";
@@ -471,6 +492,17 @@ assessment_provider.addEventListener('change', function(){
     }
 });
 
+link_inputs.forEach(input => {
+    input.addEventListener('change', function(){
+    if (this.value != ""){
+        var el = this.nextElementSibling;
+        el.style.display="inline";
+    }
+    else{
+        links.style.display="none";
+    }
+})
+});
 
 //function potential_error_link_override(){   
   //  .classList.remove("govuk-tabs__panel--hidden");

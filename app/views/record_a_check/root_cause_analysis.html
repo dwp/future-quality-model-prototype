@@ -20,7 +20,10 @@
 <div class="govuk-width-container">
     <div class="govuk-grid-row">
         <div class="govuk-grid-column-full">
-            <a href="assurance_overview_rca.html" class="govuk-back-link">Back to assurance overview</a>
+            <header class="top-bar">
+                <a href="javascript: history.back();" class="govuk-back-link left">Back</a>
+                <button class="govuk-button--secondary govuk-button right" onclick="location.href='assurance_overview_rca.html'">Assurance Overview</button>
+            </header>
             <h3 class="govuk-caption-l">RCA-12-34-56</h3>
             <div class="spacing govuk-!-margin-bottom-6"></div>
             <h1 class="govuk-heading-xl">Root cause analysis</h1>
@@ -32,23 +35,23 @@
                         <td class="govuk-table__cell">Error-123-456</td>
                     </tr>
                     <tr class="govuk-table__row">
-                        <th scope="row" class="govuk-table__header">Question</th>
-                        <td class="govuk-table__cell">Where appropriate has the outcome of the identity check been correctly recorded?</td>
-                    </tr>
-                    <tr class="govuk-table__row">
                         <th scope="row" class="govuk-table__header">Section</th>
                         <td class="govuk-table__cell">Security and identity verification for DWP</td>
                     </tr>
                     <tr class="govuk-table__row">
-                        <th scope="row" class="govuk-table__header">Case</th>
-                        <td class="govuk-table__cell">FQM-QA-4567</td>
+                        <th scope="row" class="govuk-table__header">Question</th>
+                        <td class="govuk-table__cell">Where appropriate has the outcome of the identity check been correctly recorded?</td>
                     </tr>
                     <tr class="govuk-table__row">
-                        <th scope="row" class="govuk-table__header">Type</th>
-                        <td class="govuk-table__cell">Business event error</td>
+                        <th scope="row" class="govuk-table__header">Error sub contributors</th>
+                        <td class="govuk-table__cell">Policy, System</td>
                     </tr>
                     <tr class="govuk-table__row">
-                        <th style="border-bottom: none;" scope="row" class="govuk-table__header">Detriment</th>
+                        <th scope="row" class="govuk-table__header">Error type</th>
+                        <td class="govuk-table__cell">Business</td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                        <th style="border-bottom: none;" scope="row" class="govuk-table__header">Error detriment</th>
                         <td style="border-bottom: none;" class="govuk-table__cell">Customer</td>
                     </tr>
                     </tbody>

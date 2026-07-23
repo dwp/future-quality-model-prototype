@@ -18,7 +18,10 @@
 {% block content %}
 
 <div class="govuk-width-container">
-  <a href="assurance_overview_sections.html" class="govuk-back-link">Back to assurance overview</a>
+  <header class="top-bar">
+        <a href="javascript: history.back();" class="govuk-back-link left">Back</a>
+                <button class="govuk-button--secondary govuk-button right" onclick="location.href='assurance_overview_sections.html'">Assurance Overview</button>
+    </header>
     <div class="govuk-grid-row">
         <div class="govuk-grid-column-full">
             <h3 class="govuk-caption-l">FQM-QA-1234</h3>
@@ -239,20 +242,20 @@ function selectAll(){
         if ( toggle.innerHTML == "Select all"){
             for(var i = 0; i < checkboxes.length; i++) {
                 checkboxes[i].checked = true;
-                add_to_table(checkboxes[i].value);
+                //add_to_table(checkboxes[i].value);
                 toggle.innerHTML = "Deselect all"
             }
         }
         else{
             for(var i = 0; i < checkboxes.length; i++) {
                 checkboxes[i].checked = false;
-                remove_from_table(checkboxes[i].value);
+                //remove_from_table(checkboxes[i].value);
                 toggle.innerHTML = "Select all"
             }
         }
 }
 
-function add_to_table(value){
+/*function add_to_table(value){
     count++;
     optional_content.innerHTML += '<tr id="'+value+'" class="govuk-table__row"><td class="govuk-table__cell">'+value+'</td></tr>';
     counter.textContent = "";
@@ -262,7 +265,7 @@ function remove_from_table(value){
     var element = document.getElementById(value);
     element.remove();
 }
-
+*/
 
 
 /*question sets*/
