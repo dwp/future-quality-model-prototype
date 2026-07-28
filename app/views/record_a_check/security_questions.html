@@ -37,7 +37,14 @@
                 <a href="javascript: history.back();" class="govuk-back-link left">Back</a>
                 <button class="govuk-button--secondary govuk-button right" onclick="location.href='assurance_overview_questions.html'">Assurance Overview</button>
             </header>
-            <h3 class="govuk-caption-l">FQM-QA-1234</h3>
+            <header class="second-bar">
+                <h3 class="govuk-caption-l">FQM-QA-1234</h3>
+                <div style="margin-top: 20px;" class="govuk-task-list__status" id="case-details-status">
+                    <strong class="govuk-tag govuk-tag--blue">
+                        Incomplete
+                    </strong>
+                </div>
+            </header>
             <div class="spacing govuk-!-margin-bottom-6"></div>
             <h1 class="govuk-heading-xl">Security and identity verification for DWP</h1>
             <h2 class="govuk-heading-m">0 out of 5 answered</h2>
@@ -231,9 +238,9 @@
             <div class="spacing govuk-!-margin-bottom-9"></div>
             <div>
                 <button name="cd_complete" value="yes" onclick="location.href='../record_a_check/choose_root_cause_analysis.html'" class="govuk-button" data-module="govuk-button">
-                    Save and continue
+                    Continue
                 </button>
-                <a class=" govuk-!-margin-9 govuk-link" href="#">Cancel</a>
+                <a style="margin: 50px;" class="govuk-link" href="#">Cancel</a>
             </div>
         </div>
     </div>

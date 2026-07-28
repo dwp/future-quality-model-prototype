@@ -32,14 +32,24 @@
             <button onclick="location.href='../record_a_check/sections.html'" class="govuk-button govuk-button--secondary">Change sections</button>
         </div>
         <div class="govuk-grid-column-two-thirds">
-            <a href="assurance_overview_questions.html" class="govuk-back-link">Back to assurance overview</a>
-            <h3 class="govuk-caption-l">FQM-QA-1234</h3>
+            <header class="top-bar">
+                <a href="javascript: history.back();" class="govuk-back-link left">Back</a>
+                <button class="govuk-button--secondary govuk-button right" onclick="location.href='assurance_overview_questions.html'">Assurance Overview</button>
+            </header>
+            <header class="second-bar">
+                <h3 class="govuk-caption-l">FQM-QA-1234</h3>
+                <div style="margin-top: 20px;" class="govuk-task-list__status" id="case-details-status">
+                    <strong class="govuk-tag govuk-tag--blue">
+                        Incomplete
+                    </strong>
+                </div>
+            </header>
             <div class="spacing govuk-!-margin-bottom-6"></div>
             <h1 class="govuk-heading-xl">Security and identity verification for DWP</h1>
             <h2 class="govuk-heading-m">0 out of 5 answered</h2>
             <div class="govuk-form-group">
                 <label class="govuk-label govuk-fieldset__legend--s" for="assessment_provider">
-                    Mark as:
+                    Mark all unanswered questions as:
                 </label>
                 <select class="govuk-select" id="mark_as">
                     <option value="#">Please select</option>
@@ -61,26 +71,26 @@
                    
                     <div class="govuk-radios" data-module="govuk-radios">
                         <div class="govuk-radios__item">
-                            <input class="govuk-radios__input" id="identity_check-1" name="identity_check" type="radio" value="yes" data-aria-controls="conditional-contact">
+                            <input class="govuk-radios__input" id="identity_check-1" name="identity_check" type="radio" value="yes" data-aria-controls="conditional-contact" disabled>
                             <label class="govuk-label govuk-radios__label" for="identity_check_1">
                             Yes
                             </label>
                         </div>
                         <div class="govuk-radios__item">
-                            <input class="govuk-radios__input" id="identity_check-2" name="identity_check" type="radio" value="no" data-aria-controls="conditional-contact-2">
+                            <input class="govuk-radios__input" id="identity_check-2" name="identity_check" type="radio" value="no" data-aria-controls="conditional-contact-2" checked disabled>
                             <label class="govuk-label govuk-radios__label" for="identity_check_2">
                             No
                             </label>
                         </div>
                         <div class="govuk-radios__item">
-                            <input class="govuk-radios__input" id="identity_check-3" name="identity_check" type="radio" value="na" data-aria-controls="conditional-contact-3">
+                            <input class="govuk-radios__input" id="identity_check-3" name="identity_check" type="radio" value="na" data-aria-controls="conditional-contact-3" disabled>
                             <label class="govuk-label govuk-radios__label" for="identity_check-3">
                             Not applicable
                             </label>
                         </div>
                     </div>
                     <div class="spacing govuk-!-margin-bottom-6"></div>
-                    <p class="govuk-body"><a class="govuk-link" href="error.html">View recorded error-234-567</a></p>
+                    <p class="govuk-body"><a class="govuk-link" href="error.html">View recorded error-234-567</a><a style="margin-left: 20px;" class="govuk-link" href="#">Delete</a></p>
                 </fieldset>
             </div>
             <div class="spacing govuk-!-margin-bottom-9"></div>
@@ -227,9 +237,9 @@
             <div class="spacing govuk-!-margin-bottom-9"></div>
             <div>
                 <button name="cd_complete" value="yes" onclick="location.href='../record_a_check/choose_root_cause_analysis.html'" class="govuk-button" data-module="govuk-button">
-                    Save and continue
+                    Continue
                 </button>
-                <a class=" govuk-!-margin-9 govuk-link" href="#">Cancel</a>
+                <a style="margin: 50px;" class="govuk-link" href="#">Cancel</a>
             </div>
         </div>
     </div>
